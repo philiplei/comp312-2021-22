@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>First example</title>
+</head>
+<body>
+  <div id="app">
+    <p>This example adds two numbers.</p>
+    <p>a: <input type="text" v-model.number="a" /></p>
+    <p>b: <input type="text" v-model.number="b" /></p>
+    <p><button type='button' @click="ans=a+b" >Calculate!</button></p>
+    <p>a+b = <span id="ans">{{ ans }}</span></p>
+
+    <div style="background-color: lightblue; margin-top: 2em; padding: 10px 20px">
+      <p><em>Reactivity</em>: When a or b is changed, the following is updated automatically.</p>
+      <p>a+b = <span id="ans">{{ a+b }}</span></p>
+    </div>
+
+  </div>
+
+  <!-- loading the Vue v3.2 JavaScript library from CDN -->    
+  <script src="https://unpkg.com/vue@3.2"></script>
+
+  <script>
+  // define an empty Vue options object
+  const options = { 
+    data() { 
+      return { a: 3, b: 5, ans:3+5 }
+    }
+  }
+
+  // create a Vue component, mounted to the HTML template
+  const vm = Vue.createApp(options).mount('#app')
+  </script>  
+
+</body>
+</html>

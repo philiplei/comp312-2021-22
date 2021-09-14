@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <title>chap 3 example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> 
+  <style>
+    .try { background-color:lightgreen ; color: white; padding: 0px 10px 1px 1px; border-radius: 0px 0px 7px 0px;}
+    .box { background-color: lightblue; padding: 1px 6px; border-radius: 4px; margin: 5px; }
+  </style>
+</head>
+<body>
+
+<h1>Example p307</h1>
+<p>To attach an event handler to an element, add <code>v-on:<i>event</i></code> or <code>@<i>event</i></code> attribute to the element. The attribute value can take either a JavaScript statement, or the name of a <dfn>method</dfn> to call when the event happens.</p>
+
+<p>In addition, this example demonstrates how to define a method in the options object. It also uses JavaScript timers.</p>
+
+<hr>
+
+<div id="app">
+  <p>Click count: {{ count }}</p>
+  <button class='btn btn-primary' v-on:click='count++'>Add 1</button>&nbsp; 
+  <button class='btn btn-success' @click='this.count--'>Minus 1</button>&nbsp;
+  <button class='btn btn-warning' @click='reset'>Reset to 0</button>&nbsp; 
+</div>
+
+<hr/>
+
+<p><span class='try'> Try the following</span></p> 
+<ul>
+  <li>The first two buttons run a JavaScript statement when clicked.</li>
+  <li>Reference: <a href="https://v3.vuejs.org/guide/events.html">events</a></li>
+  <li>The third button registers an event handler for click. We usually use a <em>method</em> as event handler, because methods can access the data properties of the component.</li>
+  <li>Inspect the data properties and the methods of the component instance <code>vm</code>. This object has one data property <code>vm.count</code> and two methods. <code>vm.reset()</code> and <code>vm.countUp(n)</code>.</li>
+  <li>Add a button, which, when clicked, shows an alert. Hint: <code>alert('button clicked')</code></li>
+  <li>Both event handlers and timers involve asynchronous execution of functions.</li>
+</ul>
+
+<!-- loading the Vue v3.2 JavaScript library from CDN -->    
+<script src="https://unpkg.com/vue@3.2"></script>
+
+<script>
+// define a Vue options object
+const opts = {
+  data() {
+    return {
+      count: 0
+    }
+  },
+  methods: {
+    // set 'this.count' to 0
+    reset(event) { 
+      this.count = 0;
+      // event is an event object from DOM
+      console.log(event); 
+    },
+    // increase 'this.count' by 1 per second, and stop after 'n' times
+    countUp(n) {
+      let tickLeft = n;
+      const timer = setInterval(
+        ()=>{
+          this.count++;
+          tickLeft--;
+          if (tickLeft<=0) clearInterval(timer);
+        },
+        1000
+      );
+    }
+  }
+}
+
+// create a Vue component, mounted to the HTML template
+const vm = Vue.createApp(opts).mount('#app')
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <title>chap 3 example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> 
+  <style>
+    .try { background-color:lightgreen ; color: white; padding: 0px 10px 1px 1px; border-radius: 0px 0px 7px 0px;}
+  </style>
+</head>
+<body>
+
+<h1>Example p302-a</h1>
+<p>This example rewrites p302, but uses the <code>template</code> property of the options object instead of a template embedded in HTML document.</p>
+
+<p>This example also shows that JavaScript template string <code>`string`</code> can span multiple lines in source code. This is useful to embed HTML code in JavaScript code.</p>
+
+<hr>
+
+<div id="app">
+</div>
+
+<hr/>
+
+<p><span class='try'> Try the following</span></p> 
+<ul>
+  <li>read the source code to see the <code>template</code> property</li>
+</ul>
+
+<div style='font-size:50%'>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</div>
+
+
+<!-- loading the Vue v3.2 JavaScript library from CDN -->    
+<script src="https://unpkg.com/vue@3.2"></script>
+
+<script>
+// define a Vue options object
+const weather = {
+  data() {
+    return {
+      temperature: 28, rain: 20, conditionURL: 'image/sunny.png'
+    }
+  },
+  template: `
+  <img :src='conditionURL' style='float: left; padding-right: 1em'>
+  <div>Temperature: {{ temperature }}°C</div>
+  <div>Rain: {{ rain }}%</div>
+  `
+};
+
+// create a Vue component, mounted to the HTML template
+const vm = Vue.createApp(weather).mount('#app');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>chap 3 example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> 
+  <style>
+    .try { background-color:lightgreen ; color: white; padding: 0px 10px 1px 1px; border-radius: 0px 0px 7px 0px;}
+    div span { background-color: lightblue }
+  </style>
+</head>
+<body>
+
+<h1>Example p300</h1>
+<p>In addition to the programming language JavaScript, modern web browsers support an extensive standard known as DOM (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a>). DOM defines how to represent each <em>HTML element</em> as a JavaScript <em>object</em>, each with properties, methods and events. In addition, after page loading, the browser converts the loaded HTML document into a large tree data structure called the document tree (or DOM tree). The document tree
+
+</p>
+
+<hr>
+
+<div>
+  <div>1+2*3 = <span id='ans'>span#ans</span></div>
+  <div>It's now <span id='timeNow'>span#timeNow</span>.</div>
+</div>
+
+<hr/>
+
+<p><span class='try'> Try the following</span></p> 
+<ul>
+  <li>Browser the document tree in developer tools. This tree is accessible in JavaScript object as the built-in object <code>document</code>.</li>
+  <li>DOM defines method to search and browse the document tree. For example, the following statement obtains the object that represents an element in the tree.<br>
+    <code>let a = document.getElementById('ans')</code>
+  </li>
+  <li>Run the following statements to display the answer of the arithmatic expression:<br>
+  <code>a.innerHTML = 1+2*3</code></li>
+  <li>Run the following statements to show the current time:<br>
+  <code>let b = document.getElementById('timeNow')</code><br>
+  <code>b.innerHTML =  (new Date).toLocaleTimeString()</code></li>
+  <li>There are many other methods to change the content and structure of the document tree, and handle events from elements.</li>
+  <li><em>We'll not use DOM API directly in this module</em></li>
+</ul>
+
+</body>
+</html>

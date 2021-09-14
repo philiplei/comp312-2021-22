@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>chap 3 example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> 
+  <style>
+    .try { background-color:lightgreen ; color: white; padding: 0px 10px 1px 1px; border-radius: 0px 0px 7px 0px;}
+    .box { background-color: lightblue; padding: 1px 6px; border-radius: 4px; margin: 5px; }
+  </style>
+</head>
+<body>
+
+<h1>Example p307-a</h1>
+<p>This example rewrites <a href="./p307.html">p307.html</a> using DOM API. </p>
+
+<p>An event handler is registered to handle 'click' events at the button 'Add 1' and 'Minus 1' respectively. Event handlers are JavaScript functions that run <em>asynchronously</em>. When the user clicks a button, the browser triggers a 'click' event on the button. If an event handler is registered to handle that event, <em>the browser calls</em> the event handler.</p>
+
+<code><pre>
+  // register an event handler for 'click' on the element
+  elem.addEventListener('click', (event) => {
+    // handle the event
+    // ...
+  });
+  // addEventListener only registers the event handler. 
+  // It DOES NOT call the event handler.    
+</pre></code>
+
+<p>The event handler runs <em>asynchronously</em>. After registration, the event handler may run any time, and it may run any number of times.</p>
+
+<hr>
+
+<div id="app">
+  <p>Click count: <span id='counter'>0</span></p>
+  <button class='btn btn-primary' id='btnAdd1'>Add 1</button>&nbsp; 
+  <button class='btn btn-success' id='btnMinus1'>Minus 1</button>&nbsp;
+  <button class='btn btn-secondary' disabled id='btnReset'>Reset to 0</button>&nbsp; 
+</div>
+
+<hr/>
+
+<p><span class='try'> Try the following</span></p> 
+<ul>
+  <li>Click the first two buttons. Check the event objects passed to the event handlers in the console.</li>
+  <li>DOM events are complicated. For example, mouse events have a lot of properties 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">(reference)</a>. And there are many other events.</li>
+</ul>
+
+
+<script>
+let count = 0;
+const spanCounter = document.getElementById('counter');
+document.getElementById('btnAdd1').addEventListener('click', (event) => {
+  count++;
+  spanCounter.innerHTML = count;
+  console.log(event);
+});
+document.getElementById('btnMinus1').addEventListener('click', (event) => {
+  count--;
+  spanCounter.innerHTML = count;
+  console.log(event);
+});
+</script>
+
+</body>
+</html>

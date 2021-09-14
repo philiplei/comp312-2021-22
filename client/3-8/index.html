@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>3-8 Make your own components :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1631592448" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1631592448" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1631592448" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1631592448" rel="stylesheet">
+    <link href="/css/auto-complete.css?1631592448" rel="stylesheet">
+    <link href="/css/theme.css?1631592448" rel="stylesheet">
+    <link href="/css/tabs.css?1631592448" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1631592448" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1631592448" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1631592448"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/client/3-8/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/basic/" title="JavaScript basics" class="dd-item">
+        <a href="/basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/client/" title="Client-side programming" class="dd-item parent">
+        <a href="/client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-8/" title="3-8 Make your own components" class="dd-item active">
+        <a href="/client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/client/'>Client-side programming</a> > 3-8 Make your own components
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#properties-and-one-directional-binding">Properties and one-directional binding   </a></li>
+    <li><a href="#bi-directional-binding-and-custom-events">Bi-directional binding and custom events</a></li>
+    <li><a href="#downloadable-examples">Downloadable examples</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3-8 Make your own components
+            </h1>
+          
+
+        
+
+
+<p>In this lab, we&rsquo;ll show how to create a Vue component (StarRate.Vue) and use it in the root component of the web app (App.vue).</p>
+<h2 id="properties-and-one-directional-binding">Properties and one-directional binding   </h2>
+<p>We&rsquo;d like to create a component called <code>&lt;star-rate&gt;</code> for user to rate something (e.g. products or movie). Take a look at the browser display at <a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8cD5SYXRpbmcgb2YgdGhpcyBsZWN0dXJlIGlzIHt7Y3VycmVudH19IG91dCBvZiB7eyBtYXggfX08L3A+XG4gIDxzdGFyLXJhdGUgOmxpa2VzPVwiY3VycmVudFwiIDptYXgtbGlrZXM9XCJtYXhcIj48L3N0YXItcmF0ZT5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4vLyBTdGFyIENvbXAgdjAxXG5pbXBvcnQgU3RhclJhdGUgZnJvbSBcIi4vU3RhclJhdGUudnVlXCI7XG5leHBvcnQgZGVmYXVsdCB7XG4gIGNvbXBvbmVudHM6IHsgU3RhclJhdGUgfSxcbiAgZGF0YSgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgY3VycmVudDogNCwgbWF4OiA3XG4gICAgfVxuICB9XG59XG48L3NjcmlwdD5cbiIsImltcG9ydC1tYXAuanNvbiI6IntcbiAgXCJpbXBvcnRzXCI6IHt9XG59IiwiU3RhclJhdGUudnVlIjoiPHRlbXBsYXRlPlxuICA8c3BhbiBjbGFzcz1cImRpdlN0YXJzXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gbGlrZXNcIiA6c3JjPVwiaW1nU3Rhck9uXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gKG1heExpa2VzLWxpa2VzKVwiIDpzcmM9XCJpbWdTdGFyT2ZmXCI+XG4gIDwvc3Bhbj5cbjwvdGVtcGxhdGU+XG5cbjxzdHlsZSBzY29wZWQ+XG4uZGl2U3RhcnMgeyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDRweCB9XG48L3N0eWxlPlxuXG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczoge1xuICAgIGxpa2VzOiBOdW1iZXIsXG4gICAgbWF4TGlrZXM6IE51bWJlciwgICAgXG4gIH0sXG5cbiAgZGF0YSgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgaW1nU3Rhck9uLCBpbWdTdGFyT2ZmLCBcbiAgICB9XG4gIH1cbn1cbiAgXG5sZXQgaW1nU3Rhck9uID0gXCJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUNBQUFBQWdDQVlBQUFCemVucjBBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUEzUUFBQU4wQmNGT2lCd0FBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFUdFNVUkJWRmlGdFZkZGJCUlZHRDEzWjNabXVqdTduWjFPMisyVzBpN3RRd09sQWxzRExaWHlZeVdBOHVNZk5BMHFzU2JFR0N5RWFDVGhTV3NJa21oaTRoK1ErQUFFUXJBR1JJeEtFWXhZWTJoUzlNRXFsTnBXdXkwdDNjN083blozcDN0OTJBcVVNbXRuRERlWnpNeWQ3NTV6NXQ1enY1dVBVRXBodFJGQzNBQkFLVld0WXJEL2c3eTByTWgxWmZLNWlsSjZ6UXFPemFxQU9iUEUvYzJiL2RrN3Q4ekpMdkdKKzYzaWdGSnErZ0lnS1JJZkQxOTRuR29YbnFCNUhqNE9RTGFDWldrSkZFbllzWFhOTEU3TVNnLy80UFVGOXA5K1UzTUEzREtMUmN5YWtCREM1TW44Nkk4SGw3bm1GRHB2OS9lRkprNFVyVDY5eGF3QUt4NVl2M2l1eDNrM09RQzg5dTdWRFlTUVp4KzRnSkpDOFoxWE41ZE9IY2R4YUdxY0o4Z1N2L2VCQ2lDRVBDU3dwSGpWdzdsM09oa0djTG13cXNZSHQ0TXJKb1FzZkdBQy9JWE9scDBOcFhlTVN3amdjcVh2QU41NHVWS1VKWDZQR1V4REUwNW1PZS9rbFErZ0lOZkRIK2hwZmN6dUVKaDBrQ2dDZ25CN1REU213MWR6TkRJV1R1NEJNQUJnRUVBUVFOQW9XeElBczh2OTd2Y0pJU1h4eEVTdUZrMjY0NGtVNzNhd05GOFI0TTBSU0lIQzI3d2V3Yllpb0dCRlFFbVBaRmxBa3FZQlhtZ2Z3UG5MZitsOUE1RlkvMkJFRHc1RmNmUFdPQnVKNnF6ZFRtSTh4NHd3REJOTXBWSzlnOE94UFdTMjF6bllzcjA4eis5eklGOFdrQy96Y0RsbWtCNnlzd0c3L2IvajdtcmhTQktEd3pFTURzZHdveitNNWpmYmUyd0N6N1I5ZmlsSUErVVN5bVk1WjBiT2NhYkpBY0RsdEtPczJJMUFoWUlUWjdzak5oYmZFZ0JNa2RkNXJDaFBlUHJNZ2NVMjJjMWxSaUVrUGZVTVkxb0FBTndLeFZILy9EbXR1MDg5RlZJVEw5b29wUk85QTlybTYvMlJ0NnViTGszMERFUXpJd2lDWmZLZS9qQVdybS9WZnI4UjJqODZGbitCVWpveFpSZUlXZXpXYk5GKytQU0JKZlpBK1hTREFVai9QV3YrQ0xueTZ6QldienVuaFNQNjluaGNQL3B2LzdSdFNBaXB5L1h3WDMyNmQ1R3d0aVovS2dyREFCNlBhZkl2dit1akRjMXRxcW9sTjFCS0w5NzliVm9pb3BSZXZEa2FYN1R0clE3MTBPay9wMzdrZWRQa241em8wcmMwdHcycFdyTDZYbklnY3lMeUZpaFpQKzlxS0MzYzNWaVdUblVlajZuMTMvZHg1L2kranpyN3hzS0paWlRTNFAxaURGTXhwVFE0TUJ4NzZmdXJJeE1BMHR2T3BQbk8vL0IzZEN5YzJHRkVubEVBQUxpYzNMTGErWExhY1JhbS85RmFuMXZnMktXWllqSUtLQzdJcW45a1FVNzZ4WUx6YXdOZVZoVFora3d4R1ZFdkhsNTVVK1luUFdKaDd3Y3FGRVNpK2p4Q0NLRUdaak9jQVVLSTk5VFh2ZFdUTDdlUFhETk40QmtVKzhRRWdMbEdNWm1XWU8wdmY0U3lBZHozNzd1Nng3Qzg4YXk2dlBHczJ0VTlaZ2l5c3RySEE2Z3hMY0JmNk55MHRGSW05d3JRb2tuc2Fta2ZyOXJVR3JyY01iVDdjc2ZRN3FwTnJhRmRMZTNqV2pRNURXZjVrZ0tuN0JFTWZXQW9ZRHllV2xvelg1Nk1Tb2NkTzNPZGx0UWQxdzZkN0RxaVJYUi9JcUVmVENUMGcxcEU5eDg2MlhXa3BPNjRkdXpNOVNsclhiMHdEeWs5Vld2RVkxUjR5TjRjSVVIYk4xTGF2cEYyZnJhT1ZsVW9xdVRtT2dCVVppaFlLaVUzMTFGVm9haWRYenhKNmJVbVNxODFVVm5pVlJnVUxrWkE5VSt0S2t5T2ZyT092dkpNYVVweTJVTU1nOGFaVmpzTWcwYVgwejZ5dmFFOE90cnhIRjFUVnpRQ29ONk1BTm1yQ0pFOER4LzNLc0tIQUVRTDVac29PdTN2U1c0dUxMbTVFYU1aeUhRV09BQXdsTkt3NGZyTm9CRkNmQUFjUnRYelB4SFJ1cGluMFFQdEFBQUFBRWxGVGtTdVFtQ0NcIjtcbmxldCBpbWdTdGFyT2ZmID0gXCJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUNBQUFBQWdDQVlBQUFCemVucjBBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUEzUUFBQU4wQmNGT2lCd0FBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFKL1NVUkJWRmlGdmRlL2kxVlhFQWZ3ejdncHd2cFdGbE80U2d3bUtySXBOa1NMRUJzUkVXU0xGQ2tDQ3VtMlNCVkJoUDBYb2tXRUZmWWZTTFhOZGluRmxZUnNsVlRtUjJFMmFFeXlhVlVrM1ZqY3MvQjQzbnZYZDU2YmdTbmV6Snp2ZDg2Y2U3NzN2c2hNdFJZUkJ5QXpuOVJpN0p1QS9EZzJzQkVSSjZweGFpY1FFYXY0R1ltRnpQeWlDaWd6eDNiTTRpOE1zQitQY2JBRzY0MnFybG5DV21ZK0s5TzRxdlk0SzNZL2hkL3gza2o4clpvSjFIVDlDZTVuNXRaSS9GWkVmUFovVEdBREYxcmlGL0Q5MkhoamtuOVFkdCtWdjQ4UDkvSUl2c1JLVDM2bDFMeXlkZXBBVWJtNTRvZHdHTXM0bVpuUE85Wk00d0crd2ovNEY5dlk3bExMd0RzRitNZ1E0UXllRklCaHY1dVpkM3QzRkhFZTUwdlR3MzRBVDNjYXd0KzRFZmdKWCtPUEhhTE1mTnBIVW1zUk1UUFUwTHU0Rm9YOEtEN1B6UC8yZ3JpbGtUZnhEZjZrRVpaVmZLZFNUc2U4U1FjTDF5cW1oaFBMK0FYSDlwRDhXT0ZZYnRVQlhNWkRuTmtEOGpNRiszS3ZFT0ZjT1p2RjEwaStXRERQdlpUcldEQ3Z1YzlMcjRGOHFXRE50K1o3RnM3aFIxeWZnUHg2d1pqcnJOa0Y0QkxXSjJoZ0haZjZhblo3RjN5RXpWZSs0Qy9iWnNIb3ROMGFtTmZjMlZyN0FSLzNGZlIrbEViRVRFNGd5MFh4SHVGUWRoQjFUaUFpNXZCcExUbGtJKzFiZUwrcnB1OElGbkc2S3hrUnB5TGkyK0tuZW5BMmNiYW1nYk9hTXh3bEhrVEVUZHpSUE9YcnVCTVJOeU5pMElMVC94ejBYS0ZmY1hRa2RrVWpwN2N4T3hTZkxiR0h1REt5NW0zOE5wWU9hTjVZajRaK0wrQmU4WVdlcGx2clNtT3RiOW91b0l0WUt6dGJhZHZaTGdLME02bVZnckdHaStOT1lFdnpsK3NHQmhVcU9DaHJIeGVzMWduMGZaUk9ZMm9TSFNnNFJ6Q2RtUS9hOGk4QXBzZ0Y1RTk1TndFQUFBQUFTVVZPUks1Q1lJST1cIjsgIFxuPC9zY3JpcHQ+XG4ifQ==">the SFC playground</a> for the user interface. The root component App.vue includes the following in its template, and passes values to the <code>&lt;star-rate&gt;</code> component through the two properties: <code>likes</code> and <code>max-likes</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- App.vue includes the child component StarRate.vue --&gt;</span>
+&lt;<span style="color:#f92672">star-rate</span> <span style="color:#a6e22e">:likes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span> <span style="color:#a6e22e">:max-likes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;7&#34;</span>&gt;&lt;/<span style="color:#f92672">star-rate</span>&gt;
+</code></pre></div><p>In <code>StarRate.vue</code>, we define these two properties with the <code>props</code> property in the options object. In this example, the prop <code>likes</code> equals <code>3</code>, and the prop <code>maxLikes</code> equals <code>7</code>. Vue will convert the name of the props between kebab-case (in html template) and camelCase (in JavaScript) appropriately. The template can use the props in the same way as data properties. Both work like properties of the view model object.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue"><span style="color:#75715e">// StarRate.vue
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">template</span>&gt;
+  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;divStars&#34;</span>&gt;
+    &lt;<span style="color:#f92672">img</span> <span style="color:#f92672">v-for</span><span style="color:#e6db74">=&#34;n in likes&#34; :src=&#34;imgStarOn&#34;&gt;
+</span><span style="color:#e6db74">    &lt;img v-for=&#34;n in (maxLikes-likes)&#34; </span><span style="color:#f92672">:src</span><span style="color:#e6db74">=&#34;imgStarOff&#34;</span>&gt;
+  &lt;/<span style="color:#f92672">span</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#a6e22e">likes</span><span style="color:#f92672">:</span> Number,
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#a6e22e">maxLikes</span><span style="color:#f92672">:</span> Number,    
+</span><span style="display:block;width:100%;background-color:#3c3d38">  },
+</span>
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> {
+      <span style="color:#75715e">// these two properties contains URLs to two images
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">imgStarOn</span>, <span style="color:#a6e22e">imgStarOff</span>, 
+    }
+  }
+}
+</code></pre></div><p>The code above also demonstrate doing <code>v-for</code> on a range. For example, <code>&lt;span v-for=&quot;n in 3&quot;&gt;{{n}}&lt;/span&gt;</code> will generate three <code>&lt;span&gt;</code> elements in a sequence: <code>&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;</code>.</p>
+<p>If a prop is bound to a data property of the container component, and that data property changes, the prop of the child component also change accordingly, and this will cause the child component to refresh its view. Test this in <a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8cD5SYXRpbmcgb2YgdGhpcyBsZWN0dXJlIGlzIHt7Y3VycmVudH19IG91dCBvZiB7eyBtYXggfX08L3A+XG4gIDxzdGFyLXJhdGUgOmxpa2VzPVwiY3VycmVudFwiIDptYXgtbGlrZXM9XCJtYXhcIj48L3N0YXItcmF0ZT5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4vLyBTdGFyIENvbXAgdjAxXG5pbXBvcnQgU3RhclJhdGUgZnJvbSBcIi4vU3RhclJhdGUudnVlXCI7XG5leHBvcnQgZGVmYXVsdCB7XG4gIGNvbXBvbmVudHM6IHsgU3RhclJhdGUgfSxcbiAgZGF0YSgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgY3VycmVudDogNCwgbWF4OiA3XG4gICAgfVxuICB9XG59XG48L3NjcmlwdD5cbiIsImltcG9ydC1tYXAuanNvbiI6IntcbiAgXCJpbXBvcnRzXCI6IHt9XG59IiwiU3RhclJhdGUudnVlIjoiPHRlbXBsYXRlPlxuICA8c3BhbiBjbGFzcz1cImRpdlN0YXJzXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gbGlrZXNcIiA6c3JjPVwiaW1nU3Rhck9uXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gKG1heExpa2VzLWxpa2VzKVwiIDpzcmM9XCJpbWdTdGFyT2ZmXCI+XG4gIDwvc3Bhbj5cbjwvdGVtcGxhdGU+XG5cbjxzdHlsZSBzY29wZWQ+XG4uZGl2U3RhcnMgeyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDRweCB9XG48L3N0eWxlPlxuXG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczoge1xuICAgIGxpa2VzOiBOdW1iZXIsXG4gICAgbWF4TGlrZXM6IE51bWJlciwgICAgXG4gIH0sXG5cbiAgZGF0YSgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgaW1nU3Rhck9uLCBpbWdTdGFyT2ZmLCBcbiAgICB9XG4gIH1cbn1cbiAgXG5sZXQgaW1nU3Rhck9uID0gXCJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUNBQUFBQWdDQVlBQUFCemVucjBBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUEzUUFBQU4wQmNGT2lCd0FBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFUdFNVUkJWRmlGdFZkZGJCUlZHRDEzWjNabXVqdTduWjFPMisyVzBpN3RRd09sQWxzRExaWHlZeVdBOHVNZk5BMHFzU2JFR0N5RWFDVGhTV3NJa21oaTRoK1ErQUFFUXJBR1JJeEtFWXhZWTJoUzlNRXFsTnBXdXkwdDNjN083blozcDN0OTJBcVVNbXRuRERlWnpNeWQ3NTV6NXQ1enY1dVBVRXBodFJGQzNBQkFLVld0WXJEL2c3eTByTWgxWmZLNWlsSjZ6UXFPemFxQU9iUEUvYzJiL2RrN3Q4ekpMdkdKKzYzaWdGSnErZ0lnS1JJZkQxOTRuR29YbnFCNUhqNE9RTGFDWldrSkZFbllzWFhOTEU3TVNnLy80UFVGOXA5K1UzTUEzREtMUmN5YWtCREM1TW44Nkk4SGw3bm1GRHB2OS9lRkprNFVyVDY5eGF3QUt4NVl2M2l1eDNrM09RQzg5dTdWRFlTUVp4KzRnSkpDOFoxWE41ZE9IY2R4YUdxY0o4Z1N2L2VCQ2lDRVBDU3dwSGpWdzdsM09oa0djTG13cXNZSHQ0TXJKb1FzZkdBQy9JWE9scDBOcFhlTVN3amdjcVh2QU41NHVWS1VKWDZQR1V4REUwNW1PZS9rbFErZ0lOZkRIK2hwZmN6dUVKaDBrQ2dDZ25CN1REU213MWR6TkRJV1R1NEJNQUJnRUVBUVFOQW9XeElBczh2OTd2Y0pJU1h4eEVTdUZrMjY0NGtVNzNhd05GOFI0TTBSU0lIQzI3d2V3Yllpb0dCRlFFbVBaRmxBa3FZQlhtZ2Z3UG5MZitsOUE1RlkvMkJFRHc1RmNmUFdPQnVKNnF6ZFRtSTh4NHd3REJOTXBWSzlnOE94UFdTMjF6bllzcjA4eis5eklGOFdrQy96Y0RsbWtCNnlzd0c3L2IvajdtcmhTQktEd3pFTURzZHdveitNNWpmYmUyd0N6N1I5ZmlsSUErVVN5bVk1WjBiT2NhYkpBY0RsdEtPczJJMUFoWUlUWjdzak5oYmZFZ0JNa2RkNXJDaFBlUHJNZ2NVMjJjMWxSaUVrUGZVTVkxb0FBTndLeFZILy9EbXR1MDg5RlZJVEw5b29wUk85QTlybTYvMlJ0NnViTGszMERFUXpJd2lDWmZLZS9qQVdybS9WZnI4UjJqODZGbitCVWpveFpSZUlXZXpXYk5GKytQU0JKZlpBK1hTREFVai9QV3YrQ0xueTZ6QldienVuaFNQNjluaGNQL3B2LzdSdFNBaXB5L1h3WDMyNmQ1R3d0aVovS2dyREFCNlBhZkl2dit1akRjMXRxcW9sTjFCS0w5NzliVm9pb3BSZXZEa2FYN1R0clE3MTBPay9wMzdrZWRQa241em8wcmMwdHcycFdyTDZYbklnY3lMeUZpaFpQKzlxS0MzYzNWaVdUblVlajZuMTMvZHg1L2kranpyN3hzS0paWlRTNFAxaURGTXhwVFE0TUJ4NzZmdXJJeE1BMHR2T3BQbk8vL0IzZEN5YzJHRkVubEVBQUxpYzNMTGErWExhY1JhbS85RmFuMXZnMktXWllqSUtLQzdJcW45a1FVNzZ4WUx6YXdOZVZoVFora3d4R1ZFdkhsNTVVK1luUFdKaDd3Y3FGRVNpK2p4Q0NLRUdaak9jQVVLSTk5VFh2ZFdUTDdlUFhETk40QmtVKzhRRWdMbEdNWm1XWU8wdmY0U3lBZHozNzd1Nng3Qzg4YXk2dlBHczJ0VTlaZ2l5c3RySEE2Z3hMY0JmNk55MHRGSW05d3JRb2tuc2Fta2ZyOXJVR3JyY01iVDdjc2ZRN3FwTnJhRmRMZTNqV2pRNURXZjVrZ0tuN0JFTWZXQW9ZRHllV2xvelg1Nk1Tb2NkTzNPZGx0UWQxdzZkN0RxaVJYUi9JcUVmVENUMGcxcEU5eDg2MlhXa3BPNjRkdXpNOVNsclhiMHdEeWs5Vld2RVkxUjR5TjRjSVVIYk4xTGF2cEYyZnJhT1ZsVW9xdVRtT2dCVVppaFlLaVUzMTFGVm9haWRYenhKNmJVbVNxODFVVm5pVlJnVUxrWkE5VSt0S2t5T2ZyT092dkpNYVVweTJVTU1nOGFaVmpzTWcwYVgwejZ5dmFFOE90cnhIRjFUVnpRQ29ONk1BTm1yQ0pFOER4LzNLc0tIQUVRTDVac29PdTN2U1c0dUxMbTVFYU1aeUhRV09BQXdsTkt3NGZyTm9CRkNmQUFjUnRYelB4SFJ1cGluMFFQdEFBQUFBRWxGVGtTdVFtQ0NcIjtcbmxldCBpbWdTdGFyT2ZmID0gXCJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUNBQUFBQWdDQVlBQUFCemVucjBBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUEzUUFBQU4wQmNGT2lCd0FBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFKL1NVUkJWRmlGdmRlL2kxVlhFQWZ3ejdncHd2cFdGbE80U2d3bUtySXBOa1NMRUJzUkVXU0xGQ2tDQ3VtMlNCVkJoUDBYb2tXRUZmWWZTTFhOZGluRmxZUnNsVlRtUjJFMmFFeXlhVlVrM1ZqY3MvQjQzbnZYZDU2YmdTbmV6Snp2ZDg2Y2U3NzN2c2hNdFJZUkJ5QXpuOVJpN0p1QS9EZzJzQkVSSjZweGFpY1FFYXY0R1ltRnpQeWlDaWd6eDNiTTRpOE1zQitQY2JBRzY0MnFybG5DV21ZK0s5TzRxdlk0SzNZL2hkL3gza2o4clpvSjFIVDlDZTVuNXRaSS9GWkVmUFovVEdBREYxcmlGL0Q5MkhoamtuOVFkdCtWdjQ4UDkvSUl2c1JLVDM2bDFMeXlkZXBBVWJtNTRvZHdHTXM0bVpuUE85Wk00d0crd2ovNEY5dlk3bExMd0RzRitNZ1E0UXllRklCaHY1dVpkM3QzRkhFZTUwdlR3MzRBVDNjYXd0KzRFZmdKWCtPUEhhTE1mTnBIVW1zUk1UUFUwTHU0Rm9YOEtEN1B6UC8yZ3JpbGtUZnhEZjZrRVpaVmZLZFNUc2U4U1FjTDF5cW1oaFBMK0FYSDlwRDhXT0ZZYnRVQlhNWkRuTmtEOGpNRiszS3ZFT0ZjT1p2RjEwaStXRERQdlpUcldEQ3Z1YzlMcjRGOHFXRE50K1o3RnM3aFIxeWZnUHg2d1pqcnJOa0Y0QkxXSjJoZ0haZjZhblo3RjN5RXpWZSs0Qy9iWnNIb3ROMGFtTmZjMlZyN0FSLzNGZlIrbEViRVRFNGd5MFh4SHVGUWRoQjFUaUFpNXZCcExUbGtJKzFiZUwrcnB1OElGbkc2S3hrUnB5TGkyK0tuZW5BMmNiYW1nYk9hTXh3bEhrVEVUZHpSUE9YcnVCTVJOeU5pMElMVC94ejBYS0ZmY1hRa2RrVWpwN2N4T3hTZkxiR0h1REt5NW0zOE5wWU9hTjVZajRaK0wrQmU4WVdlcGx2clNtT3RiOW91b0l0WUt6dGJhZHZaTGdLME02bVZnckdHaStOT1lFdnpsK3NHQmhVcU9DaHJIeGVzMWduMGZaUk9ZMm9TSFNnNFJ6Q2RtUS9hOGk4QXBzZ0Y1RTk1TndFQUFBQUFTVVZPUks1Q1lJST1cIjsgIFxuPC9zY3JpcHQ+XG4ifQ==">the SFC playground</a>!</p>
+<p>For more information on defining props in components, please read <a href="https://v3.vuejs.org/guide/component-props.html">the online reference</a>.</p>
+<h2 id="bi-directional-binding-and-custom-events">Bi-directional binding and custom events</h2>
+<p>Passing data into a component through props is <strong>one directional</strong>. The child component <em>cannot</em> pass updates on the props to the container. In fact, the child component <em>cannot change the value of any prop</em>. In other to inform the container of changes in the child component, we need to define <strong>custom events</strong>.</p>
+<p>Try the example online at <a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8cD5SYXRpbmcgb2YgdGhpcyBsZWN0dXJlIGlzIHt7Y3VycmVudH19IG91dCBvZiB7eyBtYXggfX08L3A+XG4gIDxzdGFyLXJhdGUgdi1tb2RlbDpsaWtlcz1cImN1cnJlbnRcIiA6bWF4LWxpa2VzPVwibWF4XCI+PC9zdGFyLXJhdGU+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuLy8gU3RhciBDb21wIHYwMlxuaW1wb3J0IFN0YXJSYXRlIGZyb20gXCIuL1N0YXJSYXRlLnZ1ZVwiO1xuZXhwb3J0IGRlZmF1bHQge1xuICBjb21wb25lbnRzOiB7IFN0YXJSYXRlIH0sXG4gIGRhdGEoKSB7XG4gICAgcmV0dXJuIHtcbiAgICAgIGN1cnJlbnQ6IDQsIG1heDogN1xuICAgIH1cbiAgfVxufVxuPC9zY3JpcHQ+XG4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XG4gIFwiaW1wb3J0c1wiOiB7fVxufSIsIlN0YXJSYXRlLnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNwYW4gY2xhc3M9XCJkaXZTdGFyc1wiPlxuICAgIDxpbWcgdi1mb3I9XCJuIGluIGxpa2VzXCIgOnNyYz1cImltZ1N0YXJPblwiIFxuICAgICAgICAgQGNsaWNrPVwiY2xpY2tTdGFyKG4pXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gKG1heExpa2VzLWxpa2VzKVwiIDpzcmM9XCJpbWdTdGFyT2ZmXCJcbiAgICAgICAgIEBjbGljaz1cImNsaWNrU3RhcihsaWtlcytuKVwiPlxuICA8L3NwYW4+XG48L3RlbXBsYXRlPlxuXG48c3R5bGUgc2NvcGVkPlxuLmRpdlN0YXJzIHsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBwYWRkaW5nOiA0cHggfVxuPC9zdHlsZT5cblxuPHNjcmlwdD5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgcHJvcHM6IHtcbiAgICBsaWtlczogTnVtYmVyLFxuICAgIG1heExpa2VzOiBOdW1iZXIsICAgIFxuICB9LFxuXG4gIGVtaXRzOiBbIFwidXBkYXRlOmxpa2VzXCIgXSxcblxuICBkYXRhKCkge1xuICAgIHJldHVybiB7XG4gICAgICBpbWdTdGFyT24sIGltZ1N0YXJPZmYsIFxuICAgIH1cbiAgfSxcblxuICBtZXRob2RzOiB7XG4gICAgY2xpY2tTdGFyKHdoaWNoKSB7XG4gICAgICBjb25zb2xlLmxvZyhgY2xpY2sgc3RhciAke3doaWNofWApO1xuICAgICAgdGhpcy4kZW1pdChcInVwZGF0ZTpsaWtlc1wiLCB3aGljaCk7XG4gICAgfVxuICB9XG59XG4gIFxubGV0IGltZ1N0YXJPbiA9IFwiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDQUFBQUFnQ0FZQUFBQnplbnIwQUFBQUJITkNTVlFJQ0FnSWZBaGtpQUFBQUFsd1NGbHpBQUFBM1FBQUFOMEJjRk9pQndBQUFCbDBSVmgwVTI5bWRIZGhjbVVBZDNkM0xtbHVhM05qWVhCbExtOXlaNXZ1UEJvQUFBVHRTVVJCVkZpRnRWZGRiQlJWR0QxM1ozWm11anU3bloxTzIrMlcwaTd0UXdPbEFsc0RMWlh5WXlXQTh1TWZOQTBxc1NiRUdDeUVhQ1RoU1dzSWttaGk0aCtRK0FBRVFyQUdSSXhLRVl4WVkyaFM5TUVxbE5wV3V5MHQzYzdPN25aM3AzdDkyQXFVTW10bkREZVp6TXlkNzU1ejV0NXp2NXVQVUVwaHRSRkMzQUJBS1ZXdFlyRC9nN3kwck1oMVpmSzVpbEo2elFxT3phcUFPYlBFL2MyYi9kazd0OHpKTHZHSis2M2lnRkpxK2dJZ0tSSWZEMTk0bkdvWG5xQjVIajRPUUxhQ1pXa0pGRW5Zc1hYTkxFN01TZy8vNFBVRjlwOStVM01BM0RLTFJjeWFrQkRDNU1uODZJOEhsN25tRkRwdjkvZUZKazRVclQ2OXhhd0FLeDVZdjNpdXgzazNPUUM4OXU3VkRZU1FaeCs0Z0pKQzhaMVhONWRPSGNkeGFHcWNKOGdTdi9lQkNpQ0VQQ1N3cEhqVnc3bDNPaGtHY0xtd3FzWUh0NE1ySm9Rc2ZHQUMvSVhPbHAwTnBYZU1Td2pnY3FYdkFONTR1VktVSlg2UEdVeERFMDVtT2Uva2xRK2dJTmZESCtocGZjenVFSmgwa0NnQ2duQjdURFNtdzFkek5ESVdUdTRCTUFCZ0VFQVFRTkFvV3hJQXM4djk3dmNKSVNYeHhFU3VGazI2NDRrVTczYXdORjhSNE0wUlNJSEMyN3dld2JZaW9HQkZRRW1QWkZsQWtxWUJYbWdmd1BuTGYrbDlBNUZZLzJCRUR3NUZjZlBXT0J1SjZxemRUbUk4eDR3d0RCTk1wVks5ZzhPeFBXUzIxem5Zc3IwOHorOXpJRjhXa0MvemNEbG1rQjZ5c3dHNy9iL2o3bXJoU0JLRHd6RU1Ec2R3b3orTTVqZmJlMndDejdSOWZpbElBK1VTeW1ZNVowYk9jYWJKQWNEbHRLT3MySTFBaFlJVFo3c2pOaGJmRWdCTWtkZDVyQ2hQZVByTWdjVTIyYzFsUmlFa1BmVU1ZMW9BQU53S3hWSC8vRG10dTA4OUZWSVRMOW9vcFJPOUE5cm02LzJSdDZ1YkxrMzBERVF6SXdpQ1pmS2UvakFXcm0vVmZyOFIyajg2Rm4rQlVqb3haUmVJV2V6V2JORisrUFNCSmZaQStYU0RBVWovUFd2K0NMbnk2ekJXYnp1bmhTUDY5bmhjUC9wdi83UnRTQWlweS9Yd1gzMjZkNUd3dGlaL0tnckRBQjZQYWZJdnYrdWpEYzF0cXFvbE4xQktMOTc5YlZvaW9wUmV2RGthWDdUdHJRNzEwT2svcDM3a2VkUGtuNXpvMHJjMHR3MnBXckw2WG5JZ2N5THlGaWhaUCs5cUtDM2MzVmlXVG5VZWo2bjEzL2R4NS9pK2p6cjd4c0tKWlpUUzRQMWlERk14cFRRNE1CeDc2ZnVySXhNQTB0dk9wUG5PLy9CM2RDeWMyR0ZFbmxFQUFMaWMzTExhK1hMYWNSYW0vOUZhbjF2ZzJLV1pZaklLS0M3SXFuOWtRVTc2eFlMemF3TmVWaFRaK2t3eEdWRXZIbDU1VStZblBXSmg3d2NxRkVTaStqeENDS0VHWmpPY0FVS0k5OVRYdmRXVEw3ZVBYRE5ONEJrVSs4UUVnTGxHTVptV1lPMHZmNFN5QWR6Mzc3dTZ4N0M4OGF5NnZQR3MydFU5WmdpeXN0ckhBNmd4TGNCZjZOeTB0RkltOXdyUW9rbnNhbWtmcjlyVUdycmNNYlQ3Y3NmUTdxcE5yYUZkTGUzaldqUTVEV2Y1a2dLbjdCRU1mV0FvWUR5ZVdsb3pYNTZNU29jZE8zT2RsdFFkMXc2ZDdEcWlSWFIvSXFFZlRDVDBnMXBFOXg4NjJYV2twTzY0ZHV6TTlTbHJYYjB3RHlrOVZXdkVZMVI0eU40Y0lVSGJOMUxhdnBGMmZyYU9WbFVvcXVUbU9nQlVaaWhZS2lVMzExRlZvYWlkWHp4SjZiVW1TcTgxVVZuaVZSZ1VMa1pBOVUrdEtreU9mck9PdnZKTWFVcHkyVU1NZzhhWlZqc01nMGFYMHo2eXZhRThPdHJ4SEYxVFZ6UUNvTjZNQU5tckNKRThEeC8zS3NLSEFFUUw1WnNvT3UzdlNXNHVMTG01RWFNWnlIUVdPQUF3bE5LdzRmck5vQkZDZkFBY1J0WHpQeEhSdXBpbjBRUHRBQUFBQUVsRlRrU3VRbUNDXCI7XG5sZXQgaW1nU3Rhck9mZiA9IFwiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDQUFBQUFnQ0FZQUFBQnplbnIwQUFBQUJITkNTVlFJQ0FnSWZBaGtpQUFBQUFsd1NGbHpBQUFBM1FBQUFOMEJjRk9pQndBQUFCbDBSVmgwVTI5bWRIZGhjbVVBZDNkM0xtbHVhM05qWVhCbExtOXlaNXZ1UEJvQUFBSi9TVVJCVkZpRnZkZS9pMVZYRUFmd3o3Z3B3dnBXRmxPNFNnd21LcklwTmtTTEVCc1JFV1NMRkNrQ0N1bTJTQlZCaFAwWG9rV0VGZllmU0xYTmRpbkZsWVJzbFZUbVIyRTJhRXl5YVZVazNWamNzL0I0M252WGQ1NmJnU25lekp6dmQ4NmNlNzczdnNoTXRSWVJCeUF6bjlSaTdKdUEvRGcyc0JFUko2cHhhaWNRRWF2NEdZbUZ6UHlpQ2lnengzYk00aThNc0IrUGNiQUc2NDJxcmxuQ1dtWStLOU80cXZZNEszWS9oZC94M2tqOHJab0oxSFQ5Q2U1bjV0WkkvRlpFZlBaL1RHQURGMXJpRi9EOTJIaGprbjlRZHQrVnY0OFA5L0lJdnNSS1QzNmwxTHl5ZGVwQVVibTU0b2R3R01zNG1ablBPOVpNNHdHK3dqLzRGOXZZN2xMTHdEc0YrTWdRNFF5ZUZJQmh2NXVaZDN0M0ZIRWU1MHZUdzM0QVQzY2F3dCs0RWZnSlgrT1BIYUxNZk5wSFVtc1JNVFBVMEx1NEZvWDhLRDdQelAvMmdyaWxrVGZ4RGY2a0VaWlZmS2RTVHNlOFNRY0wxeXFtaGhQTCtBWEg5cEQ4V09GWWJ0VUJYTVpEbk5rRDhqTUYrM0t2RU9GY09adkYxMGkrV0REUHZaVHJXREN2dWM5THI0RjhxV0ROdCtaN0ZzN2hSMXlmZ1B4NndaanJyTmtGNEJMV0oyaGdIWmY2YW5aN0YzeUV6VmUrNEMvYlpzSG90TjBhbU5mYzJWcjdBUi8zRmZSK2xFYkVURTRneTBYeEh1RlFkaEIxVGlBaTV2QnBMVGxrSSsxYmVMK3JwdThJRm5HNkt4a1JweUxpMitLbmVuQTJjYmFtZ2JPYU14d2xIa1RFVGR6UlBPWHJ1Qk1STnlOaTBJTFQveHowWEtGZmNYUWtka1VqcDdjeE94U2ZMYkdIdURLeTVtMzhOcFlPYU41WWo0WitMK0JlOFlXZXBsdnJTbU90YjlvdW9JdFlLenRiYWR2WkxnSzBNNm1WZ3JHR2krTk9ZRXZ6bCtzR0JoVXFPQ2hySHhlczFnbjBmWlJPWTJvU0hTZzRSekNkbVEvYThpOEFwc2dGNUU5NU53RUFBQUFBU1VWT1JLNUNZSUk9XCI7ICBcbjwvc2NyaXB0PlxuIn0=">SFC playground</a> for what we want to do: A user can click a star in the <code>&lt;star-rate&gt;</code> component to change the rating. This component then <em>emits an event</em> to inform the container component.</p>
+<p>To define the custom events, we list the event names in an array in the <code>emits</code> property of the options object. Later, this component can emit the event using <code>this.$emit(eventName, eventData)</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue"><span style="color:#75715e">// StarRate.vue
+</span><span style="color:#75715e"></span>&lt;<span style="color:#f92672">template</span>&gt;
+  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;divStars&#34;</span>&gt;
+    &lt;<span style="color:#f92672">img</span> <span style="color:#f92672">v-for</span><span style="color:#e6db74">=&#34;n in likes&#34; :src=&#34;imgStarOn&#34; 
+</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#e6db74">         @click=&#34;clickStar(n)&#34;&gt;
+</span></span><span style="color:#e6db74">    &lt;img v-for=&#34;n in (maxLikes-likes)&#34; :src=&#34;imgStarOff&#34;
+</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#e6db74">         @click=&#34;clickStar(likes+n)&#34;</span>&gt;
+</span>  &lt;/<span style="color:#f92672">span</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> { <span style="color:#75715e">/* omitted for brevity */</span> },
+  <span style="color:#a6e22e">data</span>() { <span style="color:#75715e">/* omitted for brevity */</span> },
+
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#a6e22e">emits</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#34;update:likes&#34;</span> ],
+</span>
+  <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">clickStar</span>(<span style="color:#a6e22e">which</span>) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`click star </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">which</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+<span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$emit</span>(<span style="color:#e6db74">&#34;update:likes&#34;</span>, <span style="color:#a6e22e">which</span>);
+</span>    }
+  }
+}
+</code></pre></div><p>The event name <code>update:likes</code> is a convention in Vue to inform the container component that the child wants to change the value of the prop <code>likes</code>. This event allows us to do <strong>bi-directional binding</strong> using <code>v-model</code> as in the following.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">star-rate</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">-model:likes</span><span style="color:#e6db74">=&#34;current&#34;</span>&gt;
+</code></pre></div><p>In fact, <code>v-model</code> is <a href="https://v3.vuejs.org/guide/component-basics.html#using-v-model-on-components">a syntactical sugar</a> for updating a prop binding via a custom event. The above is the same as the code below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">star-rate</span> <span style="color:#f92672">:likes</span><span style="color:#e6db74">=&#34;current&#34;</span> <span style="color:#f92672">@update:likes</span><span style="color:#e6db74">=&#34;current=$event.target.value&#34;</span>&gt;
+</code></pre></div><blockquote>
+<p>Similar, <code>v-model=&quot;variable&quot;</code> is the same as <code>:modelValue=&quot;variable&quot; @update:modelValue=&quot;variable=$event.target.value&quot;</code>. If you want to use <code>v-model</code> similar to form controls discussed in 3-5 or as in the UI library ElementPlus, call your prop <code>modelValue</code>.</p>
+</blockquote>
+<p>Test the bi-directional binding at the example online at <a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8cD5SYXRpbmcgb2YgdGhpcyBsZWN0dXJlIGlzIHt7Y3VycmVudH19IG91dCBvZiB7eyBtYXggfX08L3A+XG4gIDxzdGFyLXJhdGUgdi1tb2RlbDpsaWtlcz1cImN1cnJlbnRcIiA6bWF4LWxpa2VzPVwibWF4XCI+PC9zdGFyLXJhdGU+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuLy8gU3RhciBDb21wIHYwMlxuaW1wb3J0IFN0YXJSYXRlIGZyb20gXCIuL1N0YXJSYXRlLnZ1ZVwiO1xuZXhwb3J0IGRlZmF1bHQge1xuICBjb21wb25lbnRzOiB7IFN0YXJSYXRlIH0sXG4gIGRhdGEoKSB7XG4gICAgcmV0dXJuIHtcbiAgICAgIGN1cnJlbnQ6IDQsIG1heDogN1xuICAgIH1cbiAgfVxufVxuPC9zY3JpcHQ+XG4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XG4gIFwiaW1wb3J0c1wiOiB7fVxufSIsIlN0YXJSYXRlLnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNwYW4gY2xhc3M9XCJkaXZTdGFyc1wiPlxuICAgIDxpbWcgdi1mb3I9XCJuIGluIGxpa2VzXCIgOnNyYz1cImltZ1N0YXJPblwiIFxuICAgICAgICAgQGNsaWNrPVwiY2xpY2tTdGFyKG4pXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gKG1heExpa2VzLWxpa2VzKVwiIDpzcmM9XCJpbWdTdGFyT2ZmXCJcbiAgICAgICAgIEBjbGljaz1cImNsaWNrU3RhcihsaWtlcytuKVwiPlxuICA8L3NwYW4+XG48L3RlbXBsYXRlPlxuXG48c3R5bGUgc2NvcGVkPlxuLmRpdlN0YXJzIHsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBwYWRkaW5nOiA0cHggfVxuPC9zdHlsZT5cblxuPHNjcmlwdD5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgcHJvcHM6IHtcbiAgICBsaWtlczogTnVtYmVyLFxuICAgIG1heExpa2VzOiBOdW1iZXIsICAgIFxuICB9LFxuXG4gIGVtaXRzOiBbIFwidXBkYXRlOmxpa2VzXCIgXSxcblxuICBkYXRhKCkge1xuICAgIHJldHVybiB7XG4gICAgICBpbWdTdGFyT24sIGltZ1N0YXJPZmYsIFxuICAgIH1cbiAgfSxcblxuICBtZXRob2RzOiB7XG4gICAgY2xpY2tTdGFyKHdoaWNoKSB7XG4gICAgICBjb25zb2xlLmxvZyhgY2xpY2sgc3RhciAke3doaWNofWApO1xuICAgICAgdGhpcy4kZW1pdChcInVwZGF0ZTpsaWtlc1wiLCB3aGljaCk7XG4gICAgfVxuICB9XG59XG4gIFxubGV0IGltZ1N0YXJPbiA9IFwiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDQUFBQUFnQ0FZQUFBQnplbnIwQUFBQUJITkNTVlFJQ0FnSWZBaGtpQUFBQUFsd1NGbHpBQUFBM1FBQUFOMEJjRk9pQndBQUFCbDBSVmgwVTI5bWRIZGhjbVVBZDNkM0xtbHVhM05qWVhCbExtOXlaNXZ1UEJvQUFBVHRTVVJCVkZpRnRWZGRiQlJWR0QxM1ozWm11anU3bloxTzIrMlcwaTd0UXdPbEFsc0RMWlh5WXlXQTh1TWZOQTBxc1NiRUdDeUVhQ1RoU1dzSWttaGk0aCtRK0FBRVFyQUdSSXhLRVl4WVkyaFM5TUVxbE5wV3V5MHQzYzdPN25aM3AzdDkyQXFVTW10bkREZVp6TXlkNzU1ejV0NXp2NXVQVUVwaHRSRkMzQUJBS1ZXdFlyRC9nN3kwck1oMVpmSzVpbEo2elFxT3phcUFPYlBFL2MyYi9kazd0OHpKTHZHSis2M2lnRkpxK2dJZ0tSSWZEMTk0bkdvWG5xQjVIajRPUUxhQ1pXa0pGRW5Zc1hYTkxFN01TZy8vNFBVRjlwOStVM01BM0RLTFJjeWFrQkRDNU1uODZJOEhsN25tRkRwdjkvZUZKazRVclQ2OXhhd0FLeDVZdjNpdXgzazNPUUM4OXU3VkRZU1FaeCs0Z0pKQzhaMVhONWRPSGNkeGFHcWNKOGdTdi9lQkNpQ0VQQ1N3cEhqVnc3bDNPaGtHY0xtd3FzWUh0NE1ySm9Rc2ZHQUMvSVhPbHAwTnBYZU1Td2pnY3FYdkFONTR1VktVSlg2UEdVeERFMDVtT2Uva2xRK2dJTmZESCtocGZjenVFSmgwa0NnQ2duQjdURFNtdzFkek5ESVdUdTRCTUFCZ0VFQVFRTkFvV3hJQXM4djk3dmNKSVNYeHhFU3VGazI2NDRrVTczYXdORjhSNE0wUlNJSEMyN3dld2JZaW9HQkZRRW1QWkZsQWtxWUJYbWdmd1BuTGYrbDlBNUZZLzJCRUR3NUZjZlBXT0J1SjZxemRUbUk4eDR3d0RCTk1wVks5ZzhPeFBXUzIxem5Zc3IwOHorOXpJRjhXa0MvemNEbG1rQjZ5c3dHNy9iL2o3bXJoU0JLRHd6RU1Ec2R3b3orTTVqZmJlMndDejdSOWZpbElBK1VTeW1ZNVowYk9jYWJKQWNEbHRLT3MySTFBaFlJVFo3c2pOaGJmRWdCTWtkZDVyQ2hQZVByTWdjVTIyYzFsUmlFa1BmVU1ZMW9BQU53S3hWSC8vRG10dTA4OUZWSVRMOW9vcFJPOUE5cm02LzJSdDZ1YkxrMzBERVF6SXdpQ1pmS2UvakFXcm0vVmZyOFIyajg2Rm4rQlVqb3haUmVJV2V6V2JORisrUFNCSmZaQStYU0RBVWovUFd2K0NMbnk2ekJXYnp1bmhTUDY5bmhjUC9wdi83UnRTQWlweS9Yd1gzMjZkNUd3dGlaL0tnckRBQjZQYWZJdnYrdWpEYzF0cXFvbE4xQktMOTc5YlZvaW9wUmV2RGthWDdUdHJRNzEwT2svcDM3a2VkUGtuNXpvMHJjMHR3MnBXckw2WG5JZ2N5THlGaWhaUCs5cUtDM2MzVmlXVG5VZWo2bjEzL2R4NS9pK2p6cjd4c0tKWlpUUzRQMWlERk14cFRRNE1CeDc2ZnVySXhNQTB0dk9wUG5PLy9CM2RDeWMyR0ZFbmxFQUFMaWMzTExhK1hMYWNSYW0vOUZhbjF2ZzJLV1pZaklLS0M3SXFuOWtRVTc2eFlMemF3TmVWaFRaK2t3eEdWRXZIbDU1VStZblBXSmg3d2NxRkVTaStqeENDS0VHWmpPY0FVS0k5OVRYdmRXVEw3ZVBYRE5ONEJrVSs4UUVnTGxHTVptV1lPMHZmNFN5QWR6Mzc3dTZ4N0M4OGF5NnZQR3MydFU5WmdpeXN0ckhBNmd4TGNCZjZOeTB0RkltOXdyUW9rbnNhbWtmcjlyVUdycmNNYlQ3Y3NmUTdxcE5yYUZkTGUzaldqUTVEV2Y1a2dLbjdCRU1mV0FvWUR5ZVdsb3pYNTZNU29jZE8zT2RsdFFkMXc2ZDdEcWlSWFIvSXFFZlRDVDBnMXBFOXg4NjJYV2twTzY0ZHV6TTlTbHJYYjB3RHlrOVZXdkVZMVI0eU40Y0lVSGJOMUxhdnBGMmZyYU9WbFVvcXVUbU9nQlVaaWhZS2lVMzExRlZvYWlkWHp4SjZiVW1TcTgxVVZuaVZSZ1VMa1pBOVUrdEtreU9mck9PdnZKTWFVcHkyVU1NZzhhWlZqc01nMGFYMHo2eXZhRThPdHJ4SEYxVFZ6UUNvTjZNQU5tckNKRThEeC8zS3NLSEFFUUw1WnNvT3UzdlNXNHVMTG01RWFNWnlIUVdPQUF3bE5LdzRmck5vQkZDZkFBY1J0WHpQeEhSdXBpbjBRUHRBQUFBQUVsRlRrU3VRbUNDXCI7XG5sZXQgaW1nU3Rhck9mZiA9IFwiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDQUFBQUFnQ0FZQUFBQnplbnIwQUFBQUJITkNTVlFJQ0FnSWZBaGtpQUFBQUFsd1NGbHpBQUFBM1FBQUFOMEJjRk9pQndBQUFCbDBSVmgwVTI5bWRIZGhjbVVBZDNkM0xtbHVhM05qWVhCbExtOXlaNXZ1UEJvQUFBSi9TVVJCVkZpRnZkZS9pMVZYRUFmd3o3Z3B3dnBXRmxPNFNnd21LcklwTmtTTEVCc1JFV1NMRkNrQ0N1bTJTQlZCaFAwWG9rV0VGZllmU0xYTmRpbkZsWVJzbFZUbVIyRTJhRXl5YVZVazNWamNzL0I0M252WGQ1NmJnU25lekp6dmQ4NmNlNzczdnNoTXRSWVJCeUF6bjlSaTdKdUEvRGcyc0JFUko2cHhhaWNRRWF2NEdZbUZ6UHlpQ2lnengzYk00aThNc0IrUGNiQUc2NDJxcmxuQ1dtWStLOU80cXZZNEszWS9oZC94M2tqOHJab0oxSFQ5Q2U1bjV0WkkvRlpFZlBaL1RHQURGMXJpRi9EOTJIaGprbjlRZHQrVnY0OFA5L0lJdnNSS1QzNmwxTHl5ZGVwQVVibTU0b2R3R01zNG1ablBPOVpNNHdHK3dqLzRGOXZZN2xMTHdEc0YrTWdRNFF5ZUZJQmh2NXVaZDN0M0ZIRWU1MHZUdzM0QVQzY2F3dCs0RWZnSlgrT1BIYUxNZk5wSFVtc1JNVFBVMEx1NEZvWDhLRDdQelAvMmdyaWxrVGZ4RGY2a0VaWlZmS2RTVHNlOFNRY0wxeXFtaGhQTCtBWEg5cEQ4V09GWWJ0VUJYTVpEbk5rRDhqTUYrM0t2RU9GY09adkYxMGkrV0REUHZaVHJXREN2dWM5THI0RjhxV0ROdCtaN0ZzN2hSMXlmZ1B4NndaanJyTmtGNEJMV0oyaGdIWmY2YW5aN0YzeUV6VmUrNEMvYlpzSG90TjBhbU5mYzJWcjdBUi8zRmZSK2xFYkVURTRneTBYeEh1RlFkaEIxVGlBaTV2QnBMVGxrSSsxYmVMK3JwdThJRm5HNkt4a1JweUxpMitLbmVuQTJjYmFtZ2JPYU14d2xIa1RFVGR6UlBPWHJ1Qk1STnlOaTBJTFQveHowWEtGZmNYUWtka1VqcDdjeE94U2ZMYkdIdURLeTVtMzhOcFlPYU41WWo0WitMK0JlOFlXZXBsdnJTbU90YjlvdW9JdFlLenRiYWR2WkxnSzBNNm1WZ3JHR2krTk9ZRXZ6bCtzR0JoVXFPQ2hySHhlczFnbjBmWlJPWTJvU0hTZzRSekNkbVEvYThpOEFwc2dGNUU5NU53RUFBQUFBU1VWT1JLNUNZSUk9XCI7ICBcbjwvc2NyaXB0PlxuIn0=">SFC playground</a>.</p>
+<p>For more info about defining custom events in components, please read <a href="https://v3.vuejs.org/guide/component-custom-events.html">the online reference</a>.</p>
+<h2 id="downloadable-examples">Downloadable examples</h2>
+<ul>
+<li>Version 1 of <code>&lt;star-rate&gt;</code> component example demonstrates properties and one way binding.
+<ul>
+<li>live demo at <a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8cD5SYXRpbmcgb2YgdGhpcyBsZWN0dXJlIGlzIHt7Y3VycmVudH19IG91dCBvZiB7eyBtYXggfX08L3A+XG4gIDxzdGFyLXJhdGUgOmxpa2VzPVwiY3VycmVudFwiIDptYXgtbGlrZXM9XCJtYXhcIj48L3N0YXItcmF0ZT5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4vLyBTdGFyIENvbXAgdjAxXG5pbXBvcnQgU3RhclJhdGUgZnJvbSBcIi4vU3RhclJhdGUudnVlXCI7XG5leHBvcnQgZGVmYXVsdCB7XG4gIGNvbXBvbmVudHM6IHsgU3RhclJhdGUgfSxcbiAgZGF0YSgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgY3VycmVudDogNCwgbWF4OiA3XG4gICAgfVxuICB9XG59XG48L3NjcmlwdD5cbiIsImltcG9ydC1tYXAuanNvbiI6IntcbiAgXCJpbXBvcnRzXCI6IHt9XG59IiwiU3RhclJhdGUudnVlIjoiPHRlbXBsYXRlPlxuICA8c3BhbiBjbGFzcz1cImRpdlN0YXJzXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gbGlrZXNcIiA6c3JjPVwiaW1nU3Rhck9uXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gKG1heExpa2VzLWxpa2VzKVwiIDpzcmM9XCJpbWdTdGFyT2ZmXCI+XG4gIDwvc3Bhbj5cbjwvdGVtcGxhdGU+XG5cbjxzdHlsZSBzY29wZWQ+XG4uZGl2U3RhcnMgeyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDRweCB9XG48L3N0eWxlPlxuXG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczoge1xuICAgIGxpa2VzOiBOdW1iZXIsXG4gICAgbWF4TGlrZXM6IE51bWJlciwgICAgXG4gIH0sXG5cbiAgZGF0YSgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgaW1nU3Rhck9uLCBpbWdTdGFyT2ZmLCBcbiAgICB9XG4gIH1cbn1cbiAgXG5sZXQgaW1nU3Rhck9uID0gXCJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUNBQUFBQWdDQVlBQUFCemVucjBBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUEzUUFBQU4wQmNGT2lCd0FBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFUdFNVUkJWRmlGdFZkZGJCUlZHRDEzWjNabXVqdTduWjFPMisyVzBpN3RRd09sQWxzRExaWHlZeVdBOHVNZk5BMHFzU2JFR0N5RWFDVGhTV3NJa21oaTRoK1ErQUFFUXJBR1JJeEtFWXhZWTJoUzlNRXFsTnBXdXkwdDNjN083blozcDN0OTJBcVVNbXRuRERlWnpNeWQ3NTV6NXQ1enY1dVBVRXBodFJGQzNBQkFLVld0WXJEL2c3eTByTWgxWmZLNWlsSjZ6UXFPemFxQU9iUEUvYzJiL2RrN3Q4ekpMdkdKKzYzaWdGSnErZ0lnS1JJZkQxOTRuR29YbnFCNUhqNE9RTGFDWldrSkZFbllzWFhOTEU3TVNnLy80UFVGOXA5K1UzTUEzREtMUmN5YWtCREM1TW44Nkk4SGw3bm1GRHB2OS9lRkprNFVyVDY5eGF3QUt4NVl2M2l1eDNrM09RQzg5dTdWRFlTUVp4KzRnSkpDOFoxWE41ZE9IY2R4YUdxY0o4Z1N2L2VCQ2lDRVBDU3dwSGpWdzdsM09oa0djTG13cXNZSHQ0TXJKb1FzZkdBQy9JWE9scDBOcFhlTVN3amdjcVh2QU41NHVWS1VKWDZQR1V4REUwNW1PZS9rbFErZ0lOZkRIK2hwZmN6dUVKaDBrQ2dDZ25CN1REU213MWR6TkRJV1R1NEJNQUJnRUVBUVFOQW9XeElBczh2OTd2Y0pJU1h4eEVTdUZrMjY0NGtVNzNhd05GOFI0TTBSU0lIQzI3d2V3Yllpb0dCRlFFbVBaRmxBa3FZQlhtZ2Z3UG5MZitsOUE1RlkvMkJFRHc1RmNmUFdPQnVKNnF6ZFRtSTh4NHd3REJOTXBWSzlnOE94UFdTMjF6bllzcjA4eis5eklGOFdrQy96Y0RsbWtCNnlzd0c3L2IvajdtcmhTQktEd3pFTURzZHdveitNNWpmYmUyd0N6N1I5ZmlsSUErVVN5bVk1WjBiT2NhYkpBY0RsdEtPczJJMUFoWUlUWjdzak5oYmZFZ0JNa2RkNXJDaFBlUHJNZ2NVMjJjMWxSaUVrUGZVTVkxb0FBTndLeFZILy9EbXR1MDg5RlZJVEw5b29wUk85QTlybTYvMlJ0NnViTGszMERFUXpJd2lDWmZLZS9qQVdybS9WZnI4UjJqODZGbitCVWpveFpSZUlXZXpXYk5GKytQU0JKZlpBK1hTREFVai9QV3YrQ0xueTZ6QldienVuaFNQNjluaGNQL3B2LzdSdFNBaXB5L1h3WDMyNmQ1R3d0aVovS2dyREFCNlBhZkl2dit1akRjMXRxcW9sTjFCS0w5NzliVm9pb3BSZXZEa2FYN1R0clE3MTBPay9wMzdrZWRQa241em8wcmMwdHcycFdyTDZYbklnY3lMeUZpaFpQKzlxS0MzYzNWaVdUblVlajZuMTMvZHg1L2kranpyN3hzS0paWlRTNFAxaURGTXhwVFE0TUJ4NzZmdXJJeE1BMHR2T3BQbk8vL0IzZEN5YzJHRkVubEVBQUxpYzNMTGErWExhY1JhbS85RmFuMXZnMktXWllqSUtLQzdJcW45a1FVNzZ4WUx6YXdOZVZoVFora3d4R1ZFdkhsNTVVK1luUFdKaDd3Y3FGRVNpK2p4Q0NLRUdaak9jQVVLSTk5VFh2ZFdUTDdlUFhETk40QmtVKzhRRWdMbEdNWm1XWU8wdmY0U3lBZHozNzd1Nng3Qzg4YXk2dlBHczJ0VTlaZ2l5c3RySEE2Z3hMY0JmNk55MHRGSW05d3JRb2tuc2Fta2ZyOXJVR3JyY01iVDdjc2ZRN3FwTnJhRmRMZTNqV2pRNURXZjVrZ0tuN0JFTWZXQW9ZRHllV2xvelg1Nk1Tb2NkTzNPZGx0UWQxdzZkN0RxaVJYUi9JcUVmVENUMGcxcEU5eDg2MlhXa3BPNjRkdXpNOVNsclhiMHdEeWs5Vld2RVkxUjR5TjRjSVVIYk4xTGF2cEYyZnJhT1ZsVW9xdVRtT2dCVVppaFlLaVUzMTFGVm9haWRYenhKNmJVbVNxODFVVm5pVlJnVUxrWkE5VSt0S2t5T2ZyT092dkpNYVVweTJVTU1nOGFaVmpzTWcwYVgwejZ5dmFFOE90cnhIRjFUVnpRQ29ONk1BTm1yQ0pFOER4LzNLc0tIQUVRTDVac29PdTN2U1c0dUxMbTVFYU1aeUhRV09BQXdsTkt3NGZyTm9CRkNmQUFjUnRYelB4SFJ1cGluMFFQdEFBQUFBRWxGVGtTdVFtQ0NcIjtcbmxldCBpbWdTdGFyT2ZmID0gXCJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUNBQUFBQWdDQVlBQUFCemVucjBBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUEzUUFBQU4wQmNGT2lCd0FBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFKL1NVUkJWRmlGdmRlL2kxVlhFQWZ3ejdncHd2cFdGbE80U2d3bUtySXBOa1NMRUJzUkVXU0xGQ2tDQ3VtMlNCVkJoUDBYb2tXRUZmWWZTTFhOZGluRmxZUnNsVlRtUjJFMmFFeXlhVlVrM1ZqY3MvQjQzbnZYZDU2YmdTbmV6Snp2ZDg2Y2U3NzN2c2hNdFJZUkJ5QXpuOVJpN0p1QS9EZzJzQkVSSjZweGFpY1FFYXY0R1ltRnpQeWlDaWd6eDNiTTRpOE1zQitQY2JBRzY0MnFybG5DV21ZK0s5TzRxdlk0SzNZL2hkL3gza2o4clpvSjFIVDlDZTVuNXRaSS9GWkVmUFovVEdBREYxcmlGL0Q5MkhoamtuOVFkdCtWdjQ4UDkvSUl2c1JLVDM2bDFMeXlkZXBBVWJtNTRvZHdHTXM0bVpuUE85Wk00d0crd2ovNEY5dlk3bExMd0RzRitNZ1E0UXllRklCaHY1dVpkM3QzRkhFZTUwdlR3MzRBVDNjYXd0KzRFZmdKWCtPUEhhTE1mTnBIVW1zUk1UUFUwTHU0Rm9YOEtEN1B6UC8yZ3JpbGtUZnhEZjZrRVpaVmZLZFNUc2U4U1FjTDF5cW1oaFBMK0FYSDlwRDhXT0ZZYnRVQlhNWkRuTmtEOGpNRiszS3ZFT0ZjT1p2RjEwaStXRERQdlpUcldEQ3Z1YzlMcjRGOHFXRE50K1o3RnM3aFIxeWZnUHg2d1pqcnJOa0Y0QkxXSjJoZ0haZjZhblo3RjN5RXpWZSs0Qy9iWnNIb3ROMGFtTmZjMlZyN0FSLzNGZlIrbEViRVRFNGd5MFh4SHVGUWRoQjFUaUFpNXZCcExUbGtJKzFiZUwrcnB1OElGbkc2S3hrUnB5TGkyK0tuZW5BMmNiYW1nYk9hTXh3bEhrVEVUZHpSUE9YcnVCTVJOeU5pMElMVC94ejBYS0ZmY1hRa2RrVWpwN2N4T3hTZkxiR0h1REt5NW0zOE5wWU9hTjVZajRaK0wrQmU4WVdlcGx2clNtT3RiOW91b0l0WUt6dGJhZHZaTGdLME02bVZnckdHaStOT1lFdnpsK3NHQmhVcU9DaHJIeGVzMWduMGZaUk9ZMm9TSFNnNFJ6Q2RtUS9hOGk4QXBzZ0Y1RTk1TndFQUFBQUFTVVZPUks1Q1lJST1cIjsgIFxuPC9zY3JpcHQ+XG4ifQ==">SFC playground</a></li>
+<li>downloadable source code <a href="/chap3/star-comp01.zip">star-comp01.zip</a></li>
+</ul>
+</li>
+<li>Version 2 of <code>&lt;star-rate&gt;</code> component example shows custom events and bi-directional binding.
+<ul>
+<li>live demo at <a href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8cD5SYXRpbmcgb2YgdGhpcyBsZWN0dXJlIGlzIHt7Y3VycmVudH19IG91dCBvZiB7eyBtYXggfX08L3A+XG4gIDxzdGFyLXJhdGUgdi1tb2RlbDpsaWtlcz1cImN1cnJlbnRcIiA6bWF4LWxpa2VzPVwibWF4XCI+PC9zdGFyLXJhdGU+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuLy8gU3RhciBDb21wIHYwMlxuaW1wb3J0IFN0YXJSYXRlIGZyb20gXCIuL1N0YXJSYXRlLnZ1ZVwiO1xuZXhwb3J0IGRlZmF1bHQge1xuICBjb21wb25lbnRzOiB7IFN0YXJSYXRlIH0sXG4gIGRhdGEoKSB7XG4gICAgcmV0dXJuIHtcbiAgICAgIGN1cnJlbnQ6IDQsIG1heDogN1xuICAgIH1cbiAgfVxufVxuPC9zY3JpcHQ+XG4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XG4gIFwiaW1wb3J0c1wiOiB7fVxufSIsIlN0YXJSYXRlLnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNwYW4gY2xhc3M9XCJkaXZTdGFyc1wiPlxuICAgIDxpbWcgdi1mb3I9XCJuIGluIGxpa2VzXCIgOnNyYz1cImltZ1N0YXJPblwiIFxuICAgICAgICAgQGNsaWNrPVwiY2xpY2tTdGFyKG4pXCI+XG4gICAgPGltZyB2LWZvcj1cIm4gaW4gKG1heExpa2VzLWxpa2VzKVwiIDpzcmM9XCJpbWdTdGFyT2ZmXCJcbiAgICAgICAgIEBjbGljaz1cImNsaWNrU3RhcihsaWtlcytuKVwiPlxuICA8L3NwYW4+XG48L3RlbXBsYXRlPlxuXG48c3R5bGUgc2NvcGVkPlxuLmRpdlN0YXJzIHsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBwYWRkaW5nOiA0cHggfVxuPC9zdHlsZT5cblxuPHNjcmlwdD5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgcHJvcHM6IHtcbiAgICBsaWtlczogTnVtYmVyLFxuICAgIG1heExpa2VzOiBOdW1iZXIsICAgIFxuICB9LFxuXG4gIGVtaXRzOiBbIFwidXBkYXRlOmxpa2VzXCIgXSxcblxuICBkYXRhKCkge1xuICAgIHJldHVybiB7XG4gICAgICBpbWdTdGFyT24sIGltZ1N0YXJPZmYsIFxuICAgIH1cbiAgfSxcblxuICBtZXRob2RzOiB7XG4gICAgY2xpY2tTdGFyKHdoaWNoKSB7XG4gICAgICBjb25zb2xlLmxvZyhgY2xpY2sgc3RhciAke3doaWNofWApO1xuICAgICAgdGhpcy4kZW1pdChcInVwZGF0ZTpsaWtlc1wiLCB3aGljaCk7XG4gICAgfVxuICB9XG59XG4gIFxubGV0IGltZ1N0YXJPbiA9IFwiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDQUFBQUFnQ0FZQUFBQnplbnIwQUFBQUJITkNTVlFJQ0FnSWZBaGtpQUFBQUFsd1NGbHpBQUFBM1FBQUFOMEJjRk9pQndBQUFCbDBSVmgwVTI5bWRIZGhjbVVBZDNkM0xtbHVhM05qWVhCbExtOXlaNXZ1UEJvQUFBVHRTVVJCVkZpRnRWZGRiQlJWR0QxM1ozWm11anU3bloxTzIrMlcwaTd0UXdPbEFsc0RMWlh5WXlXQTh1TWZOQTBxc1NiRUdDeUVhQ1RoU1dzSWttaGk0aCtRK0FBRVFyQUdSSXhLRVl4WVkyaFM5TUVxbE5wV3V5MHQzYzdPN25aM3AzdDkyQXFVTW10bkREZVp6TXlkNzU1ejV0NXp2NXVQVUVwaHRSRkMzQUJBS1ZXdFlyRC9nN3kwck1oMVpmSzVpbEo2elFxT3phcUFPYlBFL2MyYi9kazd0OHpKTHZHSis2M2lnRkpxK2dJZ0tSSWZEMTk0bkdvWG5xQjVIajRPUUxhQ1pXa0pGRW5Zc1hYTkxFN01TZy8vNFBVRjlwOStVM01BM0RLTFJjeWFrQkRDNU1uODZJOEhsN25tRkRwdjkvZUZKazRVclQ2OXhhd0FLeDVZdjNpdXgzazNPUUM4OXU3VkRZU1FaeCs0Z0pKQzhaMVhONWRPSGNkeGFHcWNKOGdTdi9lQkNpQ0VQQ1N3cEhqVnc3bDNPaGtHY0xtd3FzWUh0NE1ySm9Rc2ZHQUMvSVhPbHAwTnBYZU1Td2pnY3FYdkFONTR1VktVSlg2UEdVeERFMDVtT2Uva2xRK2dJTmZESCtocGZjenVFSmgwa0NnQ2duQjdURFNtdzFkek5ESVdUdTRCTUFCZ0VFQVFRTkFvV3hJQXM4djk3dmNKSVNYeHhFU3VGazI2NDRrVTczYXdORjhSNE0wUlNJSEMyN3dld2JZaW9HQkZRRW1QWkZsQWtxWUJYbWdmd1BuTGYrbDlBNUZZLzJCRUR3NUZjZlBXT0J1SjZxemRUbUk4eDR3d0RCTk1wVks5ZzhPeFBXUzIxem5Zc3IwOHorOXpJRjhXa0MvemNEbG1rQjZ5c3dHNy9iL2o3bXJoU0JLRHd6RU1Ec2R3b3orTTVqZmJlMndDejdSOWZpbElBK1VTeW1ZNVowYk9jYWJKQWNEbHRLT3MySTFBaFlJVFo3c2pOaGJmRWdCTWtkZDVyQ2hQZVByTWdjVTIyYzFsUmlFa1BmVU1ZMW9BQU53S3hWSC8vRG10dTA4OUZWSVRMOW9vcFJPOUE5cm02LzJSdDZ1YkxrMzBERVF6SXdpQ1pmS2UvakFXcm0vVmZyOFIyajg2Rm4rQlVqb3haUmVJV2V6V2JORisrUFNCSmZaQStYU0RBVWovUFd2K0NMbnk2ekJXYnp1bmhTUDY5bmhjUC9wdi83UnRTQWlweS9Yd1gzMjZkNUd3dGlaL0tnckRBQjZQYWZJdnYrdWpEYzF0cXFvbE4xQktMOTc5YlZvaW9wUmV2RGthWDdUdHJRNzEwT2svcDM3a2VkUGtuNXpvMHJjMHR3MnBXckw2WG5JZ2N5THlGaWhaUCs5cUtDM2MzVmlXVG5VZWo2bjEzL2R4NS9pK2p6cjd4c0tKWlpUUzRQMWlERk14cFRRNE1CeDc2ZnVySXhNQTB0dk9wUG5PLy9CM2RDeWMyR0ZFbmxFQUFMaWMzTExhK1hMYWNSYW0vOUZhbjF2ZzJLV1pZaklLS0M3SXFuOWtRVTc2eFlMemF3TmVWaFRaK2t3eEdWRXZIbDU1VStZblBXSmg3d2NxRkVTaStqeENDS0VHWmpPY0FVS0k5OVRYdmRXVEw3ZVBYRE5ONEJrVSs4UUVnTGxHTVptV1lPMHZmNFN5QWR6Mzc3dTZ4N0M4OGF5NnZQR3MydFU5WmdpeXN0ckhBNmd4TGNCZjZOeTB0RkltOXdyUW9rbnNhbWtmcjlyVUdycmNNYlQ3Y3NmUTdxcE5yYUZkTGUzaldqUTVEV2Y1a2dLbjdCRU1mV0FvWUR5ZVdsb3pYNTZNU29jZE8zT2RsdFFkMXc2ZDdEcWlSWFIvSXFFZlRDVDBnMXBFOXg4NjJYV2twTzY0ZHV6TTlTbHJYYjB3RHlrOVZXdkVZMVI0eU40Y0lVSGJOMUxhdnBGMmZyYU9WbFVvcXVUbU9nQlVaaWhZS2lVMzExRlZvYWlkWHp4SjZiVW1TcTgxVVZuaVZSZ1VMa1pBOVUrdEtreU9mck9PdnZKTWFVcHkyVU1NZzhhWlZqc01nMGFYMHo2eXZhRThPdHJ4SEYxVFZ6UUNvTjZNQU5tckNKRThEeC8zS3NLSEFFUUw1WnNvT3UzdlNXNHVMTG01RWFNWnlIUVdPQUF3bE5LdzRmck5vQkZDZkFBY1J0WHpQeEhSdXBpbjBRUHRBQUFBQUVsRlRrU3VRbUNDXCI7XG5sZXQgaW1nU3Rhck9mZiA9IFwiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDQUFBQUFnQ0FZQUFBQnplbnIwQUFBQUJITkNTVlFJQ0FnSWZBaGtpQUFBQUFsd1NGbHpBQUFBM1FBQUFOMEJjRk9pQndBQUFCbDBSVmgwVTI5bWRIZGhjbVVBZDNkM0xtbHVhM05qWVhCbExtOXlaNXZ1UEJvQUFBSi9TVVJCVkZpRnZkZS9pMVZYRUFmd3o3Z3B3dnBXRmxPNFNnd21LcklwTmtTTEVCc1JFV1NMRkNrQ0N1bTJTQlZCaFAwWG9rV0VGZllmU0xYTmRpbkZsWVJzbFZUbVIyRTJhRXl5YVZVazNWamNzL0I0M252WGQ1NmJnU25lekp6dmQ4NmNlNzczdnNoTXRSWVJCeUF6bjlSaTdKdUEvRGcyc0JFUko2cHhhaWNRRWF2NEdZbUZ6UHlpQ2lnengzYk00aThNc0IrUGNiQUc2NDJxcmxuQ1dtWStLOU80cXZZNEszWS9oZC94M2tqOHJab0oxSFQ5Q2U1bjV0WkkvRlpFZlBaL1RHQURGMXJpRi9EOTJIaGprbjlRZHQrVnY0OFA5L0lJdnNSS1QzNmwxTHl5ZGVwQVVibTU0b2R3R01zNG1ablBPOVpNNHdHK3dqLzRGOXZZN2xMTHdEc0YrTWdRNFF5ZUZJQmh2NXVaZDN0M0ZIRWU1MHZUdzM0QVQzY2F3dCs0RWZnSlgrT1BIYUxNZk5wSFVtc1JNVFBVMEx1NEZvWDhLRDdQelAvMmdyaWxrVGZ4RGY2a0VaWlZmS2RTVHNlOFNRY0wxeXFtaGhQTCtBWEg5cEQ4V09GWWJ0VUJYTVpEbk5rRDhqTUYrM0t2RU9GY09adkYxMGkrV0REUHZaVHJXREN2dWM5THI0RjhxV0ROdCtaN0ZzN2hSMXlmZ1B4NndaanJyTmtGNEJMV0oyaGdIWmY2YW5aN0YzeUV6VmUrNEMvYlpzSG90TjBhbU5mYzJWcjdBUi8zRmZSK2xFYkVURTRneTBYeEh1RlFkaEIxVGlBaTV2QnBMVGxrSSsxYmVMK3JwdThJRm5HNkt4a1JweUxpMitLbmVuQTJjYmFtZ2JPYU14d2xIa1RFVGR6UlBPWHJ1Qk1STnlOaTBJTFQveHowWEtGZmNYUWtka1VqcDdjeE94U2ZMYkdIdURLeTVtMzhOcFlPYU41WWo0WitMK0JlOFlXZXBsdnJTbU90YjlvdW9JdFlLenRiYWR2WkxnSzBNNm1WZ3JHR2krTk9ZRXZ6bCtzR0JoVXFPQ2hySHhlczFnbjBmWlJPWTJvU0hTZzRSekNkbVEvYThpOEFwc2dGNUU5NU53RUFBQUFBU1VWT1JLNUNZSUk9XCI7ICBcbjwvc2NyaXB0PlxuIn0=">SFC playground</a></li>
+<li>downloadable source code <a href="/chap3/star-comp02.zip">star-comp02.zip</a></li>
+</ul>
+</li>
+<li>Version 3 includes another custom event and demonstrate data binding to <code>class</code> attribute.
+<ul>
+<li>live demo as <a href="/chap3/star-comp/index.html">a deployed web app</a></li>
+<li>downloadable source code <a href="/chap3/star-comp.zip">star-comp.zip</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1631592448"></script>
+    <script src="/js/perfect-scrollbar.min.js?1631592448"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1631592448"></script>
+    <script src="/js/jquery.sticky.js?1631592448"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1631592448"></script>
+    <script src="/js/featherlight.min.js?1631592448"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1631592448"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1631592448"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1631592448"></script>
+    
+
+  </body>
+</html>
+

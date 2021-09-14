@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>2-1 Basic data types and control :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1631592448" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1631592448" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1631592448" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1631592448" rel="stylesheet">
+    <link href="/css/auto-complete.css?1631592448" rel="stylesheet">
+    <link href="/css/theme.css?1631592448" rel="stylesheet">
+    <link href="/css/tabs.css?1631592448" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1631592448" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1631592448" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1631592448"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/basic/2-1/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/basic/" title="JavaScript basics" class="dd-item parent">
+        <a href="/basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-1/" title="2-1 Basic data types and control" class="dd-item active">
+        <a href="/basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/client/" title="Client-side programming" class="dd-item">
+        <a href="/client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/basic/'>JavaScript basics</a> > 2-1 Basic data types and control
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#number">Number</a></li>
+    <li><a href="#string">String</a></li>
+    <li><a href="#conversion">Conversion</a></li>
+    <li><a href="#comparison">Comparison</a></li>
+    <li><a href="#control-structure">Control structure</a></li>
+    <li><a href="#a-note-on-loose-typing">A note on loose typing</a></li>
+    <li><a href="#exercise">Exercise</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              2-1 Basic data types and control
+            </h1>
+          
+
+        
+
+
+<p>This lab goes through the basic data types (Number and String) and control structures of the JavaScript programming language.</p>
+<h2 id="number">Number</h2>
+<p>Two basic data types in JavaScript are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>.
+There are no separate types for integers and doubles. You define a variable <code>x</code> with <code>let x</code>. You don&rsquo;t need to specify data type. (In some old code, you may also see definition of variables with <code>var x</code>. This is similar to <code>let x</code>, but allows you to redefine the variable. <code>var</code> is not recommended in new code in general.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2e3</span>;  <span style="color:#75715e">/* 2 * (10*10*10) */</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c</span>;  <span style="color:#75715e">/* c is undefined */</span>
+<span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">c</span>);
+</code></pre></div><p>You can also define constant with <code>const x</code> and assign an initial value. After definition, you cannot change the value of a constant.
+Also notice that this example shows that semicolon at end of line is optional.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pi</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1415927</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">radius</span>  <span style="color:#75715e">// declare a variable
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">radius</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>  <span style="color:#75715e">// later, somehow the user inputs the value
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;area =&#39;</span>, <span style="color:#a6e22e">pi</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">radius</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>)
+</code></pre></div><p>In addition to the basic arithmetic operators (+, -, *, /, %) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">(ref)</a>, the Math built-in object <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">(ref)</a> provides some useful functions (e.g. <code>Math.random()</code>, <code>Math.floor()</code>, <code>Math.ceil()</code>, <code>Math.round()</code>, <code>Math.pow()</code>, <code>Math.sqrt()</code> and trigonometric functions.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">area</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">r</span>
+<span style="color:#75715e">// same as Math.PI * Math.pow(r,2)
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// a number from 1,2,3,4,5 and 6
+</span><span style="color:#75715e">// Math.random() returns a number between 0 and 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dice</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sin</span>(Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)  <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#75715e">// NaN
+</span></code></pre></div><p>Note: a recent update to the JavaScript language provides the new data type <code>BigInt</code>. BigInt can represent integer of arbitrary length. Please refer to <a href="https://javascript.info/bigint">this page</a> for more information.</p>
+<h2 id="string">String</h2>
+<p>The other commonly used JavaScript data type is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>.
+Strings can be delimited with single quote or double quote. Join two strings
+with <code>+</code>. Use the property <code>.length</code> to check number of characters in a string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;peterchan&#34;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">domain</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ymail.com&#39;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">addr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;@&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">domain</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;seven&#34;</span>.<span style="color:#a6e22e">length</span>  <span style="color:#75715e">// 5
+</span></code></pre></div><p>String literals use backslash <code>\</code> to escape character, e.g. <code>\&quot;</code>, <code>\'</code>, <code>\\</code> and <code>\n</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// no need to escape because the string is delimited with &#39; 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A string with &#34;double quoted text&#34;.&#39;</span>
+<span style="color:#75715e">// escape the backlash character
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;c:\\inetpub\\index.html&#39;</span>
+</code></pre></div><p>String literals can also use methods defined in the String class <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">(ref)</a>. Examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mississippi&#39;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;ss&#39;</span>) <span style="color:#75715e">// location of &#39;ss&#39;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mesg</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;All the best&#34;</span>
+<span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mesg</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">3</span>) <span style="color:#75715e">// &#39;All&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mesg</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">4</span>) <span style="color:#75715e">// &#39;the best&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mesg</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>) <span style="color:#75715e">// &#39;best&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mesg</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#75715e">// &#39;be&#39;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">A</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;202.175.3.3&#34;</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;.&#39;</span>)
+<span style="color:#75715e">// an array [&#39;202&#39;, &#39;175&#39;, &#39;3&#39;, &#39;3&#39;]
+</span></code></pre></div><h2 id="conversion">Conversion</h2>
+<p>User input are usually returned as string. Before calculation, use <code>parseInt()</code> or <code>parseFloat()</code> to convert the string into an integer / floating point number.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;3.14&#34;</span>
+<span style="color:#75715e">// unexpected result of string concatenation
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pi</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">s</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">pi</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</code></pre></div><p>In some code examples, you may also encounter using the prefix operator <code>+</code> to convert a string into a number. However, I would recommend to use <code>parseFloat</code> for easier understanding of the code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;3.14&#34;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pi</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">s</span>    <span style="color:#75715e">// pi is the Number 3.14
+</span></code></pre></div><p>There are various methods to change a number into a string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">toString</span>();  <span style="color:#75715e">// &#34;12&#34;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n</span>; <span style="color:#75715e">// automatic conversion in string concatenation
+</span></code></pre></div><p>A new features in ES6 is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template string</a>.
+Template strings support interpolation. They evaluate JavaScript expressions embedded in <code>${}</code> and insert the result into the string. Notice the back ticks used to delimit a template string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Peter&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;s age is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
+</code></pre></div><p>A longer example to illustrate number-string conversion. The browser built-in function <code>prompt</code> displays a dialog box with the given prompt and asks the user for a string input. See <a href="https://javascript.info/alert-prompt-confirm">reference</a> for more information about other browser built-in functions for input/output.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#39;Enter radius of the circle&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">s</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Area = </span><span style="color:#e6db74">${</span>Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">r</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div><h2 id="comparison">Comparison</h2>
+<p>You can compare numbers and strings using the operators <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code> and <code>!=</code>.
+Comparison results are either <code>true</code> or <code>false</code>, which are the only two values in <code>boolean</code> data type.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#e6db74">&#34;apple&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Apple&#34;</span> <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;apple&#34;</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#39;banana&#39;</span> <span style="color:#75715e">// true
+</span></code></pre></div><p>The first four operators may convert the data if they are of different data type. It is especially confusing if you compare numbers with strings. JavaScript converts strings into numbers before comparison. In general, it is better to do the conversion by yourself.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1.0</span> <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;3.0&#39;</span> <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span><span style="color:#e6db74">&#39;3&#39;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;3.0&#39;</span> <span style="color:#75715e">// false!
+</span></code></pre></div><p>Some authors recommend the usage of <code>===</code> instead of <code>==</code> in comparison. The operator <code>===</code> <strong>does not convert</strong> values before comparison. Similarly, <code>!==</code> checks whether two values are not equal without automatic type conversion.</p>
+<p>Similar to Java, you can use <code>&amp;&amp;</code> and <code>||</code> to combine comparison tests.</p>
+<h2 id="control-structure">Control structure</h2>
+<p>The control structure if, for and while are similar to those in Java. Please read the online reference of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if&hellip;else</a>,
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a>,
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> and
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">switch</a> for detail.</p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;  <span style="color:#75715e">// roots are 1 and 2
+</span><span style="color:#75715e">// let a = 1, b = 0, c = 1;  // roots are i and -i
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">det</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">c</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">root1</span>, <span style="color:#a6e22e">root2</span>;
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">det</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>) {
+  <span style="color:#75715e">// these two are Number
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">root1</span> <span style="color:#f92672">=</span> (<span style="color:#f92672">-</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">-</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">det</span>)) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>);
+  <span style="color:#a6e22e">root2</span> <span style="color:#f92672">=</span> (<span style="color:#f92672">-</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">det</span>)) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>);
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#75715e">// these two are String.. sorry, no complex number support
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">root1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#f92672">-</span><span style="color:#a6e22e">b</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">a</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#f92672">-</span><span style="color:#a6e22e">det</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">a</span><span style="color:#e6db74">}</span><span style="color:#e6db74">i`</span>;
+  <span style="color:#a6e22e">root2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#f92672">-</span><span style="color:#a6e22e">b</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">a</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> + </span><span style="color:#e6db74">${</span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#f92672">-</span><span style="color:#a6e22e">det</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">a</span><span style="color:#e6db74">}</span><span style="color:#e6db74">i`</span>;
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">a</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> x^2 + </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">b</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> x + </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">c</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> = 0`</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The roots are </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">root1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">root2</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div><p>Examples on loops.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// calculate 1+2+3+...+10;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">k</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">k</span><span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">k</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">k</span>;
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The sum of 1+2+...+10 = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sum</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>);
+
+<span style="color:#75715e">// calculate 1*1+2*2+...+n*n, where n*n&lt;100;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">i</span><span style="color:#f92672">*</span><span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>) {
+  <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">*</span><span style="color:#a6e22e">i</span>;
+  <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The sum of squares &lt; 100 is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sum</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>)
+</code></pre></div><h2 id="a-note-on-loose-typing">A note on loose typing</h2>
+<p>You might have noticed that when you define a variable with <code>let x</code> or <code>const x</code>, you don&rsquo;t need to specify a data type. A JavaScript variable is not tied to a specific data type in declaration, and can hold values of different data types.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#a6e22e">x</span><span style="color:#f92672">++</span>;  <span style="color:#75715e">// x is a Number
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">2</span>);  <span style="color:#75715e">// binary representation
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>); <span style="color:#75715e">// x is now a String
+</span></code></pre></div><h2 id="exercise">Exercise</h2>
+<ol>
+<li>
+<p>Write a program to calculate the sum of even positive numbers up to 30. <em>(The answer should be 240)</em></p>
+</li>
+<li>
+<p>The following program asks the user a number <code>n</code>, and print a <code>n</code> by <code>n</code> squares to console.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#39;Enter size of the square&#39;</span>);
+<span style="color:#75715e">/* convert the input string into a number */</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">s</span>);
+<span style="color:#75715e">/* build a line with n stars */</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">line</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) { <span style="color:#a6e22e">line</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">line</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;* &#39;</span>; }
+<span style="color:#75715e">/* build a square with n lines */</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sqr</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) { <span style="color:#a6e22e">sqr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sqr</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">line</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\n&#39;</span>;}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sqr</span>);
+</code></pre></div><p>Modify the program to print an empty square.</p>
+<pre><code> * * * * *
+ *       *
+ *       *
+ *       *
+ * * * * *
+</code></pre>
+</li>
+</ol>
+<p>The sample answers are available at <a href="/chap2/ex2-1q1.js">ex2-1q1.js</a> and <a href="/chap2/ex2-1q2.js">ex2-1q2.js</a> respectively.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1631592448"></script>
+    <script src="/js/perfect-scrollbar.min.js?1631592448"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1631592448"></script>
+    <script src="/js/jquery.sticky.js?1631592448"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1631592448"></script>
+    <script src="/js/featherlight.min.js?1631592448"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1631592448"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1631592448"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1631592448"></script>
+    
+
+  </body>
+</html>
+
