@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>4-1 Node.js primer :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1632115367" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1632115367" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1632115367" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1632115367" rel="stylesheet">
+    <link href="/css/auto-complete.css?1632115367" rel="stylesheet">
+    <link href="/css/theme.css?1632115367" rel="stylesheet">
+    <link href="/css/tabs.css?1632115367" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1632115367" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1632115367" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1632115367"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/server/4-1/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/basic/" title="JavaScript basics" class="dd-item">
+        <a href="/basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/client/" title="Client-side programming" class="dd-item">
+        <a href="/client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/server/" title="Server-side programming" class="dd-item parent">
+        <a href="/server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-1/" title="4-1 Node.js primer" class="dd-item active">
+        <a href="/server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/server/'>Server-side programming</a> > 4-1 Node.js primer
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#quick-start">Quick start</a></li>
+    <li><a href="#event-loop-in-node">Event loop in Node</a></li>
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="#npm-modules">NPM modules</a></li>
+    <li><a href="#packagejson">Package.json</a></li>
+    <li><a href="#semantic-versioning">Semantic versioning</a></li>
+    <li><a href="#downloadable-example">Downloadable example</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              4-1 Node.js primer
+            </h1>
+          
+
+        
+
+
+<p>This lab goes through the basics of the Node.js platform.</p>
+<h2 id="quick-start">Quick start</h2>
+<p>Node.js <a href="https://nodejs.org">(https://nodejs.org)</a> is a platform built on Chrome&rsquo;s JavaScript runtime V8 for easily building fast, scalable network applications. Node.js supports the same basic JavaScript programming language as web browsers. As the first example, let&rsquo;s run the following program <a href="/chap4-1/p101.mjs">p101.mjs</a> in both browser and Node. (Follow instruction to install Node.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// p101.mjs
+</span><span style="color:#75715e">// return the largest number in an array
+</span><span style="color:#75715e">// assume at least 1 entry, and all entries are numbers
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">largest</span> (<span style="color:#a6e22e">A</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">big</span><span style="color:#f92672">=</span><span style="color:#a6e22e">A</span>[<span style="color:#ae81ff">0</span>];
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">A</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">big</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">A</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#a6e22e">big</span><span style="color:#f92672">=</span><span style="color:#a6e22e">A</span>[<span style="color:#a6e22e">i</span>];
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">big</span>;
+}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">N</span> <span style="color:#f92672">=</span> [ <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span> ];
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The largest is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">largest</span>(<span style="color:#a6e22e">N</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div><blockquote>
+<p>We save JavaScript programs in files with extension <code>*.mjs</code> instead of <code>*.js</code> in this chapter. The extension informs Node.js that this file is a ES <strong>module</strong>, instead of the default of Common JS module. This allows us to use the modern syntax <code>import</code> to import modules.
+Instead of use the <code>mjs</code> extension, you can also set the default module type in the <code>type</code> attribute of the <code>package.json</code> config file.</p>
+</blockquote>
+<p>The JavaScript engine provides some common features in both Node and browsers:</p>
+<ul>
+<li>JavaScript language features: control flow, variables, data structure, defining class, functions, regular expression, etc</li>
+<li>Some global objects and functions:
+<ul>
+<li><code>console.log()</code></li>
+<li>timers: <code>setInterval()</code>, <code>setTimeout()</code></li>
+<li>Date class: <code>let now = new Date()</code></li>
+<li>JSON processing: <code>JSON.parse()</code>, <code>JSON.stringify()</code></li>
+</ul>
+</li>
+</ul>
+<p>But Node misses some features specific to the browser platform, e.g.</p>
+<ul>
+<li>document tree (i.e. DOM tree)
+<ul>
+<li>a Node program generally does not involve an HTML document</li>
+<li>no interface and mouse or keyboard events</li>
+</ul>
+</li>
+<li>and other APIs in the <a href="https://developer.mozilla.org/en-US/docs/Web/API">Web API</a></li>
+</ul>
+<h2 id="event-loop-in-node">Event loop in Node</h2>
+<p>Similar to JavaScript runtime in browser, Node includes an <strong>event loop</strong> that handles events.
+The event loop continues until all events are handled and there are no future events. Some common cases that trigger events are:</p>
+<ul>
+<li>timer: when time is up, call a functions</li>
+<li>file I/O, network I/O, etc: When some data is ready to read, or some I/O operations finish, the Node runtime triggers an event and call an event handler</li>
+<li>some objects can generate events</li>
+<li>system events, e.g. Ctrl-C interrupt</li>
+</ul>
+<p>Trace the execution of the following program.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// p102.mjs
+</span><span style="color:#75715e">// countdown from 10
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">N</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">tick</span>() {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">N</span><span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">0</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Time\&#39;s up!&#39;</span>);
+    <span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">timer</span>);
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">N</span>); <span style="color:#a6e22e">N</span><span style="color:#f92672">--</span>;
+  }
+}
+
+<span style="color:#75715e">// this starts the timer
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">timer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">tick</span>, <span style="color:#ae81ff">1000</span>);
+
+<span style="color:#75715e">// event loop goes here ...
+</span></code></pre></div><p>At any time, Node runs at most 1 event handler. If there are no pending events, the event loop blocks and waits for any future events.  If Node determines that there are no more future events, it quits.</p>
+<h2 id="modules">Modules</h2>
+<p>Node also support the new standard of JavaScript module known as <strong>ES module</strong> (<a href="https://nodejs.org/dist/latest-v14.x/docs/api/esm.html">online reference</a>). This allows you to import new functionalities to the Node platform. The Node platform comes with some built-in modules (which are installed together with Node).  See the <a href="https://nodejs.org/en/docs/">online reference</a> for a list of the built-in modules.</p>
+<p>Many modules in Node provide a <strong>default export</strong>, and usually the default export is an object that encapsulate functions or classes of the module.
+To import this kind of modules, use <code>import variableName from 'moduleName'</code>. This function returns an object that represents the module in your program. You can assign this to a variable of any convenient name.</p>
+<p>The following example demonstrates how to use another built-in module <code>os</code> to find some basic hardware information of your computer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// p103.mjs
+</span><span style="color:#75715e">// show basic info about CPU and memory
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">os</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;os&#39;</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cpus</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">cpus</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`CPU: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cpus</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">model</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cpus</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> core`</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Total memory: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">totalmem</span>()<span style="color:#f92672">/</span><span style="color:#ae81ff">1024</span><span style="color:#f92672">**</span><span style="color:#ae81ff">3</span><span style="color:#e6db74">}</span><span style="color:#e6db74">G`</span>);
+</code></pre></div><h2 id="npm-modules">NPM modules</h2>
+<p>Node.js comes with <a href="https://nodejs.org/api/">many built-in modules</a> that cover various network services. But usually programmers take advantage of many high-quality third-party JavaScript libraries. These libraries are packed as <strong>packages</strong>, and Node.js used the built-in <a href="https://docs.npmjs.com/cli/v7/commands">NPM command line tool</a> to download and install packages.</p>
+<p>By default, the NPM command line tool downloads packages from <a href="https://npmjs.com/">https://npmjs.com/</a>, which is the largest registry of JavaScript packages.
+For example, the <a href="https://www.npmjs.com/package/systeminformation">systeminformation package</a> provides a lot more information than the Node built-in module <code>os</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p104.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">si</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;systeminformation&#39;</span>;
+
+<span style="color:#a6e22e">si</span>.<span style="color:#a6e22e">cpu</span>()
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>));
+</code></pre></div><p>In order to run the above example, you have to first download the <code>systeminformation</code> module from npmjs.com with the following command. This command creates a folder <code>./node_modules</code> and install downloaded packages locally in the current <strong>project</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm install systeminformation
+<span style="color:#75715e"># or, a shorthand notation </span>
+$ npm i systeminformation
+</code></pre></div><p>After installing the package, you can now run example p104.mjs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ node p104.mjs
+</code></pre></div><blockquote>
+<p>As we mentioned in previous lectures, a Node project is a folder that contains the JavaScript programs, JavaScript libraries / modules and other assets (e.g. HTML, images) for an application.</p>
+</blockquote>
+<blockquote>
+<p>Instead of installing packages locally in a project, you can also install packages <em>globally</em> with <code>npm install -g packageName</code>. However, we&rsquo;ll not do this in this course.</p>
+</blockquote>
+<h2 id="packagejson">Package.json</h2>
+<p>Remembering and installing the dependencies of a Node application manually is error-prone. <strong>Dependencies</strong> of an application refer to the packages that must be installed properly before this application and run successfully. Fortunately, Node.js already supports a configuration file at the root of an application project folder called <code>package.json</code>. Among other functionality, <code>package.json</code> contains a property <code>dependencies</code> that list the packages required by the application. Run this command to create a <code>package.json</code> at the current folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm init -y
+</code></pre></div><p>You&rsquo;ll see the following data in the <code>package.json</code> generated.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;chap4-1&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;systeminformation&#34;</span>: <span style="color:#e6db74">&#34;^5.9.2&#34;</span>
+  },
+  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">other</span> <span style="color:#960050;background-color:#1e0010">properties</span> <span style="color:#960050;background-color:#1e0010">omitted</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">brevity</span>
+}  
+</code></pre></div><p>From now on, when you install more packages locally, it is assumed that the packages are new dependency of the current applicatoin, and <code>npm</code> will update <code>package.json</code> to include the dependency. For example, install the following package, and check the update in <code>dependencies</code> in <code>package.json</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm install prompts
+</code></pre></div><p>When you pack your Node application for sharing (e.g. upload to npmjs.org), deployment (i.e. to run in production environment), or hand in your assignment, <strong>DON&rsquo;T include the node_modules folder</strong>. There are several reasons.</p>
+<ul>
+<li>The folder usually contains a lot of files and occupy large disk space.</li>
+<li>When a user installs your application in their machine, they may want to use a more recent patch of some dependencies.</li>
+<li>Some packages include platform-specific binaries (e.g. libraries written in C).</li>
+</ul>
+<p>With the dependencies listed in <code>package.json</code>, one can install them easily with the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm install
+</code></pre></div><h2 id="semantic-versioning">Semantic versioning</h2>
+<p>In <code>package.json</code>, you might notice a version number after each mention of package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-json" data-lang="json">  <span style="color:#e6db74">&#34;dependencies&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+    <span style="color:#f92672">&#34;prompts&#34;</span>: <span style="color:#e6db74">&#34;^2.4.1&#34;</span>,
+    <span style="color:#f92672">&#34;systeminformation&#34;</span>: <span style="color:#e6db74">&#34;^5.9.2&#34;</span>
+  }<span style="color:#960050;background-color:#1e0010">,</span>
+</code></pre></div><p>This software versioning convention, called <strong>semantic versioning</strong> (<a href="https://semver.org/">online reference</a>), is an important part of package management in Node / NPM. An explanation at the official page of <a href="https://semver.org/">https://semver.org/</a> is quoted below.</p>
+<blockquote>
+<p>Given a version number <strong>MAJOR</strong>.<strong>Minor</strong>.<strong>patch</strong>, increment the:</p>
+<ul>
+<li><strong>MAJOR</strong> version when you make incompatible API changes,</li>
+<li><strong>Minor</strong> version when you add functionality in a backwards compatible manner, and</li>
+<li><strong>patch</strong> version when you make backwards compatible bug fixes.</li>
+</ul>
+</blockquote>
+<p>Check the <em>Version History</em> of the <a href="https://www.npmjs.com/package/systeminformation">systeminformation package</a> and explain the meaning of version updates.</p>
+<p>The dependencies section of <code>package.json</code> adds the symbol <code>^</code> before the version number. For version &gt;= 1.0.0, the caret range <code>^a.b.c</code> means a version &gt;= the given version <code>a.b.c</code>, but smaller than <code>a+1.0.0</code>. For example, <code>&quot;systeminformation&quot;: &quot;^5.9.2&quot;</code> means that, in the future, <code>npm install</code> can install the following versions of the package because they are considered as compatible with the application: <code>5.9.2</code>, <code>5.9.3</code>, <code>5.10.0</code>, <code>5.10.1</code>, <code>5.23.45</code>. However, versions before <code>5.9.2</code> are not acceptable. (They may have less features, or they include a bug that has been fixed in <code>5.9.2</code>. Moreover, version <code>6.x.y</code> is not acceptable because they will introduce <em>breaking changes</em>. For other possibilities of specifying usable versions, refer to the <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#dependencies">online reference</a>.</p>
+<h2 id="downloadable-example">Downloadable example</h2>
+<p>The example source files are <a href="/chap4/chap4-1.zip">available here</a>.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1632115367"></script>
+    <script src="/js/perfect-scrollbar.min.js?1632115367"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1632115367"></script>
+    <script src="/js/jquery.sticky.js?1632115367"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1632115367"></script>
+    <script src="/js/featherlight.min.js?1632115367"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1632115367"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1632115367"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1632115367"></script>
+    
+
+  </body>
+</html>
+

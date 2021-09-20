@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>4-8 Templates and file modules :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1632019543" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1632019543" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1632019543" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1632019543" rel="stylesheet">
+    <link href="/css/auto-complete.css?1632019543" rel="stylesheet">
+    <link href="/css/theme.css?1632019543" rel="stylesheet">
+    <link href="/css/tabs.css?1632019543" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1632019543" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1632019543" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1632019543"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/server/o4-5/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/basic/" title="JavaScript basics" class="dd-item">
+        <a href="/basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/client/" title="Client-side programming" class="dd-item">
+        <a href="/client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/server/" title="Server-side programming" class="dd-item parent">
+        <a href="/server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-4/" title="4-4 ES modules" class="dd-item">
+        <a href="/server/4-4/">
+          
+4-4 ES modules
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/o4-3/" title="4-6 Web app routing" class="dd-item">
+        <a href="/server/o4-3/">
+          
+4-6 Web app routing
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/o4-4/" title="4-7 Web app middlewares" class="dd-item">
+        <a href="/server/o4-4/">
+          
+4-7 Web app middlewares
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/o4-5/" title="4-8 Templates and file modules" class="dd-item active">
+        <a href="/server/o4-5/">
+          
+4-8 Templates and file modules
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/o4-6/" title="4-x Database access" class="dd-item">
+        <a href="/server/o4-6/">
+          
+4-x Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/o4-7/" title="4-x A sample web app" class="dd-item">
+        <a href="/server/o4-7/">
+          
+4-x A sample web app
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/server/'>Server-side programming</a> > 4-8 Templates and file modules
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#template-engine">Template engine</a></li>
+    <li><a href="#file-modules">File modules</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              4-8 Templates and file modules
+            </h1>
+          
+
+        
+
+
+<p>This lab demonstrates how to use templates in Express app. In addition, it shows how to break a JavaScript program into modules by using &lsquo;file modules&rsquo;.</p>
+<h2 id="template-engine">Template engine</h2>
+<p>In previous lab, we embedded HTML template inside JavaScript code to render data. This approach becomes impractical when the HTML code or the data become more complicated.  A better approach is to use some template system to render data in the server side.</p>
+<p>We studied how to use the Handlebars template system in <a href="/client/3-6">Lab 3-6</a> for client-side. It is also possible to use the template system in an Express app with a suitable template engine. A popular module is <code>hbs</code>.  Install in with the command <code>npm install hbs --save</code> or <code>npm install</code> with suitable entry in <code>package.json</code>. Then, in the Express app, load the engine with the following line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// curiously, you don&#39;t load with ..
+</span><span style="color:#75715e">// var hbs = require(&#39;hbs&#39;);
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// set the template engine to handlebars
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;view engine&#39;</span>, <span style="color:#e6db74">&#39;hbs&#39;</span>);
+</code></pre></div><p>By default, Express searches for templates in the folder <code>/views</code> and assume the file extension <code>.hbs</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/year/:y&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">year</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">y</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">coursesInTheYear</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">timetab</span>.<span style="color:#a6e22e">courses</span>.<span style="color:#a6e22e">filter</span>((<span style="color:#a6e22e">c</span>)=&gt;<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">year</span><span style="color:#f92672">==</span><span style="color:#a6e22e">year</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">year</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">year</span>,
+    <span style="color:#a6e22e">acadYear</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">timetab</span>.<span style="color:#a6e22e">acadYear</span>,
+    <span style="color:#a6e22e">semester</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">timetab</span>.<span style="color:#a6e22e">semester</span>,
+    <span style="color:#a6e22e">courses</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">coursesInTheYear</span>
+  };
+  <span style="color:#75715e">// use the template &#39;/views/list.hbs&#39; to render the context object
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#39;list&#39;</span>, <span style="color:#a6e22e">context</span>);
+});
+</code></pre></div><h2 id="file-modules">File modules</h2>
+<p>In addition to built-in modules and NPM modules, there is a third kind in Node.js.
+A <em>file module</em> is a <code>*.js</code> file that exports some functions or objects. The module exports functions by adding them to the special object <code>exports</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// module dice.js
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// private function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">randomInteger</span>(<span style="color:#a6e22e">min</span>,<span style="color:#a6e22e">max</span>) {
+  <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">*</span>(<span style="color:#a6e22e">max</span><span style="color:#f92672">-</span><span style="color:#a6e22e">min</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">min</span>;
+}
+
+<span style="color:#75715e">// functions to be exported
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">rollDice</span>() { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">randomInteger</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>); }
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">rollDiceN</span>(<span style="color:#a6e22e">n</span>) {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ans</span> <span style="color:#f92672">=</span> [];
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">k</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">k</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">k</span><span style="color:#f92672">++</span>) { <span style="color:#a6e22e">ans</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">randomInteger</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>)); }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ans</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">drawOne</span>(<span style="color:#a6e22e">items</span>) {
+  <span style="color:#75715e">// assume item is a non-empty array
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randomInteger</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">items</span>[<span style="color:#a6e22e">k</span>];
+}
+
+<span style="color:#75715e">// export functions, classes, variables by attaching them
+</span><span style="color:#75715e">// as properties to the special object &#39;exports&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">rollDice</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rollDice</span>;
+<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">rollDiceN</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rollDiceN</span>;
+<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">drawOne</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">drawOne</span>;
+</code></pre></div><p>The following &lsquo;main program&rsquo; imports the file module and uses the exported funtions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// main.js
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// import a file module by specifiying a file name with path
+</span><span style="color:#75715e">// here, the module is in the same folder as main.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./dice.js&#39;</span>);
+
+<span style="color:#75715e">// now the exported functions are accessible as
+</span><span style="color:#75715e">//   d.rollDice, d.rollDiceN, and d.drawOne
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">letters</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ABCDEFG&#39;</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Roll dice 10 times: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">rollDiceN</span>(<span style="color:#ae81ff">10</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Draw a letter from &#39;ABCDEFG&#39;: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">drawOne</span>(<span style="color:#a6e22e">letters</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div>
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1632019543"></script>
+    <script src="/js/perfect-scrollbar.min.js?1632019543"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1632019543"></script>
+    <script src="/js/jquery.sticky.js?1632019543"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1632019543"></script>
+    <script src="/js/featherlight.min.js?1632019543"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1632019543"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1632019543"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1632019543"></script>
+    
+
+  </body>
+</html>
+

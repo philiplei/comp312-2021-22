@@ -6,7 +6,18 @@
     <description>Recent content on COMP312 notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Sep 2021 15:40:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Sep 2021 10:57:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4-1 Node.js primer</title>
+      <link>https://philiplei.github.io/server/4-1/</link>
+      <pubDate>Fri, 17 Sep 2021 15:06:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/server/4-1/</guid>
+      <description>This lab goes through the basics of the Node.js platform.
+Quick start Node.js (https://nodejs.org) is a platform built on Chrome&amp;rsquo;s JavaScript runtime V8 for easily building fast, scalable network applications. Node.js supports the same basic JavaScript programming language as web browsers. As the first example, let&amp;rsquo;s run the following program p101.mjs in both browser and Node. (Follow instruction to install Node.)
+// p101.mjs // return the largest number in an array // assume at least 1 entry, and all entries are numbers function largest (A) { let big=A[0]; for (let i=1; i&amp;lt;A.</description>
+    </item>
+    
     <item>
       <title>3-1 Background</title>
       <link>https://philiplei.github.io/client/3-1/</link>
@@ -25,6 +36,15 @@ The Document Object Model standard (online ref) defines a programming interface 
       <guid>https://philiplei.github.io/basic/2-1/</guid>
       <description>This lab goes through the basic data types (Number and String) and control structures of the JavaScript programming language.
 Number Two basic data types in JavaScript are Number and String. There are no separate types for integers and doubles. You define a variable x with let x. You don&amp;rsquo;t need to specify data type. (In some old code, you may also see definition of variables with var x. This is similar to let x, but allows you to redefine the variable.</description>
+    </item>
+    
+    <item>
+      <title>4-2 Asynchronous callback</title>
+      <link>https://philiplei.github.io/server/4-2/</link>
+      <pubDate>Fri, 17 Sep 2021 10:36:44 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/server/4-2/</guid>
+      <description>Asynchronous I/O handling Input / output operations, e.g. file reading/writing and network transactions, are much slower than CPU. Introductory programming examples (e.g. in Java and Python) typically use synchronous function call to perform I/O. Each file operation takes relatively long time to complete, and while the function call is waiting the I/O completion, the process / thread is blocked. When the I/O is completed, the program can continue to the next line in the program.</description>
     </item>
     
     <item>
@@ -49,6 +69,16 @@ let a = [ 1, 3, 5, 7, 9 ]; console.log(`The second odd number is ${a[1]}.`); let
     </item>
     
     <item>
+      <title>4-3 Promise, await and async</title>
+      <link>https://philiplei.github.io/server/4-3/</link>
+      <pubDate>Sat, 18 Sep 2021 16:05:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/server/4-3/</guid>
+      <description>Promise, basics In last section, we saw that many I/O operations take a callback function to report the result (if successful) or the error (if failing).
+import dns from &amp;#39;dns&amp;#39;; const govHost = &amp;#34;www.gov.mo&amp;#34;; dns.resolve(govHost, (err, records) =&amp;gt; { if (err) throw err; console.log(`${govHost}resolves to ${records}`); }); These asynchronous callbacks are efficient and easy to understand. However, when we need to organize a sequence of asynchronous operations, excessive nesting of the callback functions will soon make the code overwhelming.</description>
+    </item>
+    
+    <item>
       <title>3-3 Dynamic structure in template</title>
       <link>https://philiplei.github.io/client/3-3/</link>
       <pubDate>Wed, 08 Sep 2021 22:06:00 +0800</pubDate>
@@ -67,6 +97,16 @@ let a = [ 1, 3, 5, 7, 9 ]; console.log(`The second odd number is ${a[1]}.`); let
       <description>This lab explains the basics of the JavaScript functions.
 Functions There are two ways to define functions: the function keyword and arrow functions. This lab covers the first. We use a function to group some statements that can be reused.
 // draw a right angle triangle of height n function draw (n) { let out = &amp;#34;&amp;#34; for (let y=0; y&amp;lt;n; y++) { let s = &amp;#34;&amp;#34; for (let i=0; i&amp;lt;n-y-1; i++) s += &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>4-4 Modules, import and export</title>
+      <link>https://philiplei.github.io/server/4-4/</link>
+      <pubDate>Sun, 19 Sep 2021 10:57:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/server/4-4/</guid>
+      <description>When you build a complicated program, it becomes necessary to break your source code into multiple files called modules for better management and organization. In addition, you&amp;rsquo;ll often want to take advantage of other&amp;rsquo;s work and use third-party modules, e.g. install a package from https://npmjs.org. To support these, JavaScript allows programmers to export some functions / variables from a module, and import some functions / variable in another module.
+In the JavaScript world (Browsers, Node.</description>
     </item>
     
     <item>

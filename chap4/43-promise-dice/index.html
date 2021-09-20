@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise dice</title>
+    <script type="module" crossorigin src="assets/index.25d90405.js"></script>
+    <link rel="modulepreload" href="assets/vendor.239bf39f.js">
+    <link rel="stylesheet" href="assets/index.ff427764.css">
+  </head>
+  <body>
+    <h2>Promise dice</h2>
+    <p>This example 'promise dice' visualize a <code>Promise</code> with a rolling dice that you can resolve or reject with button clicks. Create a promise dice in console with the following.</p>
+
+    <pre><code>
+let prom1 = vm.tossDice('prom1');
+prom1.then( e=>{
+  console.log("The dice toss result is "+e)
+}).catch(e=>{
+  console.log("The dice toss fails with error: "+e)
+});
+    </code></pre>
+
+    <div style="font-size: 50%">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+    <hr>
+
+    <div id="app"></div>
+
+    
+  </body>
+</html>
