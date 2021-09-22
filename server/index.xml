@@ -47,5 +47,16 @@ import dns from &amp;#39;dns&amp;#39;; const govHost = &amp;#34;www.gov.mo&amp;#
 In the JavaScript world (Browsers, Node.</description>
     </item>
     
+    <item>
+      <title>4-5 Database access</title>
+      <link>https://philiplei.github.io/server/4-5/</link>
+      <pubDate>Wed, 22 Sep 2021 10:52:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/server/4-5/</guid>
+      <description>This lab demonstrates basic database programming in Node.js using a file-based database sqlite.
+SQLite SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine (from https://www.sqlite.org/). The whole database is stored in a file, and an application can open this database directly without connecting to any server.
+A popular module to access SQLite in Node is sqlite3. However, this module only provides a callback-based API. Therefore, we will also use the package sqlite which is a wrapper library on sqlite3 that provides a promise-based API.</description>
+    </item>
+    
   </channel>
 </rss>

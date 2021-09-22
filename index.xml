@@ -6,7 +6,7 @@
     <description>Recent content on COMP312 notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Sep 2021 10:57:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 10:52:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4-1 Node.js primer</title>
       <link>https://philiplei.github.io/server/4-1/</link>
@@ -128,6 +128,17 @@ UI event handling In a web app, a common way to trigger an action is mouse click
       <description>This lab covers the basics of JavaScript objects and how to model complicated data using arrays and objects. The resultant data structure forms the basis of the JSON data format.
 Objects In JavaScript, an object is a collection of properties. Each property is a pair of name and value. (Sometimes JavaScript objects are used as key-value stores.) You can access each property with the dot notation.
 // define an object with 3 properties let peter = { firstName: &amp;#34;Peter&amp;#34;, lastName: &amp;#34;Chan&amp;#34;, age: 19 }; console.</description>
+    </item>
+    
+    <item>
+      <title>4-5 Database access</title>
+      <link>https://philiplei.github.io/server/4-5/</link>
+      <pubDate>Wed, 22 Sep 2021 10:52:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/server/4-5/</guid>
+      <description>This lab demonstrates basic database programming in Node.js using a file-based database sqlite.
+SQLite SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine (from https://www.sqlite.org/). The whole database is stored in a file, and an application can open this database directly without connecting to any server.
+A popular module to access SQLite in Node is sqlite3. However, this module only provides a callback-based API. Therefore, we will also use the package sqlite which is a wrapper library on sqlite3 that provides a promise-based API.</description>
     </item>
     
     <item>
