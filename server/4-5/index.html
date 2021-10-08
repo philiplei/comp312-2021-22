@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="generator" content="Hugo 0.88.1" />
     <meta name="description" content="">
 <meta name="author" content="Philip Lei">
 
@@ -12,20 +12,20 @@
     <title>4-5 Database access :: COMP312 notes</title>
 
     
-    <link href="/css/nucleus.css?1632280222" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1632280222" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1632280222" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1632280222" rel="stylesheet">
-    <link href="/css/auto-complete.css?1632280222" rel="stylesheet">
-    <link href="/css/theme.css?1632280222" rel="stylesheet">
-    <link href="/css/tabs.css?1632280222" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1632280222" rel="stylesheet">
+    <link href="/css/nucleus.css?1633677061" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633677061" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633677061" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633677061" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633677061" rel="stylesheet">
+    <link href="/css/theme.css?1633677061" rel="stylesheet">
+    <link href="/css/tabs.css?1633677061" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633677061" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1632280222" rel="stylesheet">
+    <link href="/css/theme-green.css?1633677061" rel="stylesheet">
     
     
 
-    <script src="/js/jquery.min.js?1632280222"></script>
+    <script src="/js/jquery.min.js?1633677061"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -582,6 +582,101 @@ Server-side programming
   
 
         
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/appserver/" title="App server programming" class="dd-item">
+        <a href="/appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
       
     </ul>
 
@@ -682,7 +777,9 @@ Server-side programming
     <span style="color:#f92672">&#34;sqlite&#34;</span>: <span style="color:#e6db74">&#34;^4.0.23&#34;</span>,
     <span style="color:#f92672">&#34;sqlite3&#34;</span>: <span style="color:#e6db74">&#34;^5.0.2&#34;</span>
   }<span style="color:#960050;background-color:#1e0010">,</span>
-</code></pre></div><p>The example code zip file also includes a sample database <code>chinook.sqlite</code> <a href="https://github.com/lerocha/chinook-database">(Github download)</a>. To browse the content of the database, install and use the GUI tool <a href="https://sqlitebrowser.org/">DB browser for SQLite</a>.</p>
+</code></pre></div><p>The example code zip file also includes a sample database <code>my-northwind.sqlite</code>, which is based on <a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs">a sample database for Microsoft SQL server</a>. I&rsquo;ve converted it into SQLite format. You can read the <a href="/chap4/my-northwind-schema.pdf">database schema</a> here.</p>
+<p>To browse the content of the database, install and use the GUI tool <a href="https://sqlitebrowser.org/">DB browser for SQLite</a>.</p>
+<!-- raw HTML omitted -->
 <h2 id="retrieve-data-with-select">Retrieve data with SELECT</h2>
 <p>SQLite supports both basic and advanced features of SELECT statements. The following demonstrates the steps to read data from a database.</p>
 <p>Most functions of <code>sqlite</code> are asynchronous. In other words, they return a promise which may either resolve to the result (e.g. result set returned by <code>SELECT</code>), or reject with an error. For brevity, we use <code>await</code> on the top-level in the following example.</p>
@@ -695,15 +792,15 @@ Server-side programming
 <span style="color:#75715e">// connect to the database system, open database file
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">open</span>({
   <span style="color:#75715e">// the database file  
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./chinook.sqlite&#39;</span>,
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./my-northwind.sqlite&#39;</span>,
   <span style="color:#75715e">// tell sqlite to use the standard &#39;sqlite3&#39; driver
 </span><span style="color:#75715e"></span>  <span style="color:#a6e22e">driver</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">sqlite3</span>.<span style="color:#a6e22e">Database</span>     
 });
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM Track WHERE TrackId=3412&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM Product WHERE Id=14&#34;</span>;
 <span style="color:#75715e">// get a single row from the result set of the query
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">aTrack</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">query</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">aTrack</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tofu</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">query</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">tofu</span>);
 
 <span style="color:#75715e">// close the database connection
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">close</span>();
@@ -715,42 +812,50 @@ Server-side programming
 </ul>
 <p>This example demonstrates the first approach. <code>db.all()</code> returns a promise which resolves to an array of objects, in which each object corresponds to one row in the result set. This example also illustrates <em>placeholders</em> in SQL queries, column renaming, and using template strings to write multi-line SQL queries.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// p142.mjs
+</span><span style="color:#75715e">// The total sales quantity of products in category 7 - Produce
 </span><span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> 
- <span style="color:#e6db74">`SELECT TrackId as id, tr.Name as name, milliseconds as length 
-</span><span style="color:#e6db74">  FROM Track as tr
-</span><span style="color:#e6db74">  JOIN MediaType as mt ON tr.MediaTypeId = mt.MediaTypeId
-</span><span style="color:#e6db74">  WHERE milliseconds&gt;$trackLength
-</span><span style="color:#e6db74">  AND mt.Name LIKE &#39;%AAC%&#39;
-</span><span style="color:#e6db74">  ORDER BY length DESC`</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span>
+ <span style="color:#e6db74">`SELECT P.id as id, P.ProductName as productName, SalesQuantity
+</span><span style="color:#e6db74">  FROM Product as P
+</span><span style="color:#e6db74">  JOIN (SELECT ProductId, SUM(Quantity) as SalesQuantity
+</span><span style="color:#e6db74">        FROM OrderDetail GROUP BY ProductId)
+</span><span style="color:#e6db74">    as D ON P.id = D.ProductId
+</span><span style="color:#e6db74">  WHERE P.CategoryID = $categoryId
+</span><span style="color:#e6db74">  ORDER BY SalesQuantity DESC`</span>;
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">longTrack</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">query</span>, { <span style="color:#a6e22e">$trackLength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">600000</span>});
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">longTrack</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productTotalSales</span> <span style="color:#f92672">=</span> 
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">query</span>, { <span style="color:#a6e22e">$categoryId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">7</span> });
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">productTotalSales</span>);
 <span style="color:#75715e">// ...
-</span></code></pre></div><p>The next example <code>p143.mjs</code> retrieves the invoices (from <code>Invoice</code> table) made during December of 2012, and also calculates the total invoice amount from data in <code>InvoiceLine</code> table for each order. We perform this task with two SQL select queries: one for retrieving invoices, and one for calculating the total invoice amount for each invoice.</p>
+</span></code></pre></div><p>The next example <code>p143.mjs</code> retrieves the orders (from <code>Order</code> table) made during December of 2012, and also calculates the total order amount from data in <code>OrderDetail</code> table for each order. We perform this task with two SQL select queries: one for retrieving orders, and one for calculating the total order amount for each order.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p143.mjs
 </span><span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getXmasInvoice</span> () {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">queryInvoice</span> <span style="color:#f92672">=</span> 
-  <span style="color:#e6db74">`SELECT InvoiceId as id, InvoiceDate as invDate
-</span><span style="color:#e6db74">   FROM Invoice
-</span><span style="color:#e6db74">   WHERE InvoiceDate BETWEEN $startInvoiceDate AND $endInvoiceDate`</span>;
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xmasInvoice</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">queryInvoice</span>, { <span style="color:#a6e22e">$startInvoiceDate</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2012-12-01&#34;</span>, <span style="color:#a6e22e">$endInvoiceDate</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2012-12-31&#34;</span> } );
-  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">invoice</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">xmasInvoice</span>) {
-    <span style="color:#a6e22e">invoice</span>.<span style="color:#a6e22e">invAmount</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getInvoiceAmount</span>(<span style="color:#a6e22e">invoice</span>.<span style="color:#a6e22e">id</span>); 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getXmasOrders</span> () {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">queryOrders</span> <span style="color:#f92672">=</span> 
+  <span style="color:#e6db74">`SELECT Id as id, OrderDate as orDate
+</span><span style="color:#e6db74">   FROM &#39;Order&#39;
+</span><span style="color:#e6db74">   WHERE orDate BETWEEN $startDate AND $endDate`</span>;
+
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xmasOrders</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">queryOrders</span>, { 
+    <span style="color:#a6e22e">$startDate</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2012-12-01&#34;</span>, 
+    <span style="color:#a6e22e">$endDate</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2012-12-31&#34;</span> 
+  });
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ord</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">xmasOrders</span>) {
+    <span style="color:#a6e22e">ord</span>.<span style="color:#a6e22e">amount</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getOrderAmount</span>(<span style="color:#a6e22e">ord</span>.<span style="color:#a6e22e">id</span>); 
   }
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">xmasInvoice</span>;
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">xmasOrders</span>;
 }   
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xmasInvoice</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getXmasInvoice</span>();
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">table</span>(<span style="color:#a6e22e">xmasInvoice</span>);
-</code></pre></div><p>When we refactor the statements to a function to get the xmas invoices, we have to make the function a <code>async function</code> because we&rsquo;re using <code>await</code> inside. This function returns a promise. If the function returns a result (<code>return xmasInvoice</code>), the promise resolves to that result (i.e. an array of invoice records). On the other hand, if any exception is thrown inside the function, including a rejection from <code>await getInvoiceAmount()</code>, the promise rejects with the error object of the exception.</p>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xmasOrders</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getXmasOrders</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">table</span>(<span style="color:#a6e22e">xmasOrders</span>);
+</code></pre></div><p>When we refactor the statements to a function to get the xmas orders, we have to make the function a <code>async function</code> because we&rsquo;re using <code>await</code> inside. This function returns a promise. If the function returns a result (<code>return xmasOrders</code>), the promise resolves to that result (i.e. an array of order records). On the other hand, if any exception is thrown inside the function, including a rejection from <code>await getOrderAmount()</code>, the promise rejects with the error object of the exception.</p>
 <p>Getting the whole record into an array is convenient with <code>db.all()</code>. However, if the number of records is very large, and you only need to process the records one by one, you can avoid wasting system memory by using <code>db.each()</code>. This method calls a callback to process each row in the result set, and the returned promise resolves to the number of rows after all rows are processed.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p144.mjs
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">exportTrack</span> () {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">queryTrack</span> <span style="color:#f92672">=</span> 
-   <span style="color:#e6db74">`SELECT * FROM Track LIMIT 1000 OFFSET 2000`</span>;
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">each</span>(<span style="color:#a6e22e">queryTrack</span>, {} , (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">row</span>) =&gt; {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">exportOrderDetail</span> () {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">queryOrderDetail</span> <span style="color:#f92672">=</span> 
+   <span style="color:#e6db74">`SELECT * FROM OrderDetail LIMIT 500 OFFSET 1000`</span>;
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">each</span>(<span style="color:#a6e22e">queryOrderDetail</span>, {} , (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">row</span>) =&gt; {
     <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>;
     <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">row</span>);
   }); 
@@ -758,32 +863,29 @@ Server-side programming
 </span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">prom</span>;
 }    
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">trackCount</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">exportTrack</span>();
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Track count =&#34;</span>, <span style="color:#a6e22e">trackCount</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">recordCount</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">exportOrderDetail</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;count =&#34;</span>, <span style="color:#a6e22e">recordCount</span>);
 </code></pre></div><h2 id="insert-update-and-delete">INSERT, UPDATE and DELETE</h2>
 <p>Use the method <code>db.run()</code> to execute INSERT, UPDATE and DELETE statements. In the callback to this method, the property <code>this.changes</code> indicates the number of rows affected by the query, and the property <code>this.lastID</code> contains the value of the last inserted row ID.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// p145.mjs
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createCustomer</span> (<span style="color:#a6e22e">cust</span>) {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updateCustomerAddress</span> (<span style="color:#a6e22e">custId</span>, <span style="color:#a6e22e">newAddress</span>) {
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> 
-  <span style="color:#e6db74">`INSERT INTO Customer (FirstName, LastName, City, Email) 
-</span><span style="color:#e6db74">   VALUES ($firstName, $lastName, $city, $email)`</span>;
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">run</span>(<span style="color:#a6e22e">query</span>, {
-    <span style="color:#a6e22e">$firstName</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">cust</span>.<span style="color:#a6e22e">firstName</span>, 
-    <span style="color:#a6e22e">$lastName</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">cust</span>.<span style="color:#a6e22e">lastName</span>,
-    <span style="color:#a6e22e">$city</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">cust</span>.<span style="color:#a6e22e">city</span>,
-    <span style="color:#a6e22e">$email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">cust</span>.<span style="color:#a6e22e">email</span>
+  <span style="color:#e6db74">`UPDATE Customer SET Address = $newAddress 
+</span><span style="color:#e6db74">   WHERE id=$custId`</span>;
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">run</span>(<span style="color:#a6e22e">query</span>, { 
+    <span style="color:#a6e22e">$custId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">custId</span>, <span style="color:#a6e22e">$newAddress</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">newAddress</span> 
   });
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
 }
 
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">insResult</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">createCustomer</span>({
-  <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Peter&#39;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Chan&#39;</span>,
-  <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;peterchan@ipm.edu.mo&#39;</span>, <span style="color:#a6e22e">city</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Macao&#39;</span>
+  <span style="color:#a6e22e">companyName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;MPI&#39;</span>, <span style="color:#a6e22e">contactName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Peter Chan&#39;</span>,
+  <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;(853) 85996123&#39;</span>, <span style="color:#a6e22e">city</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Macao&#39;</span>
 });
 
-<span style="color:#75715e">// insResult.lastID gives the primary key &#39;id&#39; 
-</span><span style="color:#75715e">// that is auto-generated by sqlite
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;insResult:&#39;</span>, <span style="color:#a6e22e">insResult</span>);
+<span style="color:#75715e">// insResult.lastID gives the primary key &#39;id&#39; auto-generated by sqlite
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;A new customer is created by SQL INSERT&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;insResult:&#39;</span>, <span style="color:#a6e22e">insResult</span>);
 </code></pre></div><h2 id="downloadable-examples">Downloadable examples</h2>
 <p>The example source files are <a href="/chap4/chap4-5.zip">available here</a>.</p>
 
@@ -810,16 +912,16 @@ Server-side programming
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1632280222"></script>
-    <script src="/js/perfect-scrollbar.min.js?1632280222"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1632280222"></script>
-    <script src="/js/jquery.sticky.js?1632280222"></script>
-    <script src="/js/jquery.svg.pan.zoom.js?1632280222"></script>
-    <script src="/js/featherlight.min.js?1632280222"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1632280222"></script>
+    <script src="/js/clipboard.min.js?1633677061"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633677061"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633677061"></script>
+    <script src="/js/jquery.sticky.js?1633677061"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633677061"></script>
+    <script src="/js/featherlight.min.js?1633677061"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633677061"></script>
     
         
-            <script src="/js/mermaid.min.js?1632280222"></script>
+            <script src="/js/mermaid.min.js?1633677061"></script>
         
         
             
@@ -830,7 +932,7 @@ Server-side programming
             }
         </script>
     
-    <script src="/js/relearn.js?1632280222"></script>
+    <script src="/js/relearn.js?1633677061"></script>
     
 
   </body>

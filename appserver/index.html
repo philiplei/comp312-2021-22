@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Server-side programming :: COMP312 notes</title>
+    <title>App server programming :: COMP312 notes</title>
 
     
     <link href="/css/nucleus.css?1633677061" rel="stylesheet">
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/server/">
+  <body class="" data-url="/appserver/">
     <nav id="sidebar" class="">
   
   
@@ -456,7 +456,7 @@ Client-side programming
     
       
       
-      <li data-nav-id="/server/" title="Server-side programming" class="dd-item active parent">
+      <li data-nav-id="/server/" title="Server-side programming" class="dd-item">
         <a href="/server/">
           
 Server-side programming
@@ -593,7 +593,7 @@ Server-side programming
     
       
       
-      <li data-nav-id="/appserver/" title="App server programming" class="dd-item">
+      <li data-nav-id="/appserver/" title="App server programming" class="dd-item active parent">
         <a href="/appserver/">
           
 App server programming
@@ -719,7 +719,7 @@ App server programming
             
           
           
-            <a href='/'></a> > Server-side programming
+            <a href='/'></a> > App server programming
           
         
           
@@ -744,66 +744,31 @@ App server programming
 
 
 
-    <h2 id="server-side-programming">Server-side programming</h2>
-<p>This chapter goes through the basics of the JavaScript programming on the server side using Node.js.</p>
+    <h2 id="app-server-development">App server development</h2>
+<p>Built on top of the last two chapters, in this chapter, we study several additional concepts to build a full-stack web app.</p>
 <ul>
-<li>4-1. Node primer
+<li>Web API
 <ul>
-<li>compare node.js and browser env</li>
-<li>event loop</li>
-<li>modules, NPM</li>
-<li>package.json</li>
-<li>semantic versioning</li>
+<li>payload: JSON, url-encoded</li>
+<li>REST Web API</li>
+<li>RPC Web API</li>
 </ul>
 </li>
-<li>4-2. Asynchronous callback
+<li>Consuming a Web API
 <ul>
-<li>asynchronous I/O operations</li>
-<li>event and event handlers</li>
-<li>sequential I/O operations</li>
+<li>fetch: sending requests to a Web API in browser</li>
 </ul>
 </li>
-<li>4-3. Promises
+<li>Implementing a Web API
 <ul>
-<li>promises, state and result</li>
-<li>then and catch handlers</li>
-<li>chaining promises</li>
-<li>handling errors</li>
-<li>await and async</li>
-</ul>
-</li>
-<li>4-4. ES modules
-<ul>
-<li>modules: built-in, local, NPM</li>
-<li>named exports</li>
-<li>default export</li>
-<li>compatibility with CommonJS</li>
-</ul>
-</li>
-<li>4-5. Database access
-<ul>
-<li>sqlite</li>
-<li>SELECT, INSERT, UPDATE, DELETE</li>
+<li>App server development with Express.js</li>
 </ul>
 </li>
 </ul>
-<p>Here are some useful online reference for this chapter.</p>
+<p>Examples for Web APIs</p>
 <ul>
-<li><a href="https://nodejs.org/en/">https://nodejs.org</a>: official site of Node.js, and the <a href="https://nodejs.org/dist/latest-v14.x/docs/api/">API reference</a></li>
-<li><a href="https://nodejs.dev/learn">Tutorial on Node.js</a>: cover key concepts and built-in modules of Node.js</li>
-<li>Advanced JavaScript concepts covered in this chapter
-<ul>
-<li>Chapter 11 in the Modern JavaScript tutorial: <a href="https://javascript.info/async">Promise</a></li>
-<li>MDN article, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
-<li>MDN Chapter on <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous">Asynchronous JavaScript</a></li>
-<li><a href="https://javascript.info/error-handling">Error handling</a>, including exception handling</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">Modules, MDN</a></li>
-<li><a href="https://javascript.info/modules">Modules in Modern JavaScript tutorial</a></li>
+<li><a href="https://api.slack.com/methods?filter=conversations">Conversations method group</a> in Slack API</li>
 </ul>
-</li>
-</ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 
 
 

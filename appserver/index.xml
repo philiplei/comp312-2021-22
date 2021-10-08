@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App server programming on COMP312 notes</title>
+    <link>https://philiplei.github.io/appserver/</link>
+    <description>Recent content in App server programming on COMP312 notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Sep 2021 15:14:43 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/appserver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5-1 Web API, concepts</title>
+      <link>https://philiplei.github.io/appserver/5-1/</link>
+      <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/appserver/5-1/</guid>
+      <description>In a modern web app, the application server implements a Web API that provides service to the front-end JavaScript code.
+A Web API is a defined set of HTTP request messages along with a definition of the structure of response messages, usually expressed in JSON format (from Wikipedia).
+A Web API provides service to clients through several endpoints. Each endpoint is named with an URL, e.g. http://example.com/products. A client uses an appropriate HTTP verb to invoke the endpoint.</description>
+    </item>
+    
+    <item>
+      <title>5-2 RPC Web API</title>
+      <link>https://philiplei.github.io/appserver/5-2/</link>
+      <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/appserver/5-2/</guid>
+      <description>RPC-style Web API A common design style of Web API is RPC-style (Remote Procedure Call). A RPC-style Web API allocates one URL for each function or operation. These URLs represent an action and are usually named with a verb. The following table shows five endpoints in a Web API to manipulate products in a database. They implement four common operations on data known as CRUD (Create, Retrieve, Update and Delete).</description>
+    </item>
+    
+    <item>
+      <title>5-3 REST Web API</title>
+      <link>https://philiplei.github.io/appserver/5-3/</link>
+      <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/appserver/5-3/</guid>
+      <description>REST is the most popular way to design Web APIs. In a REST Web API, actions are designed around resources. Each resource is identify by a URL. A client applies the standard HTTP verbs (including GET, PUT, POST, DELETE, POST) on the resources to perform CRUD operations (Create, Retrieve, Update, Delete).
+For example, in an online shopping site, there may be resources about products, customers and their orders. These are represented by the following URLs.</description>
+    </item>
+    
+  </channel>
+</rss>

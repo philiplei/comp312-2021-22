@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://philiplei.github.io/appserver/5-1/</loc>
+    <lastmod>2021-10-04T16:14:00+08:00</lastmod>
+  </url><url>
     <loc>https://philiplei.github.io/server/4-1/</loc>
     <lastmod>2021-09-17T15:06:00+08:00</lastmod>
   </url><url>
@@ -10,6 +13,9 @@
   </url><url>
     <loc>https://philiplei.github.io/basic/2-1/</loc>
     <lastmod>2021-08-30T10:36:44+08:00</lastmod>
+  </url><url>
+    <loc>https://philiplei.github.io/appserver/5-2/</loc>
+    <lastmod>2021-10-04T16:14:00+08:00</lastmod>
   </url><url>
     <loc>https://philiplei.github.io/server/4-2/</loc>
     <lastmod>2021-09-17T10:36:44+08:00</lastmod>
@@ -22,6 +28,9 @@
   </url><url>
     <loc>https://philiplei.github.io/basic/2-2/</loc>
     <lastmod>2021-08-31T09:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://philiplei.github.io/appserver/5-3/</loc>
+    <lastmod>2021-10-04T16:14:00+08:00</lastmod>
   </url><url>
     <loc>https://philiplei.github.io/server/4-3/</loc>
     <lastmod>2021-09-18T16:05:00+08:00</lastmod>
@@ -50,6 +59,9 @@
     <loc>https://philiplei.github.io/server/4-5/</loc>
     <lastmod>2021-09-22T10:52:00+08:00</lastmod>
   </url><url>
+    <loc>https://philiplei.github.io/appserver/</loc>
+    <lastmod>2021-09-12T15:14:43+08:00</lastmod>
+  </url><url>
     <loc>https://philiplei.github.io/client/3-5/</loc>
     <lastmod>2021-09-08T18:05:00+08:00</lastmod>
   </url><url>
@@ -72,7 +84,7 @@
     <lastmod>2021-09-12T15:40:00+08:00</lastmod>
   </url><url>
     <loc>https://philiplei.github.io/</loc>
-    <lastmod>2021-09-22T10:52:00+08:00</lastmod>
+    <lastmod>2021-10-04T16:14:00+08:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://philiplei.github.io/categories/</loc>

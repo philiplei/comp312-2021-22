@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>5-3 REST Web API :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633677060" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633677060" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633677060" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633677060" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633677060" rel="stylesheet">
+    <link href="/css/theme.css?1633677060" rel="stylesheet">
+    <link href="/css/tabs.css?1633677060" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633677060" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633677060" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633677060"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/appserver/5-3/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/basic/" title="JavaScript basics" class="dd-item">
+        <a href="/basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/client/" title="Client-side programming" class="dd-item">
+        <a href="/client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/server/" title="Server-side programming" class="dd-item">
+        <a href="/server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/appserver/" title="App server programming" class="dd-item parent">
+        <a href="/appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-3/" title="5-3 REST Web API" class="dd-item active">
+        <a href="/appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/appserver/'>App server programming</a> > 5-3 REST Web API
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#retrieve-a-single-item">Retrieve a single item</a></li>
+    <li><a href="#retrieve-all-items-in-a-collection">Retrieve all items in a collection</a></li>
+    <li><a href="#update-an-item">Update an item</a></li>
+    <li><a href="#delete-an-item">Delete an item</a></li>
+    <li><a href="#error-reporting">Error reporting</a></li>
+    <li><a href="#create-an-item">Create an item</a></li>
+    <li><a href="#resources-with-more-complicated-structure">Resources with more complicated structure</a></li>
+    <li><a href="#searching-items">Searching items</a></li>
+    <li><a href="#pagination">Pagination</a></li>
+    <li><a href="#sub-resources--nested-route">Sub-resources / nested route</a></li>
+    <li><a href="#more-examples-of-rest-web-apis">More examples of REST Web APIs</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              5-3 REST Web API
+            </h1>
+          
+
+        
+
+
+<p>REST is the most popular way to design Web APIs. In a REST Web API, actions are designed around <strong>resources</strong>. Each resource is identify by a URL. A client applies the standard HTTP verbs (including <code>GET</code>, <code>PUT</code>, <code>POST</code>, <code>DELETE</code>, <code>POST</code>) on the resources to perform CRUD operations (Create, Retrieve, Update, Delete).</p>
+<p>For example, in an online shopping site, there may be resources about products, customers and their orders. These are represented by the following URLs.</p>
+<table>
+<thead>
+<tr>
+<th>resource type</th>
+<th>collection</th>
+<th>individual item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product</td>
+<td>/products</td>
+<td>/products/<em>id</em></td>
+</tr>
+<tr>
+<td>customer</td>
+<td>/customers</td>
+<td>/customers/<em>id</em></td>
+</tr>
+<tr>
+<td>order</td>
+<td>/orders</td>
+<td>/orders/<em>id</em></td>
+</tr>
+</tbody>
+</table>
+<p>In this lab, we&rsquo;ll demonstrate how to do the following using a hypothetical REST API.</p>
+<ul>
+<li>retrieve a single product</li>
+<li>list all products</li>
+<li>update an existing product</li>
+<li>delete a product</li>
+<li>create a new product</li>
+</ul>
+<h2 id="retrieve-a-single-item">Retrieve a single item</h2>
+<p>To retrieve information about the product with a given ID, a client uses a request similar to this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /products/5 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><p>The Web API returns the product data in JSON format as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">116</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">10.5</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">20</span>
+}
+</code></pre></div><p>In principle, REST APIs should reuse HTTP status code as much as possible to report errors. For example, if the server cannot find a product of the given ID, it may return <code>404</code> error as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">404</span> <span style="color:#a6e22e">Not found</span>
+
+</code></pre></div><p>However, the server often needs to report more detail about the errors, or there may not be suitable HTTP status code to report some errors. We&rsquo;ll discuss how to handle this later.</p>
+<h2 id="retrieve-all-items-in-a-collection">Retrieve all items in a collection</h2>
+<p>To list all products, use the <code>GET</code> verb on the product collection resource.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /products <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><p>The Web API returns the product data as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">6060</span>
+
+{
+  <span style="color:#f92672">&#34;count&#34;</span>: <span style="color:#ae81ff">98</span>,
+  <span style="color:#f92672">&#34;items&#34;</span>: [
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">10.5</span> },
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">6</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Chocolate bar&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">25.0</span> },
+    <span style="color:#960050;background-color:#1e0010">...</span>
+  ]
+}
+</code></pre></div><h2 id="update-an-item">Update an item</h2>
+<p>HTTP provides a verb <code>PUT</code> to replace / update an existing resource in the server. The request body must contain a representation of the whole resource.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">PUT</span> /products/5 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">142</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy (Update price and stock)&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">12.5</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">32</span>
+}
+</code></pre></div><p>Sometimes, we may only need to update a few properties of a resource with many properties. HTTP provides another verb <code>PATCH</code> to list <em>only</em> the properties to be updated in the request payload. For example, the following request updates the unit price only.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">PATCH</span> /products/5 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">21</span>
+
+{ <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">13.8</span> }
+</code></pre></div><p>After processing the <code>PUT</code> or <code>PATCH</code> request, the server has to report success / failure. If the update is successful, the server often returns the most up-to-date version of the resource.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">142</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy (Update price and stock)&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">13.8</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">32</span>
+}
+</code></pre></div><p>When you design the Web API, you may also choose to just return a code for successful processing, and don&rsquo;t include an updated representation, as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">204</span> <span style="color:#a6e22e">No content</span>
+
+</code></pre></div><h2 id="delete-an-item">Delete an item</h2>
+<p>HTTP supports a verb <code>DELETE</code> to delete a resource.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">DELETE</span> /products/5 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><p>If successful, the server returns <code>204</code>, or <code>200</code> with an empty object.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">204</span> <span style="color:#a6e22e">No content</span>
+
+</code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+
+{}
+</code></pre></div><h2 id="error-reporting">Error reporting</h2>
+<p>In principle, REST APIs should reuse HTTP status code as much as possible to report errors. For example, if the server cannot find a product of the given ID when the client sends a <code>GET</code>, <code>PATCH</code> or <code>DELETE</code> request, it may return <code>404</code> error.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">404</span> <span style="color:#a6e22e">Not found</span>
+
+</code></pre></div><p>Some designers use HTTP status codes like <code>400</code> and <code>500</code> to report runtime error. An example is <a href="https://docs.github.com/en/rest/overview/resources-in-the-rest-api#client-errors">GitHub API client error</a>.
+Web APIs often describe the errors in the JSON payload using some specified fields, e.g. <code>errorCode</code>. Therefore, a client can always check the existence of any error, and the detail of the error, from the specified fields in the payload.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">400</span> <span style="color:#a6e22e">Bad Request</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">62</span>
+
+{ <span style="color:#f92672">&#34;errorCode&#34;</span>: <span style="color:#ae81ff">1001</span>, <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Date format error in input&#34;</span> }
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">500</span> <span style="color:#a6e22e">Internal Server Error</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">63</span>
+
+{ <span style="color:#f92672">&#34;errorCode&#34;</span>: <span style="color:#ae81ff">1002</span>, <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Database connection problem&#34;</span> }
+</code></pre></div><p>Since the error detail is already available in the JSON payload, some Web APIs always return the responses using <code>200</code> status code. This is convenient for client programming because all information about the error can be found in the JSON payload, and programmers do not need to check the HTTP status code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">63</span>
+
+{ <span style="color:#f92672">&#34;errorCode&#34;</span>: <span style="color:#ae81ff">1002</span>, <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Database connection problem&#34;</span> }
+</code></pre></div><h2 id="create-an-item">Create an item</h2>
+<p>In theory, one can create an item by sending a <code>PUT</code> request. However, you need to know the ID of the new item in order to build the resource URL. This is not always possible because the ID is usually assigned by the server.</p>
+<p>A common solution in REST Web APIs is to <code>POST</code> to the collection resource for the new item. (Notice the ID is not given.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">113</span>
+
+{
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Great new chocolate&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">20</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">100</span>
+}
+</code></pre></div><p>After creating the new item, the server returns a successful response with the location of the newly created resource in <code>location</code> header. The status code <code>201</code> means that a new resource has been created.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">201</span> <span style="color:#a6e22e">Created</span>
+Location<span style="color:#f92672">:</span> <span style="color:#ae81ff">http://example.com/products/98</span>
+
+</code></pre></div><p>Web APIs are often designed to return the representation of the newly created resource in the response body.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">201</span> <span style="color:#a6e22e">Created</span>
+Location<span style="color:#f92672">:</span> <span style="color:#ae81ff">http://example.com/products/98</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">126</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">98</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Great new chocolate&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">20</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">100</span>
+}
+</code></pre></div><h2 id="resources-with-more-complicated-structure">Resources with more complicated structure</h2>
+<p>The JSON representation of a resource may be more complicated than a list of properties of simple values. For example, an order contains several lines, each line specifies a product and its quantity.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /orders/10248 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">302</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">10248</span>,
+  <span style="color:#f92672">&#34;customerId&#34;</span>: <span style="color:#ae81ff">85</span>,
+  <span style="color:#f92672">&#34;orderDate&#34;</span>: <span style="color:#e6db74">&#34;2012-07-04&#34;</span>,
+  <span style="color:#f92672">&#34;freight&#34;</span>: <span style="color:#ae81ff">32.38</span>,
+  <span style="color:#f92672">&#34;shipCity&#34;</span>: <span style="color:#e6db74">&#34;Reims&#34;</span>,
+  <span style="color:#f92672">&#34;lines&#34;</span>: [
+    { <span style="color:#f92672">&#34;productId&#34;</span>: <span style="color:#ae81ff">11</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">14</span>,  <span style="color:#f92672">&#34;quantity&#34;</span>: <span style="color:#ae81ff">12</span> },
+    { <span style="color:#f92672">&#34;productId&#34;</span>: <span style="color:#ae81ff">42</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">9.8</span>, <span style="color:#f92672">&#34;quantity&#34;</span>: <span style="color:#ae81ff">10</span> },
+    { <span style="color:#f92672">&#34;productId&#34;</span>: <span style="color:#ae81ff">72</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">34.8</span>,<span style="color:#f92672">&#34;quantity&#34;</span>: <span style="color:#ae81ff">5</span> }
+  ]
+}
+</code></pre></div><h2 id="searching-items">Searching items</h2>
+<p>If the searching is limited a single kind of resources (e.g. products), we can extend the list item endpoint (e.g. <code>GET /products</code>) with search criteria formatted as a query string.</p>
+<p>For example, you can introduce two parameters <code>category</code> and <code>maxUnitPrice</code> in your API to support product search for a certain category and a unit price less than a given price.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /products?category=Confections&amp;maxUnitPrice=10 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><h2 id="pagination">Pagination</h2>
+<p>The result of searching or listing items often consists of a large number of items, which may overwhelm a client in computing resource consumption. Web APIs often support <strong>pagination</strong>, i.e. breaking the search result into several batches (or pages).</p>
+<p>A familiar example of pagination is web search. For example, here are the URLs of the first three pages when search &lsquo;Web API design&rsquo; in bing.com.</p>
+<ul>
+<li>page 1: <a href="https://www.bing.com/search?q=Web+API+design">https://www.bing.com/search?q=Web+API+design</a></li>
+<li>page 2: <a href="https://www.bing.com/search?q=Web+API+design&amp;first=11">https://www.bing.com/search?q=Web+API+design&amp;first=11</a></li>
+<li>page 2: <a href="https://www.bing.com/search?q=Web+API+design&amp;first=21">https://www.bing.com/search?q=Web+API+design&amp;first=21</a></li>
+</ul>
+<p>The above technique is called <strong>offset-based pagination</strong>. Typically, there are two parameters, the first to specify the offset (index of the first item to include in this page), and the second to specify the number of items in this page.</p>
+<p>Two examples of offset-based pagination in Web APIs:</p>
+<ul>
+<li><a href="https://reqres.in/">req|res REST API</a></li>
+<li><a href="https://docs.github.com/en/rest/overview/resources-in-the-rest-api#pagination">GitHub REST API supports pagination</a>. Example: <code>https://api.github.com/user/repos?page=2&amp;per_page=100</code></li>
+</ul>
+<p>When the items include a temporal property (e.g. post time of tweets) or other properties that are ever increasing (e.g. tweet id in Twitter), you can also paginate using these properties as the offset. Example: <code>GET https://api.twitter.com/2/tweets/search/recent?start_time=2021-10-07T00:39:00Z&amp;max_results=20</code></p>
+<hr>
+<p>Another technique is called <strong>cursor-based pagination</strong>. Number of items to return in a page is specified in a query parameter (e.g. <code>max_results</code>). When the API server returns a response, it includes a token <code>next_token</code>, which the client can include in the next request to indicate the start position of the next page. (Similarly, the API also provides <code>previous_token</code>) for navigation to the previous page.</p>
+<p>The following example is from the Twitter API endpoint to retrieve followers of a certain user. <a href="https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/get-users-id-followers">(online ref)</a>.</p>
+<p>To get the first 3 followers of the user with id 12345678:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /2/users/12345678/followers?max_results=3 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">api.twitter.com</span>
+
+</code></pre></div><p>The Web API returns a response with a JSON payload similar to the following.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;data&#34;</span>: [
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;7000001&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;..&#34;</span>, <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;..&#34;</span> },
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;8003004&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;..&#34;</span>, <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;..&#34;</span> },
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;3030003&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;..&#34;</span>, <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;..&#34;</span> }
+  ],
+  <span style="color:#f92672">&#34;meta&#34;</span>: {
+    <span style="color:#f92672">&#34;result_count&#34;</span>: <span style="color:#ae81ff">3</span>,
+    <span style="color:#f92672">&#34;next_token&#34;</span>: <span style="color:#e6db74">&#34;DEFGABCDJKKLL&#34;</span>
+  }
+}
+</code></pre></div><p>To fetch the next page of the result, you can then use the following request.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /2/users/12345678/followers?max_results=3&amp;pagination_token=DEFGABCDJKKLL <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">api.twitter.com</span>
+
+</code></pre></div><p>Further information:</p>
+<ul>
+<li>Twitter REST API v2: <a href="https://developer.twitter.com/en/docs/twitter-api/pagination">Pagination</a></li>
+<li>Facebook Graph API: <a href="https://developers.facebook.com/docs/graph-api/results">Paginating APIs</a></li>
+<li>GitHub REST API: <a href="https://docs.github.com/en/rest/guides/traversing-with-pagination">Traversing with pagination</a></li>
+</ul>
+<h2 id="sub-resources--nested-route">Sub-resources / nested route</h2>
+<p>Consider the Web API at <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a> which exposes the resource <code>users</code> and their <code>posts</code> and <code>albums</code>.  Sending a <code>GET</code> request to <code>/users</code> and <code>/posts</code> will retrieve a list of users and posts respectively. Very often, a client needs to find the posts writen by a certain user. Some API designer model such 1 to many relationship with <strong>sub-resource</strong> (also known as nested routes).  A <code>GET</code> request to get the posts by user <code>1</code> would be <a href="https://jsonplaceholder.typicode.com/users/1/posts">https://jsonplaceholder.typicode.com/users/1/posts</a> .</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /users/1/posts <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">jsonplaceholder.typicode.com</span>
+
+</code></pre></div><p>This sample Web API also model the relationship that a post may have many comments, a user may have many albums, and an album may include many photos.</p>
+<h2 id="more-examples-of-rest-web-apis">More examples of REST Web APIs</h2>
+<p>REST style is used in many Web APIs. A popular API is the <a href="https://developer.twitter.com/en/docs/twitter-api/early-access">Twitter API V2</a>. <a href="https://documenter.getpostman.com/view/9956214/T1LMiT5U#intro">Postman collection</a></p>
+<ul>
+<li><code>GET /2/users/:id</code></li>
+<li><code>GET /2/users/:id/tweets</code> <a href="https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-tweets">(online ref)</a></li>
+<li><code>GET /2/tweets/:id</code> <a href="https://developer.twitter.com/en/docs/twitter-api/tweets/lookup/api-reference/get-tweets#Optional">(online ref)</a></li>
+<li><code>GET /2/tweets/search/recent</code> <a href="https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent">(online ref)</a></li>
+<li>The Twitter API v2 currently (Oct 2021) <em>does not provide</em> an endpoint for posting tweets.
+<ul>
+<li>In the API v1.1, it is <code>POST statuses/update</code> <a href="https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update">(online ref)</a></li>
+<li>But in API v2, it would be more natural to use <code>POST /2/users/:id/tweets</code></li>
+</ul>
+</li>
+</ul>
+<p>A limitation of REST APIs is that only a limited set of standard HTTP methods (e.g. <code>GET</code>, <code>PUT</code>) can be used on resources. To model other actions, the Twitter API uses sub-resources to represent actions.</p>
+<ul>
+<li>likes <a href="https://developer.twitter.com/en/docs/twitter-api/tweets/likes/api-reference">(online ref)</a>
+<ul>
+<li><code>POST /2/users/:id/likes</code></li>
+<li><code>DELETE /2/users/:id/likes/:tweet_id</code></li>
+<li><code>GET /2/users/:id/liked_tweets</code></li>
+<li><code>GET /2/tweets/:id/liking_users</code></li>
+</ul>
+</li>
+<li>retweets <a href="https://developer.twitter.com/en/docs/twitter-api/tweets/retweets/api-reference/post-users-id-retweets">(online ref)</a>
+<ul>
+<li><code>POST /2/users/:id/retweets</code></li>
+<li><code>DELETE /2/users/:id/retweets/:source_tweet_id</code></li>
+<li><code>GET /2/tweets/:id/retweeted_by</code></li>
+</ul>
+</li>
+<li>Also check the endpoints for &lsquo;follows&rsquo;</li>
+</ul>
+<p>Another well defined example of REST API is <a href="https://docs.github.com/en/rest">(GitHub REST API)</a>.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633677060"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633677060"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633677060"></script>
+    <script src="/js/jquery.sticky.js?1633677060"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633677060"></script>
+    <script src="/js/featherlight.min.js?1633677060"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633677060"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633677060"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633677060"></script>
+    
+
+  </body>
+</html>
+

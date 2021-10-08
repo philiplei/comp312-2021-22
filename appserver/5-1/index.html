@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>5-1 Web API, concepts :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633677060" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633677060" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633677060" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633677060" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633677060" rel="stylesheet">
+    <link href="/css/theme.css?1633677060" rel="stylesheet">
+    <link href="/css/tabs.css?1633677060" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633677060" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633677060" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633677060"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/appserver/5-1/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/basic/" title="JavaScript basics" class="dd-item">
+        <a href="/basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/client/" title="Client-side programming" class="dd-item">
+        <a href="/client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/server/" title="Server-side programming" class="dd-item">
+        <a href="/server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/appserver/" title="App server programming" class="dd-item parent">
+        <a href="/appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-1/" title="5-1 Web API, concepts" class="dd-item active">
+        <a href="/appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/appserver/'>App server programming</a> > 5-1 Web API, concepts
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#url-encoded-payload">URL-encoded payload</a></li>
+    <li><a href="#json-javascript-object-notation">JSON, JavaScript Object Notation</a></li>
+    <li><a href="#object-enclosed-json">Object-enclosed JSON</a></li>
+    <li><a href="#json-payload-in-requests">JSON payload in requests</a></li>
+    <li><a href="#javascript-support-for-json">JavaScript support for JSON</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              5-1 Web API, concepts
+            </h1>
+          
+
+        
+
+
+<p>In a modern web app, the application server implements a Web API that provides service to the front-end JavaScript code.</p>
+<p>A <strong>Web API</strong> is a defined set of HTTP request messages along with a definition of the structure of response messages, usually expressed in JSON format (from <a href="https://en.wikipedia.org/wiki/Web_API">Wikipedia</a>).</p>
+<p>A Web API provides service to clients through several <strong>endpoints</strong>. Each endpoint is named with an URL, e.g. <code>http://example.com/products</code>. A client uses an appropriate HTTP verb to invoke the endpoint.There are a few common paradigms to design Web APIs and structure the endpoints. We&rsquo;ll discuss two, namely REST and RPC, in the next two sections. We&rsquo;ll use REST style in the examples here. However, the focus on this section is the payload in requests and responses.</p>
+<p>The two most popular <strong>payload</strong> formats in Web APIs are URL-encoded and JSON. URL encoded payloads are key-value pairs, and are only suitable for simple values. JSON is more flexible in representing data structure.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>URL-encoded</th>
+<th>JSON</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>key value pairs</td>
+<td>similar to JavaScript objects</td>
+</tr>
+<tr>
+<td>Content type</td>
+<td><code>application/x-www-form-urlencoded</code></td>
+<td><code>application/json</code></td>
+</tr>
+<tr>
+<td>In GET requests</td>
+<td>as query of the URL</td>
+<td><em>no</em></td>
+</tr>
+<tr>
+<td>In other requests (POST, PUT, etc)</td>
+<td>in body</td>
+<td>in body</td>
+</tr>
+<tr>
+<td>In responses</td>
+<td>in body</td>
+<td>in body</td>
+</tr>
+</tbody>
+</table>
+<h2 id="url-encoded-payload">URL-encoded payload</h2>
+<p>&lsquo;URL-encoded&rsquo; was one of the original encoding in the Web to encode form data that a <code>&lt;form&gt;</code> submits to a server. (We&rsquo;ve discussed this in Chapter 1.) You can use URL-encoded in all kinds of requests and responses.</p>
+<p>For example, below is a simple (RPC style) request to get information about product with <code>id=5</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /products.info?id=5 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><blockquote>
+<p>Notice that GET requests cannot have message body. Therefore, the URL-encoded payload must be packed in the URL.</p>
+</blockquote>
+<p>The response for the above request could be the following.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/x-www-form-urlencoded</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">79</span>
+
+id=5&amp;productName=Coke+candy&amp;category=Confections&amp;unitPrice=10.5&amp;unitsInStock=20
+</code></pre></div><p>URL-encoded payload are also common as body of other kinds of requests (e.g. <code>POST</code>, <code>PUT</code>). Below is a sample (RPC style) request to create a new product.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.create <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/x-www-form-urlencoded</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">53</span>
+
+productName=Great+new+chocolate&amp;category=Confections&amp;unitPrice=20&amp;unitsInStock=100
+</code></pre></div><h2 id="json-javascript-object-notation">JSON, JavaScript Object Notation</h2>
+<p>The <a href="http://www.json.org/">JSON data format</a> is a textual language-agnostic data exchange format. JSON is supported by many popular languages, including Java, <a href="https://docs.python.org/3/library/json.html">Python</a>, and, of course, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JavaScript</a>.</p>
+<p>Below is a sample response message that returns information about the product with <code>id=5</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">116</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">10.5</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">20</span>
+}
+</code></pre></div><p>The syntax of JSON is similar to JavaScript object, array, numbers, string and boolean. But there are several differences.</p>
+<ul>
+<li>string values must use double quotation marks, e.g. <code>&quot;correct&quot;</code>, <em>not</em> <code>'incorrect'</code>.</li>
+<li>keys of objects must be quoted strings, e.g. <code>{&quot;name&quot;: &quot;peter&quot;, &quot;age&quot;: 20}</code>, <em>not</em> <code>{name: &quot;peter&quot;, 'age': 20}</code></li>
+<li>there is only one root value. To represent a list of value, you can use array, e.g. <code>[1,2,3]</code>.</li>
+<li>Simple values (namely numbers, strings, <code>true</code>, <code>false</code>, <code>null</code>) are supported, but JSON data cannot include functions.</li>
+<li>Comments <code>/* like this */</code> are not allowed in JSON.</li>
+</ul>
+<h2 id="object-enclosed-json">Object-enclosed JSON</h2>
+<p>Although simple values like <code>123</code>, <code>&quot;json sample&quot;</code>, <code>true</code> are valid JSON data, in many Web APIs, the returned values in responses are <strong>object-enclosed</strong>. In other words, the root value in the JSON data is an object. Below are two possible designs for returning data about two products in JSON, e.g. in response to a search request. (We omit some fields about products for brevity.)  The first design returns the items directly in an array.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">131</span>
+
+[
+  { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">10.5</span> },
+  { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">6</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Chocolate bar&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">25.0</span> }
+]
+</code></pre></div><p>The second design <em>encloses the data in an object</em>. Usually, the items are described under a property of the object, and there is another property to provide the number of items (e.g. <code>count</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">166</span>
+
+{
+  <span style="color:#f92672">&#34;count&#34;</span>: <span style="color:#ae81ff">2</span>,
+  <span style="color:#f92672">&#34;items&#34;</span>: [
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">10.5</span> },
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">6</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Chocolate bar&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">25.0</span> }
+  ]
+}
+</code></pre></div><h2 id="json-payload-in-requests">JSON payload in requests</h2>
+<p><code>GET</code> requests cannot take message body. Because JSON payload is usually large and may exceed the maximum allowable length of URL, we do not use JSON payload in <code>GET</code> requests.</p>
+<p>On the other hand, JSON payload can appear in the message body of  non-GET requests (e.g. <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)
+For example, to create a product, the client may send the following (RPC style) request.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.create <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">104</span>
+
+{
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;New candy&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">8.6</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">500</span>
+}
+</code></pre></div><h2 id="javascript-support-for-json">JavaScript support for JSON</h2>
+<p>Two built-in functions in JavaScript support conversion between JavaScript values and JSON data.</p>
+<p><code>JSON.stringify()</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">(online ref)</a> converts a JavaScript value into a JSON string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">product5</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">productName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;New candy&#39;</span>,
+  <span style="color:#a6e22e">category</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#a6e22e">unitPrice</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8.6</span>,
+  <span style="color:#a6e22e">unitsInStock</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>
+};
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">product5</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jsonString</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">product5</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">jsonString</span>);
+</code></pre></div><p><code>JSON.parse()</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">(online ref)</a> converts a JSON string back into a JavaScript value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// a JSON string obtained from a Web API
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jsonString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;id&#34;:10248,&#34;customerId&#34;:85,&#34;orderDate&#34;:&#34;2012-07-04&#34;,&#34;freight&#34;:32.38,&#34;shipCity&#34;:&#34;Reims&#34;,&#34;lines&#34;:[{&#34;productId&#34;:11,&#34;unitPrice&#34;:14,&#34;quantity&#34;:12},{&#34;productId&#34;:42,&#34;unitPrice&#34;:9.8,&#34;quantity&#34;:10},{&#34;productId&#34;:72,&#34;unitPrice&#34;:34.8,&#34;quantity&#34;:5}]}&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">jsonString</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+</code></pre></div><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633677060"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633677060"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633677060"></script>
+    <script src="/js/jquery.sticky.js?1633677060"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633677060"></script>
+    <script src="/js/featherlight.min.js?1633677060"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633677060"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633677060"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633677060"></script>
+    
+
+  </body>
+</html>
+
