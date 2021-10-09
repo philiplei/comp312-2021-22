@@ -6,7 +6,7 @@
     <description>Recent content on COMP312 notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Oct 2021 16:14:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Oct 2021 12:29:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>5-1 Web API, concepts</title>
       <link>https://philiplei.github.io/appserver/5-1/</link>
@@ -130,6 +130,16 @@ Functions There are two ways to define functions: the function keyword and arrow
     </item>
     
     <item>
+      <title>5-4 Making HTTP requests in client</title>
+      <link>https://philiplei.github.io/appserver/5-4/</link>
+      <pubDate>Sat, 09 Oct 2021 06:10:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/appserver/5-4/</guid>
+      <description>In a modern web app, client-side JavaScript programs react to user interaction, and send HTTP requests to Web APIs to get up-to-date information to display or invoke actions on the server. Client-side programs also need to handle receive data or reported errors from the server.
+Web browsers provide two main means to send asynchronous HTTP requests: the traditional XMLHttpRequest, and the new Fetch API. XMLHttpRequest applies callbacks and events to handle asynchronous message handling, while the Fetch API fetch is based on promises.</description>
+    </item>
+    
+    <item>
       <title>4-4 Modules, import and export</title>
       <link>https://philiplei.github.io/server/4-4/</link>
       <pubDate>Sun, 19 Sep 2021 10:57:00 +0800</pubDate>
@@ -188,6 +198,17 @@ A popular module to access SQLite in Node is sqlite3. However, this module only 
       <guid>https://philiplei.github.io/basic/2-5/</guid>
       <description>Defining function objects Functions in JavaScript are often described as first-class values. (In fact, functions are objects, with their own properties and methods.) This means that, in many cases, if you can do something on numbers or strings, you can also do the same on functions. In particular, you can save a function in a variable, pass a function to another function, or return a function from a function.
 There are three ways to define a function: function declaration, function expression and arrow function.</description>
+    </item>
+    
+    <item>
+      <title>5-5 Web app server</title>
+      <link>https://philiplei.github.io/appserver/5-5/</link>
+      <pubDate>Sat, 09 Oct 2021 12:29:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/appserver/5-5/</guid>
+      <description>Express.js (official website) is a web framework to simplify development of Web applications. It supports:
+ Routing – different request processing based on URL patterns Middleware – chainable processing of requests and responses Template – generate HTML output from variables  This lab covers how to define routes to capture HTTP requests for a web app / service endpoints. In addition, we&amp;rsquo;ll discuss how to generate simple HTTP responses.
+Handling requests at routes This example shows the basic structure of an Express app.</description>
     </item>
     
     <item>

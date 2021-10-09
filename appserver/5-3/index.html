@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="generator" content="Hugo 0.87.0" />
     <meta name="description" content="">
 <meta name="author" content="Philip Lei">
 
@@ -12,20 +12,20 @@
     <title>5-3 REST Web API :: COMP312 notes</title>
 
     
-    <link href="/css/nucleus.css?1633677060" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1633677060" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1633677060" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1633677060" rel="stylesheet">
-    <link href="/css/auto-complete.css?1633677060" rel="stylesheet">
-    <link href="/css/theme.css?1633677060" rel="stylesheet">
-    <link href="/css/tabs.css?1633677060" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1633677060" rel="stylesheet">
+    <link href="/css/nucleus.css?1633771374" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633771374" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633771374" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633771374" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633771374" rel="stylesheet">
+    <link href="/css/theme.css?1633771374" rel="stylesheet">
+    <link href="/css/tabs.css?1633771374" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633771374" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1633677060" rel="stylesheet">
+    <link href="/css/theme-green.css?1633771374" rel="stylesheet">
     
     
 
-    <script src="/js/jquery.min.js?1633677060"></script>
+    <script src="/js/jquery.min.js?1633771374"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -670,6 +670,48 @@ App server programming
   
 
             
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
           
         </ul>
       </li>
@@ -1025,11 +1067,13 @@ Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">api.twitter
 <li>GitHub REST API: <a href="https://docs.github.com/en/rest/guides/traversing-with-pagination">Traversing with pagination</a></li>
 </ul>
 <h2 id="sub-resources--nested-route">Sub-resources / nested route</h2>
-<p>Consider the Web API at <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a> which exposes the resource <code>users</code> and their <code>posts</code> and <code>albums</code>.  Sending a <code>GET</code> request to <code>/users</code> and <code>/posts</code> will retrieve a list of users and posts respectively. Very often, a client needs to find the posts writen by a certain user. Some API designer model such 1 to many relationship with <strong>sub-resource</strong> (also known as nested routes).  A <code>GET</code> request to get the posts by user <code>1</code> would be <a href="https://jsonplaceholder.typicode.com/users/1/posts">https://jsonplaceholder.typicode.com/users/1/posts</a> .</p>
+<p>Consider the Web API at <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a> which exposes the resource <code>users</code> and their <code>posts</code> and <code>albums</code>.  Sending a <code>GET</code> request to <code>/users</code> and <code>/posts</code> will retrieve a list of users and posts respectively. Very often, a client needs to find the posts written by a certain user. Some API designer model such 1 to many relationship with <strong>sub-resource</strong> (also known as nested routes).  A <code>GET</code> request to get the posts by user <code>1</code> would be <a href="https://jsonplaceholder.typicode.com/users/1/posts">https://jsonplaceholder.typicode.com/users/1/posts</a> .</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /users/1/posts <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
 Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">jsonplaceholder.typicode.com</span>
 
 </code></pre></div><p>This sample Web API also model the relationship that a post may have many comments, a user may have many albums, and an album may include many photos.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="more-examples-of-rest-web-apis">More examples of REST Web APIs</h2>
 <p>REST style is used in many Web APIs. A popular API is the <a href="https://developer.twitter.com/en/docs/twitter-api/early-access">Twitter API V2</a>. <a href="https://documenter.getpostman.com/view/9956214/T1LMiT5U#intro">Postman collection</a></p>
 <ul>
@@ -1088,16 +1132,16 @@ Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">jsonplaceho
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1633677060"></script>
-    <script src="/js/perfect-scrollbar.min.js?1633677060"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1633677060"></script>
-    <script src="/js/jquery.sticky.js?1633677060"></script>
-    <script src="/js/jquery.svg.pan.zoom.js?1633677060"></script>
-    <script src="/js/featherlight.min.js?1633677060"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1633677060"></script>
+    <script src="/js/clipboard.min.js?1633771374"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633771374"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633771374"></script>
+    <script src="/js/jquery.sticky.js?1633771374"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633771374"></script>
+    <script src="/js/featherlight.min.js?1633771374"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633771374"></script>
     
         
-            <script src="/js/mermaid.min.js?1633677060"></script>
+            <script src="/js/mermaid.min.js?1633771374"></script>
         
         
             
@@ -1108,7 +1152,7 @@ Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">jsonplaceho
             }
         </script>
     
-    <script src="/js/relearn.js?1633677060"></script>
+    <script src="/js/relearn.js?1633771374"></script>
     
 
   </body>

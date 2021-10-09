@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="generator" content="Hugo 0.87.0" />
     <meta name="description" content="">
 <meta name="author" content="Philip Lei">
 
@@ -12,20 +12,20 @@
     <title>App server programming :: COMP312 notes</title>
 
     
-    <link href="/css/nucleus.css?1633677061" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1633677061" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1633677061" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1633677061" rel="stylesheet">
-    <link href="/css/auto-complete.css?1633677061" rel="stylesheet">
-    <link href="/css/theme.css?1633677061" rel="stylesheet">
-    <link href="/css/tabs.css?1633677061" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1633677061" rel="stylesheet">
+    <link href="/css/nucleus.css?1633771374" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633771374" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633771374" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633771374" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633771374" rel="stylesheet">
+    <link href="/css/theme.css?1633771374" rel="stylesheet">
+    <link href="/css/tabs.css?1633771374" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633771374" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1633677061" rel="stylesheet">
+    <link href="/css/theme-green.css?1633771374" rel="stylesheet">
     
     
 
-    <script src="/js/jquery.min.js?1633677061"></script>
+    <script src="/js/jquery.min.js?1633771374"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -670,6 +670,48 @@ App server programming
   
 
             
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
           
         </ul>
       </li>
@@ -747,27 +789,46 @@ App server programming
     <h2 id="app-server-development">App server development</h2>
 <p>Built on top of the last two chapters, in this chapter, we study several additional concepts to build a full-stack web app.</p>
 <ul>
-<li>Web API
+<li>5-1. Web API, concepts
 <ul>
-<li>payload: JSON, url-encoded</li>
-<li>REST Web API</li>
-<li>RPC Web API</li>
+<li>endpoints, HTTP methods, path</li>
+<li>payload, URL-encoded, JSON</li>
 </ul>
 </li>
-<li>Consuming a Web API
+<li>5-2. RPC Web APIs
 <ul>
-<li>fetch: sending requests to a Web API in browser</li>
+<li>GET - retrieve items</li>
+<li>POST - update items</li>
 </ul>
 </li>
-<li>Implementing a Web API
+<li>5-3. REST Web APIs
 <ul>
-<li>App server development with Express.js</li>
+<li>Resources, collection</li>
+<li>CRUD operations</li>
+<li>HTTP methods: GET, PUT, PATCH, DELETE, POST</li>
+<li>searching, pagination, sub-resources</li>
 </ul>
 </li>
-</ul>
-<p>Examples for Web APIs</p>
+<li>5-4. Making HTTP requests in clients
 <ul>
-<li><a href="https://api.slack.com/methods?filter=conversations">Conversations method group</a> in Slack API</li>
+<li>Fetch API</li>
+<li>Send GET request, with payload in query string</li>
+<li>Send other requests (e.g. POST, PUT), with JSON payload in body</li>
+<li>sample program: <a href="/chap5/p540-fetch.zip">p540-fetch</a></li>
+</ul>
+</li>
+<li>5-5. Web app server
+<ul>
+<li>Express.js</li>
+<li>Routes, middlewares</li>
+<li>sample program: <a href="/chap5/p550-express.zip">p550-express.zip</a></li>
+</ul>
+</li>
+<li>5-6. Implementing REST API
+<ul>
+<li>to do</li>
+</ul>
+</li>
 </ul>
 
 
@@ -798,16 +859,16 @@ App server programming
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1633677061"></script>
-    <script src="/js/perfect-scrollbar.min.js?1633677061"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1633677061"></script>
-    <script src="/js/jquery.sticky.js?1633677061"></script>
-    <script src="/js/jquery.svg.pan.zoom.js?1633677061"></script>
-    <script src="/js/featherlight.min.js?1633677061"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1633677061"></script>
+    <script src="/js/clipboard.min.js?1633771374"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633771374"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633771374"></script>
+    <script src="/js/jquery.sticky.js?1633771374"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633771374"></script>
+    <script src="/js/featherlight.min.js?1633771374"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633771374"></script>
     
         
-            <script src="/js/mermaid.min.js?1633677061"></script>
+            <script src="/js/mermaid.min.js?1633771374"></script>
         
         
             
@@ -818,7 +879,7 @@ App server programming
             }
         </script>
     
-    <script src="/js/relearn.js?1633677061"></script>
+    <script src="/js/relearn.js?1633771374"></script>
     
 
   </body>

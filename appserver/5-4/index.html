@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>5-4 Making HTTP requests in client :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633771374" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633771374" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633771374" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633771374" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633771374" rel="stylesheet">
+    <link href="/css/theme.css?1633771374" rel="stylesheet">
+    <link href="/css/tabs.css?1633771374" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633771374" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633771374" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633771374"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/appserver/5-4/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/basic/" title="JavaScript basics" class="dd-item">
+        <a href="/basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/client/" title="Client-side programming" class="dd-item">
+        <a href="/client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/server/" title="Server-side programming" class="dd-item">
+        <a href="/server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/appserver/" title="App server programming" class="dd-item parent">
+        <a href="/appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item active">
+        <a href="/appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/appserver/'>App server programming</a> > 5-4 Making HTTP requests in client
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#making-get-requests">Making GET requests</a></li>
+    <li><a href="#understanding-the-two-then-handlers">Understanding the two &lsquo;then handlers&rsquo;</a></li>
+    <li><a href="#making-other-requests">Making other requests</a></li>
+    <li><a href="#sample-program">Sample program</a></li>
+    <li><a href="#further-resources">Further resources</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              5-4 Making HTTP requests in client
+            </h1>
+          
+
+        
+
+
+<p>In a modern web app, client-side JavaScript programs react to user interaction, and send HTTP requests to Web APIs to get up-to-date information to display or invoke actions on the server. Client-side programs also need to handle receive data or reported errors from the server.</p>
+<p>Web browsers provide two main means to send asynchronous HTTP requests: the traditional <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, and the new <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a>. XMLHttpRequest applies callbacks and events to handle asynchronous message handling, while the Fetch API <code>fetch</code> is based on promises. In this chapter, we&rsquo;ll use <code>fetch</code> to interact with Web APIs.</p>
+<h2 id="making-get-requests">Making GET requests</h2>
+<p>An introduction to <code>fetch()</code> usually starts with an example that resembles the following. Line 3 assumes the response body is JSON format, and converts it to JavaScript data. Line 4 receives the data, and prints it in the console. The default HTTP method fo <code>fetch()</code> is <code>GET</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users/1&#39;</span>;
+<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">endpoint</span>)
+  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">response</span>) =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">json</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">json</span>));
+</code></pre></div><p>You can rewrite the above example using <code>await</code>, as below. This work inside an <code>async</code> function, or on top level of a program.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users/1&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">endpoint</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">json</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">json</span>);
+</code></pre></div><hr>
+<p>A <code>GET</code> request cannot have payload in the body. So you can only attach payload in the query string of the URL. For example, some REST APIs enhance the endpoints of collection resources to accept search criteria. The following endpoint retrieves the pending todo of the user with <code>userId=1</code>.</p>
+<p><a href="https://jsonplaceholder.typicode.com/todos?userId=1&amp;completed=false">https://jsonplaceholder.typicode.com/todos?userId=1&amp;completed=false</a></p>
+<p>You can construct the query string in the end of the URL yourself, or you can use the browser built-in object <code>URLSearchParams</code> to do the encoding.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/todos?&#39;</span>
+  <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>({
+    <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">completed</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+  });
+
+<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">endpoint</span>)
+  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">response</span>) =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">json</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">json</span>));
+</code></pre></div><h2 id="understanding-the-two-then-handlers">Understanding the two &lsquo;then handlers&rsquo;</h2>
+<p>The first example of <code>fetch()</code> above involves <strong>two promises</strong>.</p>
+<p>The browser built-in function <code>fetch()</code> initiates an HTTP request and returns a promise. Because it will take some time until the browser receives the response, <code>fetch()</code> is asynchronous. The promise will <em>resolve</em> to a <code>response</code> object when the browser has received the status line and headers of the response, <em>but before it receives the full response body</em>. The promise <em>rejects</em> if there are network errors. You can check <code>response.ok</code> to find whether the HTTP status code is in class 200, e.g. <code>200 Ok</code> or <code>204 No content</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users/1&#39;</span>;
+<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">endpoint</span>).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">response</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;ok: &#39;</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">ok</span>, <span style="color:#e6db74">&#39;status: &#39;</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;headers: &#39;</span>, [...<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">headers</span>]);
+  <span style="color:#75715e">// but the response body is not yet ready yet    
+</span><span style="color:#75715e"></span>})
+</code></pre></div><p>Assuming that the response is ok, you can call the method <code>response.json()</code> to read the response body, treat it as JSON string, and convert it into a JavaScript object. <em>(Attention!)</em> This method also <strong>returns a promise</strong>. (Some response body may be large and will take some time to transfer from the server.) The promise <em>resolves to a JavaScript object</em> when the JSON data is ready.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users/1&#39;</span>;
+<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">endpoint</span>).<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">response</span>) =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">prom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+  <span style="color:#a6e22e">prom</span>.<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">json</span>) =&gt; {
+    <span style="color:#75715e">// &#39;json&#39; is a JavaScript object converted from the JSON payload
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">json</span>);
+  });
+});
+</code></pre></div><p>The &lsquo;then handler&rsquo; only creates a promise and handles it. We can take advantage of chaining &lsquo;then handlers&rsquo; of a promise to simplify the code. If the &lsquo;then handler&rsquo; returns a new promise, you can chain the &lsquo;then handler&rsquo; of the new promise.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users/1&#39;</span>;
+<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">endpoint</span>)
+  <span style="color:#75715e">// this handler returns a promise that resolves to json data
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">response</span>) =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  <span style="color:#75715e">// this handler receives the json data
+</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">json</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">json</span>));
+</code></pre></div><blockquote>
+<p><code>fetch()</code> does not reject if the server returns an HTTP status code reporting errors (e.g. <code>404</code>, <code>500</code>). For example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://httpstat.us/500&#39;</span>).<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">response</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;ok: &#39;</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">ok</span>, <span style="color:#e6db74">&#39;status: &#39;</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;headers: &#39;</span>, [...<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">headers</span>]);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;url: &#39;</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">url</span>);
+}).<span style="color:#66d9ef">catch</span>( (<span style="color:#a6e22e">error</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;promise rejected: &#39;</span>, <span style="color:#a6e22e">error</span>);
+});
+</code></pre></div><p><code>fetch()</code> rejects when there is network error, or somehow it cannot finish the HTTP request-response transaction. For example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://notexist.ipm.edu.mo&#39;</span>).<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">response</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;ok: &#39;</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">ok</span>, <span style="color:#e6db74">&#39;status: &#39;</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span>);
+}).<span style="color:#66d9ef">catch</span>( (<span style="color:#a6e22e">error</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;promise rejected: &#39;</span>, <span style="color:#a6e22e">error</span>);
+});
+</code></pre></div><p>In general, you can handle erroneous HTTP status code by throwing an Error object. Next, you attach a &lsquo;catch handler&rsquo; at the end of the chain of &lsquo;then handlers&rsquo;. The &lsquo;catch handler&rsquo; will handle promise rejections and exceptions thrown in the &lsquo;then handlers&rsquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;...&#39;</span>;
+<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">endpoint</span>).<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">response</span>) =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">ok</span>) {
+    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`HTTP error! status: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+}).<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">json</span>) =&gt; {
+  <span style="color:#75715e">// process the json data
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">json</span>);
+}).<span style="color:#66d9ef">catch</span>( (<span style="color:#a6e22e">error</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;promise rejected: &#39;</span>, <span style="color:#a6e22e">error</span>);
+});
+</code></pre></div><p>Refer to <a href="https://css-tricks.com/using-fetch/">https://css-tricks.com/using-fetch/</a> for more explanation on error handling in fetch.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="making-other-requests">Making other requests</h2>
+<p><code>fetch()</code> has a second parameter that allows you to set the HTTP verb (e.g. <code>method: 'POST'</code>) and message <code>body</code>. Notice that you need to format your data as a JSON string using <code>JSON.stringify()</code>, and set the <code>Content-type</code> header manually. The following example sends a <code>POST</code> request to the testing endpoint to create a new post.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;foo&#39;</span>, <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;bar&#39;</span> };
+
+<span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/posts&#39;</span>, {
+  <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;POST&#39;</span>,
+  <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">content</span>),
+  <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#39;Content-type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>,
+  },
+})
+  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">response</span>) =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">json</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">json</span>));
+</code></pre></div><p>The code used to send <code>PUT</code>, <code>PATCH</code> and <code>DELETE</code> are similar. You can find some examples in <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a>.</p>
+<blockquote>
+<p>If you need to send URL-encoded payload in request body, use <code>URLSearchParams</code>. For example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://example.com/products.create&#39;</span>, {
+  <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;POST&#39;</span>,
+  <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>({
+    <span style="color:#a6e22e">productName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Great new chocolate&#34;</span>,
+    <span style="color:#a6e22e">category</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Confections&#34;</span>,
+    <span style="color:#a6e22e">unitPrice</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>,
+    <span style="color:#a6e22e">unitsInStock</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>
+  })
+}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+  <span style="color:#75715e">// handle the response
+</span><span style="color:#75715e"></span>});
+</code></pre></div></blockquote>
+<h2 id="sample-program">Sample program</h2>
+<p>The sample program <a href="/chap5/p540-fetch.zip">p540-fetch</a> implements the client side of a web app. Download the project and uncompress the project. Install and run the project as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-csh" data-lang="csh">$ npm install
+
+<span style="color:#75715e"># build the client side of the web app to ./dist</span>
+$ npm run build
+
+<span style="color:#75715e"># run the web api server</span>
+$ node server.mjs
+</code></pre></div><p>You can now access the web app at http://localhost:8000/ . The web API is accessible at http://localhost:8000/api .</p>
+<h2 id="further-resources">Further resources</h2>
+<p>Fetch API</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch</a></li>
+<li>The chapter on <a href="https://javascript.info/network">Network requests</a> in javascript.info covers more detail of the Fetch API. In addition, it also discusses XMLHttpRequest and WebSocket.</li>
+<li>charset is not required after application/json. <a href="https://newbedev.com/what-does-content-type-application-json-charset-utf-8-really-mean">https://newbedev.com/what-does-content-type-application-json-charset-utf-8-really-mean</a></li>
+<li>The Fetch API is natively supported by modern web browser, but is not included in Node.js. However, there are package like <a href="https://www.npmjs.com/package/node-fetch">node-fetch</a> which provides most of its feature in Node.js.</li>
+</ul>
+<p>Testing APIs:</p>
+<ul>
+<li><a href="https://reqres.in/">https://reqres.in/</a> and <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a> provide REST APIs with sample data. But they don&rsquo;t persist changes from <code>POST</code>, <code>PUT</code> and <code>DELETE</code> requests.</li>
+<li><a href="https://dummyapi.io/">https://dummyapi.io/</a> includes more kinds of data, and support persisting changes. But it requires registration to get an app_id.</li>
+</ul>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633771374"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633771374"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633771374"></script>
+    <script src="/js/jquery.sticky.js?1633771374"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633771374"></script>
+    <script src="/js/featherlight.min.js?1633771374"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633771374"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633771374"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633771374"></script>
+    
+
+  </body>
+</html>
+
