@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>2-3 Functions :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633929656" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633929656" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633929656" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633929656" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633929656" rel="stylesheet">
+    <link href="/css/theme.css?1633929656" rel="stylesheet">
+    <link href="/css/tabs.css?1633929656" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633929656" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633929656" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633929656"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/2basic/2-3/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/2basic/" title="JavaScript basics" class="dd-item parent">
+        <a href="/2basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/2basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/2basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-3/" title="2-3 Functions" class="dd-item active">
+        <a href="/2basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/2basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/2basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/2basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/2basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+        <a href="/3client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/3client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/3client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/3client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/3client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/3client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/3client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/3client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/3client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/4server/" title="Server-side programming" class="dd-item">
+        <a href="/4server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/4server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/4server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/4server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/4server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/4server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/5appserver/" title="App server programming" class="dd-item">
+        <a href="/5appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/5appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/5appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/5appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/5appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/5appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/2basic/'>JavaScript basics</a> > 2-3 Functions
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#functions">Functions</a></li>
+    <li><a href="#variable-scope">Variable scope</a></li>
+    <li><a href="#exercise">Exercise</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              2-3 Functions
+            </h1>
+          
+
+        
+
+
+<p>This lab explains the basics of the JavaScript functions.</p>
+<h2 id="functions">Functions</h2>
+<p>There are two ways to define functions: the <code>function</code> keyword and arrow functions. This lab covers the first. We use a function to group some statements that can be reused.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// draw a right angle triangle of height n
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span> (<span style="color:#a6e22e">n</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">out</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">y</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">y</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#a6e22e">y</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#a6e22e">s</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;. &#34;</span>
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;=</span><span style="color:#a6e22e">y</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) <span style="color:#a6e22e">s</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;* &#34;</span>
+    <span style="color:#a6e22e">out</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">s</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>
+  }
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">out</span>)
+}
+
+<span style="color:#a6e22e">draw</span>(<span style="color:#ae81ff">5</span>) <span style="color:#75715e">// call the function to draw a triangle of height 5
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">draw</span>(<span style="color:#ae81ff">10</span>) <span style="color:#75715e">// draw again
+</span></code></pre></div><p>Functions can return values to the calling code with <code>return</code>. The <code>return</code> statement also ends the execution of the functions immediately.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// this function compares the two parameters a and b, and returns the bigger one
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bigger</span> (<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">b</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>
+  }
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;The bigger one is &#39;</span>, <span style="color:#a6e22e">bigger</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>))
+
+<span style="color:#75715e">// another way to write
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bigger2</span> (<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">b</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>
+}
+
+<span style="color:#75715e">// yet another way to write
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bigger3</span> (<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">b</span> }
+</code></pre></div><p>The next example defines a function that finds the largest number in an array, assuming that the array has at least 1 element.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">max</span> (<span style="color:#a6e22e">num</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num</span>[<span style="color:#ae81ff">0</span>] <span style="color:#75715e">// assume the 0th element is the largest
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// compare x with each remaining element
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">k</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">k</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">k</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">num</span>[<span style="color:#a6e22e">k</span>]<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">x</span>) <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num</span>[<span style="color:#a6e22e">k</span>]
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span>
+}
+
+<span style="color:#a6e22e">max</span>([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>]) <span style="color:#75715e">// return 8
+</span></code></pre></div><h2 id="variable-scope">Variable scope</h2>
+<p>In JavaScript, variables defined inside a function are called <strong>local variables</strong>. They are visible from the point of declaration up to the end of the function. When you call a function, all its local variables are created; when the function returns (stops execution), the local variables are destroyed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span> (<span style="color:#a6e22e">param1</span>, <span style="color:#a6e22e">param2</span>) {
+  <span style="color:#75715e">// &#39;a&#39; cannot be used yet, but &#39;param1&#39; can be used here
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// &#39;a&#39; can be used till the end of the function
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>);
+}
+</code></pre></div><blockquote>
+<p>Technical note: Sometimes, a local variable may still exist <em>after the function that defines it returns</em>. This is the case if the variable falls into the <strong>closure</strong> of an inner function which is returned by the outer function. See <a href="https://javascript.info/closure">online reference</a> for more information.</p>
+</blockquote>
+<p>Variables defined using <code>let</code> or <code>const</code> may further be restricted to a block scope. A block is a region of the function then is delimited by <code>{ }</code>.  This works similarly to Java&rsquo;s scoping rules.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bar</span> () {
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) { 
+    <span style="color:#75715e">/* &#39;i&#39; can be used only within this block */</span> 
+  }
+  <span style="color:#66d9ef">while</span> (Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0.5</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">k</span>;
+    <span style="color:#75715e">/* the scope of &#39;k&#39; is this &#39;while&#39; loop */</span>
+  }
+}
+</code></pre></div><p>On the other hand, variables defined outside any functions are <strong>global variables</strong>, and are visible in any functions. It is generally recommended to use global variables as little as possible.</p>
+<h2 id="exercise">Exercise</h2>
+<ol>
+<li>
+<p>Write a <strong>function</strong> <code>sum(num)</code> to calculate the sum of elements in an array <code>num</code>.
+Use the following code to test your function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ans</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">x</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Correct? &#39;</span>, <span style="color:#a6e22e">ans</span><span style="color:#f92672">==</span><span style="color:#ae81ff">15</span>);
+</code></pre></div></li>
+<li>
+<p>Write a function <code>odd(n)</code> to generate an array of odd numbers less than or equal to <code>n</code>.
+Test your function with the following code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">odd</span>(<span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>); <span style="color:#75715e">// should print [1]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">odd</span>(<span style="color:#ae81ff">9</span>)); <span style="color:#75715e">// should print [1,3,5,7,9]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">odd</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))); <span style="color:#75715e">// should print 100
+</span></code></pre></div></li>
+<li>
+<p>Write a function <code>search(num, n)</code> to search for an number <code>n</code> in the array <code>num</code>. Return the   position of the element if it is found. If it is not found, return -1. Test your function with the following code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>];
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">search</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">3</span>)); <span style="color:#75715e">// should print 2;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">search</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">1</span>)); <span style="color:#75715e">// should print -1;
+</span></code></pre></div></li>
+</ol>
+<p>The sample answers are available at <a href="/chap2/ex2-3q1.js">ex2-3q1.js</a>, <a href="/chap2/ex2-3q2.js">ex2-3q2.js</a> and <a href="/chap2/ex2-3q3.js">ex2-3q3.js</a> respectively.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633929656"></script>
+    <script src="/js/jquery.sticky.js?1633929656"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633929656"></script>
+    <script src="/js/featherlight.min.js?1633929656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633929656"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633929656"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633929656"></script>
+    
+
+  </body>
+</html>
+

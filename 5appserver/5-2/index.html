@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>5-2 RPC Web API :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633929656" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633929656" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633929656" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633929656" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633929656" rel="stylesheet">
+    <link href="/css/theme.css?1633929656" rel="stylesheet">
+    <link href="/css/tabs.css?1633929656" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633929656" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633929656" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633929656"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/5appserver/5-2/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/2basic/" title="JavaScript basics" class="dd-item">
+        <a href="/2basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/2basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/2basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/2basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/2basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/2basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/2basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/2basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+        <a href="/3client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/3client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/3client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/3client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/3client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/3client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/3client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/3client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/3client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/4server/" title="Server-side programming" class="dd-item">
+        <a href="/4server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/4server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/4server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/4server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/4server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/4server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/5appserver/" title="App server programming" class="dd-item parent">
+        <a href="/5appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/5appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-2/" title="5-2 RPC Web API" class="dd-item active">
+        <a href="/5appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/5appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/5appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/5appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/5appserver/'>App server programming</a> > 5-2 RPC Web API
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#rpc-style-web-api">RPC-style Web API</a>
+      <ul>
+        <li><a href="#retrieving-items">Retrieving items</a></li>
+        <li><a href="#update-operations">Update operations</a></li>
+      </ul>
+    </li>
+    <li><a href="#more-examples-of-rpc-web-apis">More examples of RPC Web APIs</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              5-2 RPC Web API
+            </h1>
+          
+
+        
+
+
+<h2 id="rpc-style-web-api">RPC-style Web API</h2>
+<p>A common design style of Web API is RPC-style (Remote Procedure Call). A RPC-style Web API allocates <em>one URL for each function or operation</em>.  These URLs represent an action and are usually named with a verb.  The following table shows five endpoints in a Web API to manipulate products in a database. They implement four common operations on data known as CRUD (Create, Retrieve, Update and Delete).</p>
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>URL</th>
+<th>function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/products.info</td>
+<td>Retrieve info about a specific product</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/products.list</td>
+<td>List all products</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/products.create</td>
+<td>Add a new product</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/products.update</td>
+<td>Update a product</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/products.delete</td>
+<td>Delete a product</td>
+</tr>
+</tbody>
+</table>
+<p>Each endpoint is identified with the HTTP method (either GET or POST) and an URL.
+An endpoint uses <strong>GET</strong> if the operation is <em>read-only</em>. If the operation may cause some action or side-effect on the server side, the endpoint must use <strong>POST</strong>.</p>
+<p>In addition, when you design a Web API, you also need to specify:</p>
+<ul>
+<li>input parameters, and whether they are in URL-encoded or json format, and whether to pass them in URL query or request message body</li>
+<li>results, whether they are in URL-encoded or json format</li>
+<li>how to report error</li>
+</ul>
+<h3 id="retrieving-items">Retrieving items</h3>
+<p>Readonly endpoints in RPC-style Web APIs should <strong>use the GET method</strong>. This informs the proxy servers that the responses from these endpoints are cacheable, and may be reused within an expiry time.</p>
+<p>A Web API may return result in either URL-encoded (i.e. key-value pairs) or JSON. Key-value pairs are only suitable for simple values. JSON is more flexible in representing data structure.</p>
+<p>Below is a sample HTTP request to retrieve a product with a specified ID:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /products.info?id=5 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><p>Below is a sample response message returned by the Web API. The JSON payload has <code>Content-type: application/json</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">116</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">10.5</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">20</span>
+}
+</code></pre></div><hr>
+<p>Similarly, search operations should use the <code>GET</code> verb because they are readonly operations. You can design the parameters to specify the search criteria. For example, to list all &lsquo;confections&rsquo; products with a unit price less than or equal to $10, you can implement the parameters <code>category</code> and <code>maxUnitPrice</code> for filtering the result set. The client can then send the following request.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">GET</span> /products.list?category=Confections&amp;maxUnitPrice=10 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">6060</span>
+
+{
+  <span style="color:#f92672">&#34;count&#34;</span>: <span style="color:#ae81ff">98</span>,
+  <span style="color:#f92672">&#34;items&#34;</span>: [
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">10.5</span> <span style="color:#960050;background-color:#1e0010">...</span> },
+    { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">6</span>, <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Chocolate bar&#34;</span>, <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">25.0</span> <span style="color:#960050;background-color:#1e0010">...</span>},
+    <span style="color:#960050;background-color:#1e0010">...</span>
+  ]
+}
+</code></pre></div><h3 id="update-operations">Update operations</h3>
+<p>The endpoints of any update operations <strong>must use POST</strong>. It indicates that any web proxy servers between the client and the Web API should not cache responses of the operations. In update operations, there are usually some input parameters. In your design of the API, you can choose either to use simple parameters as URL-encoded (i.e. key-value pairs) or JSON data in the request message body.</p>
+<p>Below is a sample request for adding a new product <code>products.create</code> in the Web API.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.create <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/x-www-form-urlencoded</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">53</span>
+
+productName=Great+new+chocolate&amp;category=Confections&amp;unitPrice=20&amp;unitsInStock=100
+</code></pre></div><p>And the equivalent version using JSON payload.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.create <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">113</span>
+
+{
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Great new chocolate&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">20</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">100</span>
+}
+</code></pre></div><blockquote>
+<p>URL-encoded payload is commonly used in Web APIs in client side of modern web apps. One reason is that the input parameters are usually simple in these APIs. Furthermore, it is easier to work with key-value pairs in client-side programming.</p>
+<p>In this chapter, we&rsquo;ll mostly use JSON payload for simplicity.</p>
+</blockquote>
+<p>A <em>successful response</em> from an update operation may provide some info about the update operation, e.g. the id of the newly created record. Alternatively, the API designer may choose to return a representation of the newly created product as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">125</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">21</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Great new chocolate&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">20</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">100</span>
+}
+</code></pre></div><hr>
+<p>In the <code>product.update</code> endpoint, the client must specify the <code>id</code> of the product to change, and then list the properties and their new values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.update <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">141</span>
+
+{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">5</span>,
+  <span style="color:#f92672">&#34;productName&#34;</span>: <span style="color:#e6db74">&#34;Coke candy (Update price and stock)&#34;</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Confections&#34;</span>,
+  <span style="color:#f92672">&#34;unitPrice&#34;</span>: <span style="color:#ae81ff">13.8</span>,
+  <span style="color:#f92672">&#34;unitsInStock&#34;</span>: <span style="color:#ae81ff">32</span>
+}
+</code></pre></div><p>After successful update of the item, the server usually returns a <code>200</code> response with the updated representation of the item in the response body. This is similar to the response for adding a new product.</p>
+<hr>
+<p>For the delete operation, the client must specify the <code>id</code> of product to delete in the <code>products.delete</code> endpoint.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.delete <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/x-www-form-urlencoded</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span>
+
+id=3
+</code></pre></div><p>An equivalent version using JSON payload follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.delete <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>
+
+{ <span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">3</span> }
+</code></pre></div><blockquote>
+<p>Some API designers prefer to pass simple parameters as URL query in POST requests, for example &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#a6e22e">POST</span> /products.delete?id=3 <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+
+</code></pre></div></blockquote>
+<p>A <em>successful response</em> for the delete operation usually contains no data. The Web API designer may choose a response with no body using the <code>204</code> status code,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">204</span> <span style="color:#a6e22e">No content</span>
+
+</code></pre></div><p>or, for consistency, a response with an empty JSON value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTTP" data-lang="HTTP"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">200</span> <span style="color:#a6e22e">Ok</span>
+Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">example.com</span>
+Content-type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/json</span>
+Content-length<span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+
+{}
+</code></pre></div><h2 id="more-examples-of-rpc-web-apis">More examples of RPC Web APIs</h2>
+<p>The Slack API is a popular Web API that use the RPC style. Consider, for example, the numerous endpoints in <a href="https://api.slack.com/methods?filter=conversations">the conversations method group</a>.  These endpoints allow a client to create a channel, join a channel, leave a channel, kick someone out of a channel, invite someone to join a channel, and list the messages in a channel.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633929656"></script>
+    <script src="/js/jquery.sticky.js?1633929656"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633929656"></script>
+    <script src="/js/featherlight.min.js?1633929656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633929656"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633929656"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633929656"></script>
+    
+
+  </body>
+</html>
+

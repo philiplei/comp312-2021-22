@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>4-4 Modules, import and export :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633929656" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633929656" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633929656" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633929656" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633929656" rel="stylesheet">
+    <link href="/css/theme.css?1633929656" rel="stylesheet">
+    <link href="/css/tabs.css?1633929656" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633929656" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633929656" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633929656"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/4server/4-4/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/2basic/" title="JavaScript basics" class="dd-item">
+        <a href="/2basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/2basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/2basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/2basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/2basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/2basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/2basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/2basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+        <a href="/3client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/3client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/3client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/3client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/3client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/3client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/3client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/3client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/3client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/4server/" title="Server-side programming" class="dd-item parent">
+        <a href="/4server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/4server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/4server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/4server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-4/" title="4-4 Modules, import and export" class="dd-item active">
+        <a href="/4server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/4server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/5appserver/" title="App server programming" class="dd-item">
+        <a href="/5appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/5appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/5appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/5appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/5appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/5appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/4server/'>Server-side programming</a> > 4-4 Modules, import and export
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#named-export-and-import">Named export and import</a></li>
+    <li><a href="#other-ways-to-use-modules">Other ways to use modules</a></li>
+    <li><a href="#default-export">Default export</a>
+      <ul>
+        <li><a href="#load-commonjs-modules-with-import">Load CommonJS modules with <code>import</code></a></li>
+        <li><a href="#default-export-from-vue-sfc">Default export from Vue SFC</a></li>
+      </ul>
+    </li>
+    <li><a href="#downloadable-examples">Downloadable examples</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              4-4 Modules, import and export
+            </h1>
+          
+
+        
+
+
+<p>When you build a complicated program, it becomes necessary to break your source code into multiple files called <strong>modules</strong> for better management and organization. In addition, you&rsquo;ll often want to take advantage of other&rsquo;s work and use third-party modules, e.g. install a package from <a href="https://npmjs.org">https://npmjs.org</a>. To support these, JavaScript allows programmers to <strong>export</strong> some functions / variables from a module, and <strong>import</strong> some functions / variable in another module.</p>
+<p>In the JavaScript world (Browsers, Node.js, etc), there are two common ways to organize features from a module.</p>
+<ul>
+<li>import individual function / variable from a module, as required.</li>
+<li>import the whole module as an object</li>
+</ul>
+<h2 id="named-export-and-import">Named export and import</h2>
+<p>Suppose that you want to write a board game in JavaScript, and you&rsquo;ve found a module <code>dice-util.mjs</code> that provides some useful function for rolling dice. From their documentation, you pick two particular functions named <code>rollDice</code> and <code>rollDiceSum</code> which the module export. You import the two functions in the following ways.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p131.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">rollDice</span>, <span style="color:#a6e22e">rollDiceSum</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./dice-util.mjs&#39;</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sixDice</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rollDice</span>(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">10</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Roll six dice of 10 faces and get </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sixDice</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>)
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">diceSum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rollDiceSum</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Roll 10 dice of 6 faces and their sum is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">diceSum</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>);
+</code></pre></div><blockquote>
+<p>In this example, the module name is a (relative) path to a JavaScript module file in the same folder as <code>p131.js</code>. Different platforms (e.g. browsers and Node.js) provide different ways to locate modules. For Node.js, we can use relative or absolute path to specify a file.</p>
+</blockquote>
+<p>How does the author of the module <code>dice-util.mjs</code> indicate which functions to export? One simple way is to attach the keyword <code>export</code> in front of the definition of the functions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// dice-util.mjs
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// internal function, not exported
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">randomInteger</span>(<span style="color:#a6e22e">min</span>, <span style="color:#a6e22e">max</span>) {
+  <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">*</span>(<span style="color:#a6e22e">max</span><span style="color:#f92672">-</span><span style="color:#a6e22e">min</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))<span style="color:#f92672">+</span><span style="color:#a6e22e">min</span>
+}
+
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">rollDice</span> (<span style="color:#a6e22e">count</span>, <span style="color:#a6e22e">face</span>) {
+</span>  <span style="color:#75715e">// assume count &gt; 0, face &gt; 1, integers
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> [ ];
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">n</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">count</span>; <span style="color:#a6e22e">n</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">randomInteger</span>(<span style="color:#ae81ff">1</span>,<span style="color:#a6e22e">face</span>));  
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
+}
+</code></pre></div><blockquote>
+<p>Alternatively, you can specify the functions to export with a statement like <code>export { rollDice, rollDiceSum }</code>.</p>
+</blockquote>
+<p>Named export is only supported by ES Module, a new standard of JavaScript module system that can be used on both client-side (web browsers) and server-side (Node.js). Therefore, existing modules may have limited support for named exports.</p>
+<h2 id="other-ways-to-use-modules">Other ways to use modules</h2>
+<p>We&rsquo;ve seen some uses of <code>import</code> in previous lectures. For example, in last section, we imported some function from
+the Node.js built-in <code>fs</code> module.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p127.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">readFile</span>, <span style="color:#a6e22e">writeFile</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs/promises&#39;</span>;
+
+<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">copyFile</span> (<span style="color:#a6e22e">sourceFileName</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#a6e22e">sourceFileName</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#39;copy-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sourceFileName</span>, <span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+}
+<span style="color:#75715e">// ...
+</span></code></pre></div><p>We can also import from modules in client-side development. For example, in Chapter 2, we used named import and export to load components from a UI library. Before we can import from the module <code>element-plus</code>, we&rsquo;ve to install it into the current project by <code>npm install</code>. This <code>import</code> statement is handled by the code bundler in the <code>Vite</code> build tool.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// import &lt;el-button&gt; and &lt;el-input&gt; from ElementPlus
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ElButton</span>, <span style="color:#a6e22e">ElInput</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;element-plus&#34;</span>;
+</code></pre></div><p>You can also use named exports from third-party package from NPM. For example, the following example uses two functions from the <a href="https://www.npmjs.com/package/mathjs">Math.js</a> package. You need to install the package before running the program. (e.g. with <code>npm install mathjs</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p132.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">evaluate</span>, <span style="color:#a6e22e">inv</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;mathjs&#39;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`sqrt(-1) = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">evaluate</span>(<span style="color:#e6db74">&#34;sqrt(-1)&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`sqrt(i) = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">evaluate</span>(<span style="color:#e6db74">&#34;sqrt(i)&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mat</span> <span style="color:#f92672">=</span> [ [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>] ];
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;A matrix: &#34;</span>, <span style="color:#a6e22e">mat</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;and its inverse: &#34;</span>, <span style="color:#a6e22e">inv</span>(<span style="color:#a6e22e">mat</span>));
+</code></pre></div><p>As a summary, there are several ways you can use modules in Node.js</p>
+<ul>
+<li>use built-in modules in Node.js, and import using a &ldquo;bare module name&rdquo;</li>
+<li>install a package from NPM registry using the command <code>npm install package_name</code>, and import using a &ldquo;bare module name&rdquo;</li>
+<li>write the module yourself, and import using a path to the module file</li>
+</ul>
+<p>You can also use modules in client-side programming.</p>
+<ul>
+<li>use a package manager (e.g. npm) to install modules in project folder, and a build tools (e.g. Vite) to bundle all JavaScript code for the client-side of your web app in one (or a few) JavaScript script file. The HTML file will then load this bundle file.</li>
+<li>modern browsers have native support for ES modules, so it&rsquo;s possible to use modules without build tools. See the advanced example <a href="/chap3/p331-module-in-browser">p331-module-in-browser</a> for a Vue component example.
+For more information on browser support of modules, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">online reference</a>.</li>
+</ul>
+<h2 id="default-export">Default export</h2>
+<p>The other common way to use modules is to import a module as one <strong>module object</strong>.  This is common in module systems before ES module, e.g. the CommonJS standard in traditional Node.js packages.</p>
+<p>We can specify a default export with the <code>default</code> keyword. You can export a function, a class or a variable using <code>export default</code>, and you don&rsquo;t give it a name. In many cases, you want to group several thing in a <strong>module object</strong>, as export it as default. This is demonstrated in the following example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// circle.js
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span> {
+  <span style="color:#a6e22e">constructor</span> (<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">radius</span>) { <span style="color:#75715e">/* omitted */</span> }
+  <span style="color:#a6e22e">area</span> () { <span style="color:#75715e">/* omitted */</span> }
+  <span style="color:#75715e">/* more methods */</span>
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">contains</span> (<span style="color:#a6e22e">c1</span>, <span style="color:#a6e22e">c2</span>) {
+  <span style="color:#75715e">/* detail omitted */</span>
+}
+
+<span style="color:#75715e">// make a default export module object which contains the class and the function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> { <span style="color:#a6e22e">Circle</span>, <span style="color:#a6e22e">contains</span> }
+</code></pre></div><p>To use this module, import it into a module object as follows. Notice that we don&rsquo;t use <code>{ }</code>, and we can choose an arbitrary name for the module.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p133.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">cc</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./circle.mjs&#39;</span>
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">cc</span>.<span style="color:#a6e22e">Circle</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">10</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">area</span>();
+</code></pre></div><p>We&rsquo;ve also used similar syntax to import a built-in module in Node.js, for example &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p103.mjs
+</span><span style="color:#75715e">// show basic info about CPU and memory
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">os</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;os&#39;</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cpus</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">cpus</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`CPU: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cpus</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">model</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cpus</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> core`</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Total memory: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">totalmem</span>()<span style="color:#f92672">/</span><span style="color:#ae81ff">1024</span><span style="color:#f92672">**</span><span style="color:#ae81ff">3</span><span style="color:#e6db74">}</span><span style="color:#e6db74">G`</span>);
+</code></pre></div><p>and import a module downloaded from <a href="https://www.npmjs.com/package/systeminformation">https://www.npmjs.com/package/systeminformation</a> .</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p104.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">si</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;systeminformation&#39;</span>;
+
+<span style="color:#a6e22e">si</span>.<span style="color:#a6e22e">cpu</span>()
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>));
+</code></pre></div><blockquote>
+<p>Note: some modules support both named export and default export. e.g. both <code>import fs from 'fs/promises'</code> and <code>import { readFile } from 'fs/promises'</code> work.</p>
+</blockquote>
+<h3 id="load-commonjs-modules-with-import">Load CommonJS modules with <code>import</code></h3>
+<p>Before the introduction of the ES module standard, Node.js uses CommonJS modules. Many JavaScript Node.js packages were published in CommonJS format, and existing books and online tutorials often use this traditional JavaScript module format. Commonly, code examples uses statement like <code>let fs = require('fs')</code> to import a CommonJS module. The module is imported as a module object, and saved in the variable <code>fs</code>. You may then access functions using dot notation, e.g. <code>fs.readFile</code>.</p>
+<p>In ES module script (extension <code>*.mjs</code>), you <em>cannot</em> use <code>require</code>. Instead, you can import a CommonJS module as a module object in a similar way as in importing default export. For example, you can rewrite <code>let prompts = require('prompts')</code> as <code>import prompts from 'prompts'</code>.  The following example uses two packages <a href="https://www.npmjs.com/package/prompts">prompts</a> and <a href="https://www.npmjs.com/package/figlet">figlet</a> from npmjs.org.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p134.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">prompts</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;prompts&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">figlet</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;figlet&#39;</span>;
+
+<span style="color:#a6e22e">prompts</span>({
+  <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text&#39;</span>,
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sentence&#39;</span>,
+  <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Type a short sentence&#39;</span>
+}).<span style="color:#a6e22e">then</span>( <span style="color:#a6e22e">data</span>=&gt; {
+  <span style="color:#a6e22e">figlet</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">sentence</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">data</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>;
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>)
+  });
+});
+</code></pre></div><h3 id="default-export-from-vue-sfc">Default export from Vue SFC</h3>
+<p>We also used default export when we write a Vue SFC (Single File Component). In fact, build tool like Vite converts each SFC (<code>*.vue</code>) into a JavaScript module which export the options object of the component.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+<span style="color:#a6e22e">The</span> <span style="color:#a6e22e">time</span> <span style="color:#a6e22e">now</span> <span style="color:#a6e22e">is</span> 
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;clock&#39;</span>&gt;{{ <span style="color:#a6e22e">timeNow</span> }}&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">timeNow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span> }
+  },
+  <span style="color:#a6e22e">created</span>() { <span style="color:#75715e">/* omitted */</span>  }
+};
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>For example, the file <code>MyClock.vue</code> above is translated into a JavaScript module similar to <code>MyClock.mjs</code> below. (The actual process is more complicated, e.g. the template will be compiled into a render function.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">timeNow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span> }
+  },
+  <span style="color:#a6e22e">created</span>() { <span style="color:#75715e">/* omitted */</span>  },
+  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`The time now is 
+</span><span style="color:#e6db74">&lt;div class=&#39;clock&#39;&gt;{{ timeNow }}&lt;/div&gt;`</span>
+};
+</code></pre></div><h2 id="downloadable-examples">Downloadable examples</h2>
+<p>The example source files are <a href="/chap4/chap4-4.zip">available here</a>.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633929656"></script>
+    <script src="/js/jquery.sticky.js?1633929656"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633929656"></script>
+    <script src="/js/featherlight.min.js?1633929656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633929656"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633929656"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633929656"></script>
+    
+
+  </body>
+</html>
+

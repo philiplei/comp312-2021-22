@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>2-6 Objects with methods :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633929656" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633929656" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633929656" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633929656" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633929656" rel="stylesheet">
+    <link href="/css/theme.css?1633929656" rel="stylesheet">
+    <link href="/css/tabs.css?1633929656" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633929656" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633929656" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633929656"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/2basic/2-6/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/2basic/" title="JavaScript basics" class="dd-item parent">
+        <a href="/2basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/2basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/2basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/2basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/2basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/2basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-6/" title="2-6 Objects with methods" class="dd-item active">
+        <a href="/2basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/2basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+        <a href="/3client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/3client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/3client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/3client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/3client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/3client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/3client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/3client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/3client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/4server/" title="Server-side programming" class="dd-item">
+        <a href="/4server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/4server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/4server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/4server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/4server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/4server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/5appserver/" title="App server programming" class="dd-item">
+        <a href="/5appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/5appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/5appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/5appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/5appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/5appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/2basic/'>JavaScript basics</a> > 2-6 Objects with methods
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#object-literals">Object literals</a></li>
+    <li><a href="#adding-methods">Adding methods</a></li>
+    <li><a href="#a-caveat-on-writing-methods">A caveat on writing methods</a></li>
+    <li><a href="#inherited-methods">Inherited methods</a></li>
+    <li><a href="#exercise">Exercise</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              2-6 Objects with methods
+            </h1>
+          
+
+        
+
+
+<h2 id="object-literals">Object literals</h2>
+<p>In previous sections, we&rsquo;ve studied how to use JavaScript objects to model complicated data and how to declare functions that can be used as function objects, which can be stored in variable.  By combining these knowledge, we can create an object in the sense of <em>Object Oriented Programming</em>: a object with state and behavior.</p>
+<p>To recap, a JavaScript object is a group of properties. Each property has a name and a value. Previously we create a single object by listing the properties of the object in <code>{ }</code>. This is known as <strong>object literal</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">circle</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,  <span style="color:#75715e">// x, y-coordinate of center of the circle
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">radius</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+  <span style="color:#a6e22e">fillColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;red&#39;</span>
+};
+</code></pre></div><h2 id="adding-methods">Adding methods</h2>
+<p>A property can take &lsquo;anything&rsquo; as value, including number, string, boolean, array, object, and even <em>function</em>.  When we add a property with a function value, we&rsquo;ve added a <strong>method</strong> to the object.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">circle</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+  <span style="color:#a6e22e">radius</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+  <span style="color:#a6e22e">fillColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;red&#39;</span>,
+  <span style="color:#a6e22e">area</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () { 
+    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> 
+  }
+};
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Area of the circle is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">area</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</code></pre></div><p>You call a method of an object with the dot notation (similar to Java). <code>circle.area</code> refers to the function object we defined for the <code>area</code> property. You run this method by adding <code>( )</code> (possibly with parameters). In this example, it is <code>circle.area()</code>.</p>
+<p>In the body of a method, <code>this</code> refers to the object on which the method is invoked. (Think &lsquo;area of this circle&rsquo;)</p>
+<p>There is a shorthand notation to define methods in an object literal. In this example, we also define another method <code>resize</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">circle</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+  <span style="color:#a6e22e">radius</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+  <span style="color:#a6e22e">fillColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;red&#39;</span>,
+  <span style="color:#a6e22e">area</span>() { 
+    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>; 
+  },
+  <span style="color:#a6e22e">resize</span>(<span style="color:#a6e22e">factor</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">factor</span>;
+  } 
+};
+
+<span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">resize</span>(<span style="color:#ae81ff">2</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Area of the circle is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">area</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div><h2 id="a-caveat-on-writing-methods">A caveat on writing methods</h2>
+<p>Here is a reminder about writing methods. <em>Never use arrow functions as methods.</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">circle_with_incorrect_method</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+  <span style="color:#a6e22e">radius</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+  <span style="color:#75715e">// arrow functions CANNOT work as methods
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">area</span><span style="color:#f92672">:</span> () =&gt; Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> 
+};
+
+<span style="color:#a6e22e">circle_with_incorrect_method</span>.<span style="color:#a6e22e">area</span>()  <span style="color:#75715e">// returns NaN
+</span></code></pre></div><p>The reason that the above example does not work is that when an arrow function is called, it does not set <code>this</code> to refer to the object on which the method is invoked. In this case, <code>this</code> does not point to <code>circle</code>, and <code>this.radius</code> does not exist (or, is <code>undefined</code>).</p>
+<blockquote>
+<p>Technical note: In this example, <code>this</code> refers to the &lsquo;global object&rsquo;, which is <code>window</code> in browsers, or <code>globalThis</code> in general.
+<code>this.radius</code> would refer to a global variable named <code>radius</code>, if it exists.</p>
+<p>So, how does an arrow function obtain <code>this</code> when invoked? It obtains from the surrounding (usually an outer function). Read this <a href="https://javascript.info/arrow-functions">reference</a> for an example.</p>
+</blockquote>
+<h2 id="inherited-methods">Inherited methods</h2>
+<p>You might notice that object literals include some methods not defined by you. For example, <code>point.toString()</code> is called when JavaScript tries to concatenate a string with the object.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">point</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span> };
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;This point is &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">point</span>);
+</code></pre></div><p>The method <code>.toString()</code> is actually inherited from the <strong>prototype</strong> of the object. But this version of <code>toString</code> is not very informative. You can define a more useful version of <code>toString</code> by redefining it in <code>point</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">point</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+  <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+  <span style="color:#a6e22e">toString</span>() { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`(</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span> }
+};
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`This point is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">point</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div><blockquote>
+<p>JavaScript&rsquo;s use of prototype to implement inheritance is different from that of Java and Python. You can learn more about that in this <a href="https://javascript.info/">reference</a>.</p>
+</blockquote>
+<h2 id="exercise">Exercise</h2>
+<ol>
+<li>
+<p>Add a method <code>quadrant()</code> to the object literal <code>point</code>. The method returns the <a href="https://en.wikipedia.org/wiki/Quadrant_(plane_geometry)">quadrant</a> in which the point resides. <a href="/chap2/ex2-6q1.js">(sample answer)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">point</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>,
+  <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+  <span style="color:#a6e22e">toString</span>() { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`(</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span> },
+  <span style="color:#a6e22e">quadrant</span>() { <span style="color:#75715e">/* your work */</span> }
+};
+<span style="color:#75715e">// prints &#34;The point (-2,3) is in quadrant II&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The point </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">point</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> is in quadrant </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">point</span>.<span style="color:#a6e22e">quadrant</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div></li>
+<li>
+<p>Write an <em>object literal</em> that implements the <em>queue</em> data structure. Use the following template to write your solution. <a href="/chap2/ex2-6q2.js">(sample answer)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">q</span> <span style="color:#f92672">=</span> {
+  <span style="color:#75715e">// data properties to hold the content of the queue
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">enqueue</span>(<span style="color:#a6e22e">elem</span>) {
+    <span style="color:#75715e">// add &#39;elem&#39; at the end of queue
+</span><span style="color:#75715e"></span>  },
+  <span style="color:#a6e22e">dequeue</span>() {
+    <span style="color:#75715e">// remove the element at the head of queue, and return the element
+</span><span style="color:#75715e"></span>  },
+  <span style="color:#a6e22e">count</span>() {
+    <span style="color:#75715e">// returns the number of elements in the queue
+</span><span style="color:#75715e"></span>  },
+  <span style="color:#a6e22e">toString</span>() {
+    <span style="color:#75715e">// return the content of the queue as string
+</span><span style="color:#75715e"></span>  }
+};
+<span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">enqueue</span>(<span style="color:#e6db74">&#39;a&#39;</span>); <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">enqueue</span>(<span style="color:#e6db74">&#39;b&#39;</span>); <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">enqueue</span>(<span style="color:#e6db74">&#39;c&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">dequeue</span>() ); <span style="color:#75715e">// print &#39;a&#39;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">count</span>() );   <span style="color:#75715e">// print 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">enqueue</span>(<span style="color:#e6db74">&#39;d&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The queue contains </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">q</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>);
+</code></pre></div></li>
+</ol>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633929656"></script>
+    <script src="/js/jquery.sticky.js?1633929656"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633929656"></script>
+    <script src="/js/featherlight.min.js?1633929656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633929656"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633929656"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633929656"></script>
+    
+
+  </body>
+</html>
+

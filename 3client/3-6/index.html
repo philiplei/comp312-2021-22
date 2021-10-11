@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: COMP312 notes</title>
+    <title>3-6 Component: motivation and features :: COMP312 notes</title>
 
     
     <link href="/css/nucleus.css?1633929656" rel="stylesheet">
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/3client/3-6/">
     <nav id="sidebar" class="">
   
   
@@ -256,7 +256,7 @@ JavaScript basics
     
       
       
-      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item parent">
         <a href="/3client/">
           
 Client-side programming
@@ -384,7 +384,7 @@ Client-side programming
   
 		
     
-      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item active">
         <a href="/3client/3-6/">
           
 3-6 Component: motivation and features
@@ -763,7 +763,13 @@ App server programming
             
           
           
-            <a href='/'></a> > Tags
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/3client/'>Client-side programming</a> > 3-6 Component: motivation and features
+          
+        
           
         
           
@@ -774,7 +780,24 @@ App server programming
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a>
+      <ul>
+        <li><a href="#reusing-components">Reusing components</a></li>
+        <li><a href="#organizing-components">Organizing components</a></li>
+      </ul>
+    </li>
+    <li><a href="#common-features-of-components">Common features of components</a>
+      <ul>
+        <li><a href="#properties--attributes">Properties / attributes</a></li>
+        <li><a href="#bi-directional-binding">Bi-directional binding</a></li>
+        <li><a href="#slots">Slots</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-preview">A preview</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -790,22 +813,117 @@ App server programming
           
             <h1>
               
-              Tags
+              3-6 Component: motivation and features
             </h1>
           
 
         
 
 
+<h2 id="motivation">Motivation</h2>
+<h3 id="reusing-components">Reusing components</h3>
+<p>Suppose you&rsquo;re developing a web app for online shopping. One page of the app lets the users to input a rating of a product. You&rsquo;d like to build an interface similar to <a href="/chap3/p321.html">example p321.html</a>.  Wouldn&rsquo;t it be great if you can utilize some existing code from a third-party library instead of writing this rating feature yourself?</p>
+<p>Vue components allow programmers to package some functionality into reusable code, and incorporate the code into their own application with ease. Web app interface typically involves three kinds of code: HTML (the text content and structure), CSS (presentation) and JavaScript (business logic and dynamic behaviour). So Vue components are able to package HTML, CSS and JavaScript codes into a single reusable unit.</p>
+<p>Fortunately, there are many UI component library that we can take advantage of in making our web app. And, in fact,
+we had silently used the <a href="https://element-plus.org/#/en-US/component/rate">Rate component</a> of the component library <a href="https://element-plus.org/">Element Plus</a> to write <a href="/chap3/p321.html">example p321.html</a>.</p>
+<p>In the code snippet from example p321.html, we register our app to use the rate component with <code>components: { ElRate: ElementPlus.ElRate }</code>. In the template, we use the HTML syntax to place the component as in <code>&lt;el-rate v-model=&quot;value&quot; :colors=&quot;colors&quot;&gt;&lt;/el-rate&gt;</code>. Similar to HTML elements, Vue supports attribute binding, bi-directional binding and event handling on Vue components. (More detail to be covered in coming sections.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vuejs" data-lang="vuejs">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+  &lt;<span style="color:#f92672">span</span>&gt;<span style="color:#a6e22e">Rating</span><span style="color:#f92672">:</span> {{ <span style="color:#a6e22e">value</span> }}&lt;/<span style="color:#f92672">span</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">  &lt;<span style="color:#f92672">el-rate</span> <span style="color:#f92672">v-model</span><span style="color:#e6db74">=&#34;value&#34; </span><span style="color:#f92672">:colors</span><span style="color:#e6db74">=&#34;colors&#34;</span>&gt;<span style="color:#960050;background-color:#1e0010">&lt;/</span><span style="color:#a6e22e">el</span><span style="color:#f92672">-rate</span>&gt;
+</span>&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">opts</span> <span style="color:#f92672">=</span> {
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ElRate</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ElementPlus</span>.<span style="color:#a6e22e">ElRate</span> },
+</span>  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> {
+      <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+      <span style="color:#a6e22e">colors</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;#99A9BF&#39;</span>, <span style="color:#e6db74">&#39;#F7BA2A&#39;</span>, <span style="color:#e6db74">&#39;#FF9900&#39;</span>]
+    }
+  }
+};
+<span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">opts</span>).<span style="color:#a6e22e">mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>);
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="organizing-components">Organizing components</h3>
+<p>As web apps become more complicated, putting all the constituent HTML and JavaScript in one large file becomes very difficult to manage and understand. One common technique to tackle this complexity is to decompose the web app interface into a <strong>hierarchy of components</strong>, as in <a href="https://vuejs.org/v2/guide/components.html#Organizing-Components">this diagram</a>.</p>
+<p>After decomposition, each component can be stored in a separate file / module. Some of the components can be developed and tested independently, and some may be reused among different pages of the web app, or even among different web apps.</p>
+<h2 id="common-features-of-components">Common features of components</h2>
+<p>In this section, we use some components from the <a href="https://element-plus.org/">ElementPlus Desktop UI library</a> to illustrate common features of Vue components.</p>
+<h3 id="properties--attributes">Properties / attributes</h3>
+<p>When you insert a component to a page, you often need to provide value for some properties / attributes to initialize the components. In the following example, property <code>placeholder</code> of <code>&lt;el-input&gt;</code> provides the short message shown in the input box before the user enters any data. When the value is a string literal, you don&rsquo;t need to use the data-binding syntax <code>v-bind:attr</code>.</p>
+<p>However, if the value is other data types (e.g. number, boolean), a data property of the component, or a JavaScript expression, you must use the data-binding syntax.</p>
+<p>Data-binding is uni-directional. This means that data is passed into the component in one direction only. If the value changes in the container, Vue will update the component view through reactivity.</p>
+<p>Some components also emit <code>event</code>, and the container can register an event handler with <code>@event</code>. In this example, the <code>&lt;el-button&gt;</code> emits <code>click</code> event, which is handled by a method in the container.</p>
 
 
 
-<ul>
-    
-</ul>
 
 
-<footer class=" footline" >
+
+
+
+<script
+    data-slug-hash="mdwmMdg"
+    data-user="your_username"
+    data-height="500"
+    data-default-tab="js"
+    data-theme-id="8862"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
+<h3 id="bi-directional-binding">Bi-directional binding</h3>
+<p>Many input controls in a UI library needs to pass user input to the container. For this purpose, the relevant components usually support <code>v-model</code> to bind a property to a value in the container in both directions. The bound component property can be of different data type. For example, <code>dueDate</code> binds to <code>modelValue</code> in <code>&lt;el-date-picker&gt;</code>, and their data type is <code>Date</code>.</p>
+<blockquote>
+<p>Internally, bi-directional binding is implemented by the <code>update</code> event. Refer to <a href="https://v3.vuejs.org/guide/migration/v-model.html#_3-x-syntax">online reference</a> for more information.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+<script
+    data-slug-hash="powPrNe"
+    data-user="your_username"
+    data-height="500"
+    data-default-tab="js"
+    data-theme-id="8862"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
+<h3 id="slots">Slots</h3>
+<p>Sometimes we need to distribute content to a component. For example, the label on the button <code>&lt;el-button&gt;Swap the two book&lt;/el-button&gt;</code> is put between the start tag and the end tag. The component <code>&lt;el-button&gt;</code> is said to have a slot, and it displays the slot content inside the button.</p>
+<p>The content passed into a slot is not restricted to string. In general it can contain HTML content and even other components.  Consider the <code>&lt;el-row&gt;</code> and <code>&lt;el-col&gt;</code> components for page layout.</p>
+<p>Some components even have more than slots. For example <code>&lt;el-card&gt;</code> has a header slot, in addition to the default slot. Refer to <a href="https://v3.vuejs.org/guide/component-basics.html#content-distribution-with-slots">online reference</a> for more information.</p>
+
+
+
+
+
+
+
+
+<script
+    data-slug-hash="RwgVLKG"
+    data-user="your_username"
+    data-height="500"
+    data-default-tab="js"
+    data-theme-id="8862"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
+<h2 id="a-preview">A preview</h2>
+<p>In the next section, we&rsquo;ll integrate the above examples into a single web app. The dist version of this app is accessible here:
+<a href="/chap3/c37-feature/dist/index.html">c37-feature</a>.</p>
+
+
+
+<footer class="footline">
     
 </footer>
 

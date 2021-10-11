@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: COMP312 notes</title>
+    <title>Client-side programming :: COMP312 notes</title>
 
     
     <link href="/css/nucleus.css?1633929656" rel="stylesheet">
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/3client/">
     <nav id="sidebar" class="">
   
   
@@ -256,7 +256,7 @@ JavaScript basics
     
       
       
-      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item active parent">
         <a href="/3client/">
           
 Client-side programming
@@ -740,24 +740,135 @@ App server programming
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > Client-side programming
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
+        
+          <div id="chapter">
         
         <div id="body-inner">
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
 
-<h1 id="comp312-internet-programming-ii">COMP312 Internet Programming II</h1>
-<p>Welcome to the online course notes of COMP312. You can jump to the notes of chap 2 to 5 using the menu on the left.</p>
+    <h2 id="client-side-programming">Client-side programming</h2>
+<p>This chapter goes through the basics of the JavaScript programming inside the Web browser environment.</p>
+<ul>
+<li>3-1 Background
+<ul>
+<li>Document tree manipulation vs. MVVM approach</li>
+</ul>
+</li>
+<li>3-2 Vue basics
+<ul>
+<li>Loading Vue library from CDN</li>
+<li>Data properties and reactivity</li>
+<li>Template syntax: moustache <code>{{ }}</code>, attribute binding <code>v-on:attr</code>, style binding</li>
+<li>Computed properties</li>
+</ul>
+</li>
+<li>3-3 Dynamic structure in template
+<ul>
+<li>Conditional rendering: <code>v-if</code> and others</li>
+<li>List rendering: <code>v-for</code></li>
+</ul>
+</li>
+<li>3-4 Events, methods and component lifecycle
+<ul>
+<li>asynchronous function calls</li>
+<li>UI event handling, <code>@event</code></li>
+<li>Component methods</li>
+<li>JavaScript timers, <code>setInterval</code>, <code>setTimeout</code></li>
+<li>Component lifecycle hooks, <code>created</code> and others</li>
+</ul>
+</li>
+<li>3-5 Forms controls and bi-directional binding
+<ul>
+<li>Using HTML built-in form controls</li>
+<li><code>v-model</code> and bi-directional binding</li>
+</ul>
+</li>
+<li>3-6 Components: motivation and common features
+<ul>
+<li>reuse components</li>
+<li>organize a web app as a hierarchy of components</li>
+<li>properties / attributes, event, v-model, slots</li>
+</ul>
+</li>
+<li>3-7 Vue projects and build tools
+<ul>
+<li>intro to Node.js, node project, package.json</li>
+<li>Vite, build tools</li>
+<li>Starter project and SFC</li>
+</ul>
+</li>
+<li>3-8 Defining your own components
+<ul>
+<li>define prop</li>
+<li>bi-directional binding</li>
+<li>emit event</li>
+</ul>
+</li>
+</ul>
+<p>Here are some useful online reference for this chapter.</p>
+<ul>
+<li>Vue.js official site: <a href="https://v3.vuejs.org/guide/introduction.html">guide</a> and <a href="https://v3.vuejs.org/api/">API reference</a> for Vue 3</li>
+<li><a href="https://nodejs.org/">Node.js official site</a></li>
+<li><a href="https://www.npmjs.com/">NPM registry</a>, the largest JavaScript library registry</li>
+<li><a href="https://vitejs.dev/">The build tool Vite</a> that we use in second half of the chapter</li>
+</ul>
+<p>Todo: multiple html, public folder in Vite</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
+
+
+
+
+<footer class=" footline" >
+    
+</footer>
+
+        
+            </div> 
         
         </div>
         

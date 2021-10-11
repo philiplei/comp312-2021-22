@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>4-3 Promise, await and async :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633929656" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633929656" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633929656" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633929656" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633929656" rel="stylesheet">
+    <link href="/css/theme.css?1633929656" rel="stylesheet">
+    <link href="/css/tabs.css?1633929656" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633929656" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633929656" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633929656"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/4server/4-3/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/2basic/" title="JavaScript basics" class="dd-item">
+        <a href="/2basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/2basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/2basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/2basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/2basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/2basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/2basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/2basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+        <a href="/3client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/3client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/3client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/3client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/3client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/3client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/3client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/3client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/3client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/4server/" title="Server-side programming" class="dd-item parent">
+        <a href="/4server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/4server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/4server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-3/" title="4-3 Promise, await and async" class="dd-item active">
+        <a href="/4server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/4server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/4server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/5appserver/" title="App server programming" class="dd-item">
+        <a href="/5appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/5appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/5appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/5appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/5appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/5appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/4server/'>Server-side programming</a> > 4-3 Promise, await and async
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#promise-basics">Promise, basics</a></li>
+    <li><a href="#obtaining-the-result-of-a-promise">Obtaining the result of a promise</a></li>
+    <li><a href="#chaining-promises">Chaining promises</a></li>
+    <li><a href="#handling-errors">Handling errors</a></li>
+    <li><a href="#await-and-async">await and async</a></li>
+    <li><a href="#further-reading">Further reading</a></li>
+    <li><a href="#downloadable-examples">Downloadable examples</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              4-3 Promise, await and async
+            </h1>
+          
+
+        
+
+
+<h2 id="promise-basics">Promise, basics</h2>
+<p>In last section, we saw that many I/O operations take a callback function to report the result (if successful) or the error (if failing).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">dns</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;dns&#39;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">govHost</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;www.gov.mo&#34;</span>;
+<span style="color:#a6e22e">dns</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">govHost</span>, (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">records</span>) =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>;
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">govHost</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> resolves to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">records</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+});
+</code></pre></div><p>These <strong>asynchronous callbacks</strong> are efficient and easy to understand. However, when we need to organize a sequence of asynchronous operations, excessive nesting of the callback functions will soon make the code overwhelming.</p>
+<p>Modern JavaScript introduces <strong>Promise</strong>, an abstraction to model the result and error from an operation that will complete in the future. According to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">MDN article - Using promises</a>,</p>
+<blockquote>
+<p>A Promise is an object representing the eventual completion or failure of an asynchronous operation.</p>
+</blockquote>
+<p>Below is a rewrite of the DNS resolve example using promises.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p121-promdns.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">promises</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;dns&#39;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">promises</span>.<span style="color:#a6e22e">Resolver</span>();
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">govHost</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;www.gov.mo&#34;</span>;
+<span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">govHost</span>).<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">records</span>) =&gt; {
+  <span style="color:#75715e">// succeed 
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">govHost</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> resolves to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">records</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+}).<span style="color:#66d9ef">catch</span>( (<span style="color:#a6e22e">err</span>) =&gt; {
+  <span style="color:#75715e">// fail 
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Resolve fails with </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">err</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+}) 
+</code></pre></div><p>The line <code>resolver.resolve(govHost)</code> creates a <code>Promise</code> object.
+A promise has both a <strong>state</strong> and a <strong>result</strong>. At start, the program is waiting for a reply from a name server, and the promise is said to be in the <code>pending</code> state, and have a <em>undefined</em> result. After some time, the program may receive DNS records successfully, and the state of the promise changes to <code>fulfilled</code>, and the result contains the resolution records. On the other hand, if the DNS resolution fails, the state of the promise becomes <code>rejected</code>.</p>
+<p>Since a promise represents the result/error of a task to be completed, when its state changes from <code>pending</code> to <code>fulfilled</code> or <code>rejected</code>, it will never change again. The promise is said to be <code>settled</code>. We also say <em>resolve a promise</em> to refer to the action that the promise becomes <code>fulfilled</code> with a result, and <em>reject a promise</em> to refer to that action that the promise  becomes <code>rejected</code> with an error.</p>
+<p>Please refer to the state diagram in the online reference <a href="https://javascript.info/promise-basics">promise basics</a> for more information about the three states of a promise.</p>
+<p>Also try the <a href="/chap4/43-promise-dice/index.html">promise dice</a> example to examine state change of a promise in a web browser.</p>
+<h2 id="obtaining-the-result-of-a-promise">Obtaining the result of a promise</h2>
+<p>The result <strong>is not</strong> a property of the promise object. To access the result/error of a promise object, use the <code>.then()</code> or <code>.catch()</code> methods.</p>
+<p>The full form of <code>.then()</code> has two parameters: one is the callback when the promise is resolved (successful completion), and the other is the callback when the promise is rejected (failed completion). Try the examples <code>p122-success.mjs</code> and <code>p122-failure.mjs</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p122-success.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">promises</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;dns&#39;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">promises</span>.<span style="color:#a6e22e">Resolver</span>();
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">host</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;www.gov.mo&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">resolver</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">host</span>);
+<span style="color:#a6e22e">prom</span>.<span style="color:#a6e22e">then</span>(
+  <span style="color:#a6e22e">rec</span> =&gt; { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">host</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> resolves to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rec</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>) }
+  ,
+  <span style="color:#a6e22e">err</span> =&gt; { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Name server returns an error: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">err</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>) }
+);
+</code></pre></div><p>If you&rsquo;re only interested in the result in successful completion, you can use <code>.then()</code> with one callback only. The callback is sometimes known as <strong>then handler</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">prom</span>.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">rec</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">host</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> resolves to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rec</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>) 
+})
+</code></pre></div><p>On the other hand, if you&rsquo;re only interested in the error object in case of failure, you can use <code>.catch()</code> with one callback. The callback is sometimes known as <strong>catch handler</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">prom</span>.<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Name server returns an error: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">err</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>) 
+})
+</code></pre></div><p>Also try to add handler to the <a href="/chap4/43-promise-dice/index.html">promise dice</a>.</p>
+<h2 id="chaining-promises">Chaining promises</h2>
+<p>We often need to perform I/O operations one after another. For example, to copy a file, we need to call <code>readFile</code> to get the file content, and <strong>then</strong> call <code>writeFile</code> to write the content to a copy.</p>
+<p>In the last section, we use nested callbacks to do this. Now, let&rsquo;s examine the promise versions of <code>readFile</code> and <code>writeFile</code>. Both functions return promises.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#39;mpi-info.txt&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>).<span style="color:#a6e22e">then</span>( <span style="color:#a6e22e">data</span>=&gt;{
+  <span style="color:#75715e">// data contains content of the input file
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>); 
+});
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;content read earlier&#34;</span>;
+<span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#39;copy-mpi-info.txt&#39;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>).<span style="color:#a6e22e">then</span>( ()=&gt;{
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Finish copying&#34;</span>);  
+});
+</code></pre></div><p>The method <code>.then()</code> returns another promise object, and it allows us to chain <code>.then()</code> together in the form <code>prom.then().then().then()</code>.  What promise the <code>.then()</code> method returns depends on the inner working of the handler.</p>
+<ul>
+<li>If the handler returns a promise, <code>.then()</code> also returns the same promise.</li>
+<li>If the handler returns a normal value (e.g. number, string, plain object), <code>.then()</code> returns a <em>fulfilled promise</em> with the return value as result.</li>
+<li>If the handler throws an exception, <code>.then()</code> returns a <em>rejected promise</em> with the exception object as error.</li>
+</ul>
+<p>With this in mind, we can rewrite the file copy example in the last section using promises.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p123.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">readFile</span>, <span style="color:#a6e22e">writeFile</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs/promises&#39;</span>;
+
+<span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#39;mpi-info.txt&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>).<span style="color:#a6e22e">then</span>( <span style="color:#a6e22e">data</span>=&gt;{
+  <span style="color:#75715e">// data contains content of the input file
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#39;copy-mpi-info.txt&#39;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>)    
+}).<span style="color:#a6e22e">then</span>( ()=&gt;{
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Finish copying&#34;</span>);  
+})
+</code></pre></div><h2 id="handling-errors">Handling errors</h2>
+<p>In a promise chain <code>prom.then().then()</code>, if any handler throws an exception (which is wrapped up as a rejected promise) or any <code>then()</code> returns a rejected promise, the chain will skip the remaining <code>then()</code> and run the nearest <code>catch()</code>. Therefore, we can handle the errors in a promise chain by adding a <code>catch()</code> handler near the end of the chain.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p124.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">readFile</span>, <span style="color:#a6e22e">writeFile</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs/promises&#39;</span>;
+
+<span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#39;non-exist-mpi-info.txt&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>).<span style="color:#a6e22e">then</span>( <span style="color:#a6e22e">data</span>=&gt;
+  <span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#39;copy-mpi-info.txt&#39;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>)
+).<span style="color:#a6e22e">then</span>( ()=&gt;{
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Finish copying&#34;</span>);  
+}).<span style="color:#66d9ef">catch</span>( <span style="color:#a6e22e">err</span>=&gt;{
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;promise catch &#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">err</span>);
+})
+</code></pre></div><p>Test error handling of promise in <a href="/chap4/43-promise-dice/index.html">promise dice</a>.</p>
+<h2 id="await-and-async">await and async</h2>
+<p>Modern JavaScript provides two keywords <code>await</code> and <code>async</code> then make using promises even easier.</p>
+<p>Given a promise <code>prom</code>, you can wait and obtain its result with <code>let result = await prom</code>. If the promise is rejected, then the await statement throws an exception.  Essentially, <code>await</code> makes promises work like synchronous I/O functions in Java or Python. Below is a rewrite of p124.mjs (file copy) using <code>await</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p125.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">readFile</span>, <span style="color:#a6e22e">writeFile</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs/promises&#39;</span>;
+
+<span style="color:#66d9ef">try</span> {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#39;mpi-info.txt&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#39;copy-mpi-info.txt&#39;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Finish copying&#34;</span>);  
+} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;promise catch &#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">err</span>);
+}
+</code></pre></div><p>However, when I say <code>await</code> will wait for the fulfillment or rejection of a promise, you should be aware that in JavaScript, <em>blocking</em> is generally undesirable. JavaScript has only one thread, and when that single thread is blocked, the whole program is blocked and cannot process any network services or interaction in user interface.  The example <code>p123.mjs</code> demonstrates an exception, not a norm, of JavaScript. You can use <code>await</code> on the top-level statements, which may block the single thread. However, you cannot block the event loop.</p>
+<p>JavaScript does not allow you simply use <code>await</code> inside a &lsquo;normal&rsquo; function. You can only use <code>await</code> inside a function that is marked as <code>async</code> (asynchronous).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p126.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">readFile</span>, <span style="color:#a6e22e">writeFile</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs/promises&#39;</span>;
+
+<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">copyFile</span> (<span style="color:#a6e22e">sourceFileName</span>) {
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#a6e22e">sourceFileName</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#39;copy-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sourceFileName</span>, <span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Finish copying&#34;</span>);  
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;promise catch &#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">err</span>);
+  }
+}
+
+<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">copyFile</span>(<span style="color:#e6db74">&#39;mpi-info.txt&#39;</span>);
+</code></pre></div><p>Essentially, <code>async function</code> returns a promise object. It may take a long time to finish running the function, but when it returns, it can return a value (i.e. result). If an exception is thrown inside an <code>async function</code>, the function stops execution, and the returned promise object is rejected with the exception object. The following example rewrites <code>p126.mjs</code> to illustrate this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p127.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">readFile</span>, <span style="color:#a6e22e">writeFile</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs/promises&#39;</span>;
+
+<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">copyFile</span> (<span style="color:#a6e22e">sourceFileName</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#a6e22e">sourceFileName</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#39;copy-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sourceFileName</span>, <span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+}
+
+<span style="color:#a6e22e">copyFile</span>(<span style="color:#e6db74">&#39;mpi-info.txt&#39;</span>).<span style="color:#a6e22e">then</span>( () =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Finish copying&#34;</span>);  
+}).<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;promise catch &#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">err</span>);
+});
+</code></pre></div><h2 id="further-reading">Further reading</h2>
+<ul>
+<li>Chapter 11 in the Modern JavaScript tutorial: <a href="https://javascript.info/async">Promise</a></li>
+<li>MDN Chapter on <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous">Asynchronous JavaScript</a></li>
+<li>MDN article, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
+</ul>
+<h2 id="downloadable-examples">Downloadable examples</h2>
+<p>The example source files are <a href="/chap4/chap4-3.zip">available here</a>.</p>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633929656"></script>
+    <script src="/js/jquery.sticky.js?1633929656"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633929656"></script>
+    <script src="/js/featherlight.min.js?1633929656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633929656"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633929656"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633929656"></script>
+    
+
+  </body>
+</html>
+

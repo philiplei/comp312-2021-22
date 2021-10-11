@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>3-7 Vue projects and build tools :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1633929656" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633929656" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633929656" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633929656" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633929656" rel="stylesheet">
+    <link href="/css/theme.css?1633929656" rel="stylesheet">
+    <link href="/css/tabs.css?1633929656" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633929656" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1633929656" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1633929656"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/3client/3-7/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/2basic/" title="JavaScript basics" class="dd-item">
+        <a href="/2basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/2basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/2basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/2basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/2basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/2basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/2basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/2basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item parent">
+        <a href="/3client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/3client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/3client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/3client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/3client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/3client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/3client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-7/" title="3-7 Vue projects and build tools" class="dd-item active">
+        <a href="/3client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/3client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/4server/" title="Server-side programming" class="dd-item">
+        <a href="/4server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/4server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/4server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/4server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/4server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/4server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/5appserver/" title="App server programming" class="dd-item">
+        <a href="/5appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/5appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/5appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/5appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/5appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/5appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/3client/'>Client-side programming</a> > 3-7 Vue projects and build tools
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-nodejs">Introduction to Node.js </a>
+      <ul>
+        <li><a href="#node-and-node-project">Node and node project</a></li>
+        <li><a href="#packages-and-npm">Packages and NPM</a></li>
+      </ul>
+    </li>
+    <li><a href="#vite-a-build-tool-for-vue">Vite, a build tool for Vue</a>
+      <ul>
+        <li><a href="#project-configuration">Project configuration</a></li>
+        <li><a href="#dev-server-and-live-reload">Dev server and live-reload</a></li>
+        <li><a href="#building-a-dist-package">Building a dist package</a></li>
+        <li><a href="#a-tour-of-the-source-code">A tour of the source code</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-third-party-components">Using third-party components</a></li>
+    <li><a href="#downloadable-sample-code">Downloadable sample code</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3-7 Vue projects and build tools
+            </h1>
+          
+
+        
+
+
+<h2 id="introduction-to-nodejs">Introduction to Node.js </h2>
+<p>As we try to build more complicated (client side of) a web app, we&rsquo;ve to handle a growing number of source code files (including HTML, JavaScript and other assets). We need to break down a large JavaScript program into several <strong>modules</strong> for better management. We may also want to install and use modules from third-party libraries (e.g. the Element Plus desktop UI library).</p>
+<p>To handle the complexity of such projects, web developers often apply <strong>build tools</strong> to facilitate the development and testing processes and automate the building of distributable. In this section, we introduce the <a href="https://vitejs.dev/">Vite</a> tool and demonstrate how to build an Vue project with components and third-party library.</p>
+<p>We need to have basic understanding of several tools and programming concepts before we dive into the study of Vue components.</p>
+<h3 id="node-and-node-project">Node and node project</h3>
+<p>From its <a href="https://nodejs.org/">official page</a>, &ldquo;Node.js is a JavaScript runtime built on Chrome&rsquo;s V8 JavaScript engine&rdquo;. Node.js is commonly used to develop network services, and, in particular, application servers for web apps (which will be the main topic in chapter 4).</p>
+<p>In this chapter, we&rsquo;ll mainly use Node.js as a platform to run development tools of Vue projects. For now, install node from the <a href="https://nodejs.org/">official page</a>. After installation, check the version as below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ node -v
+</code></pre></div><p>A JavaScript <em>project</em> most likely contains more than one JavaScript files and other resources (e.g. HTML, images) placed in a folder. The folder contains a file <code>package.json</code> which describes the project. You can create <code>package.json</code> with the following steps. See <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json">online reference</a> for the meaning of properties in the file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ mkdir proj01
+$ cd proj01
+$ npm init
+</code></pre></div><p>Now, create a simple JavaScript program <code>hello.js</code> in the project. Run it with the command <code>node hello.js</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// hello.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello Node!&#34;</span>);
+</code></pre></div><h3 id="packages-and-npm">Packages and NPM</h3>
+<p>Bundled with Node.js is a package manager called <strong>NPM</strong>, a command line tool to download (and manage) JavaScript packages from <strong>package registry</strong>. The default registry is  <a href="https://www.npmjs.com/">npmjs.com</a>, which has recently become the largest JavaScript registry for both server-side and client-side libraries and also tools written in JavaScript.</p>
+<p>You can easily install a package into a Node project with the command line tool <code>npm</code>. The following commands installs a toy tool called <code>cowsay</code> <em>locally</em> in the current project, and then run it with the command line tool <code>npx</code>.</p>
+<blockquote>
+<p>Actually, <code>npx</code> will download a package on-the-fly if it cannot find the package locally. Refer to <a href="https://www.npmjs.com/package/npx">online reference</a> for more information.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm install cowsay
+$ npx cowsay Hello npm!
+</code></pre></div><p>A more useful tool is a simple web server <code>http-server</code> written in JavaScript.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm install http-server
+$ npx http-server
+</code></pre></div><p>By default, <code>npm install</code> installs a package and its dependencies in the folder <code>node_modules</code> inside the project folder. <em>Check it out</em>. Moreover, <code>npm install</code> also automatically adds an entry in the <code>package.json</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;proj1&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;web&#34;</span>: <span style="color:#e6db74">&#34;http-server&#34;</span>,
+    <span style="color:#f92672">&#34;hello&#34;</span>: <span style="color:#e6db74">&#34;cowsay \&#34;Hello npm script!\&#34;&#34;</span>
+  },
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;cowsay&#34;</span>: <span style="color:#e6db74">&#34;^1.5.0&#34;</span>,
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;http-server&#34;</span>: <span style="color:#e6db74">&#34;^13.0.1&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">  }
+</span>}
+</code></pre></div><p>With the dependencies of a project listed in <code>package.json</code>, you can install all the required package for a project with a simple command in the future.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm install
+</code></pre></div><p>You can also create scripts in <code>package.json</code> to run commands with <code>npm run</code>. Download the sample package <a href="/chap3/c37-proj01.zip">c37-proj01.zip</a> and watch the demo in class.</p>
+<h2 id="vite-a-build-tool-for-vue">Vite, a build tool for Vue</h2>
+<p>In the next few sections, we will use a build tool called Vite (<a href="https://vitejs.dev/">official site</a>) to develop, test and build Vue applications.</p>
+<p>Using a build tool has several advantages, compared to our previous approach of loading JavaScript libraries from CDN and writing JavaScript code in a single <code>*.js</code> file.</p>
+<ol>
+<li>We can manage client-side JavaScript libraries using a package manager (we&rsquo;ll use <code>npm</code>). A package manager can automatically install dependencies of a package, and take care of versioning of packages.</li>
+<li>Build tools support loaders and pre-processors, which enable more convenient and powerful formats for programming (e.g. TypeScript). In particular, we&rsquo;ll use SFC (Single File Component) to group the HTML template, CSS style and JavaScript code of a component into a single file.</li>
+<li>Build tools can translate JavaScript codes to versions that are compatible with older versions of web browsers. This allows developers to take advantage of modern JavaScript programming constructs (e.g. modules).</li>
+<li>Module bundlers can trace out the JavaScript codes (function, class) starting from <code>&lt;script&gt;</code> element in HTML. They can <em>bundle</em> multiple JavaScript files into one (or a few) file, and this can reduce the time that a web browser will load the web application.</li>
+<li>They support <em>tree shaking</em>, also known as dead code elimination, and will not include in the bundles any code that is not used by the web app.</li>
+</ol>
+<h3 id="project-configuration">Project configuration</h3>
+<p>We will use a simple Node project <a href="/chap3/c37-sfc.zip">c37-sfc.zip</a>
+to illustrate how to use Vite to develop a Vue project. First, download the example and expand the zip in a working folder. The following in the <code>package.json</code> of the project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;c37-sfc&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.1.0&#34;</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;dev&#34;</span>: <span style="color:#e6db74">&#34;vite&#34;</span>,
+    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;vite build&#34;</span>,
+    <span style="color:#f92672">&#34;serve&#34;</span>: <span style="color:#e6db74">&#34;vite preview&#34;</span>
+  },
+  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;vue&#34;</span>: <span style="color:#e6db74">&#34;^3.2.6&#34;</span>
+  },
+  <span style="color:#f92672">&#34;devDependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;@vitejs/plugin-vue&#34;</span>: <span style="color:#e6db74">&#34;^1.6.0&#34;</span>,
+    <span style="color:#f92672">&#34;@vue/compiler-sfc&#34;</span>: <span style="color:#e6db74">&#34;^3.2.6&#34;</span>,
+    <span style="color:#f92672">&#34;vite&#34;</span>: <span style="color:#e6db74">&#34;^2.5.2&#34;</span>
+  }
+}
+</code></pre></div><p>This project has two kinds of dependencies. <code>dependencies</code> refers to packages that are required by the application itself. Execution of the application requires these packages. In this example, we have only vue 3. But if you use other libraries (e.g. Element Plus), you should install them into the project (e.g. <code>npm install element-plus</code>).</p>
+<p>The other kind of dependencies is <code>devDependencies</code>. These packages are not necessary while we&rsquo;re developing the project. You can install packages for development with <code>npm install packageName --save-dev</code>.</p>
+<p>Another config file in the project is <code>vite.config.js</code>. This configures the Vite build tool.  For our purpose, we mostly only need to change the input to the bundler.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">defineConfig</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;vite&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">vue</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@vitejs/plugin-vue&#39;</span>
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">defineConfig</span>({
+  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">vue</span>()],
+  <span style="color:#a6e22e">build</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">rollupOptions</span><span style="color:#f92672">:</span> {
+<span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> {
+</span><span style="display:block;width:100%;background-color:#3c3d38">        <span style="color:#75715e">// list all HTML files that contain Vue components
+</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e"></span>        <span style="color:#a6e22e">index</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./index.html&#39;</span>,
+</span><span style="display:block;width:100%;background-color:#3c3d38">      }
+</span>    }
+  }
+})
+</code></pre></div><h3 id="dev-server-and-live-reload">Dev server and live-reload</h3>
+<p>The Vue application in this example <a href="/chap3/c37-sfc.zip">(c37-sfc.zip)</a> consists of three files. The HTML file is <code>index.html</code>, a browser loads this file to run the web app. The HTML file loads the JavaScript module <code>main.js</code>, which creates a Vue app using <code>createApp()</code>. The root component of the app is provided by a SFC <code>app.vue</code>.</p>
+<p>We can run a development web server to test the app.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-cmd" data-lang="cmd">$ npm run dev
+</code></pre></div><p>Open a browser to connect to the URL that is given by the above command. Can you run the web app?</p>
+<p>Vite also supports live reload. When you make some changes to the source code, the browser will reload automatically to show the update.  Try to make some changes to the HTML or JavaScript code and see that the browser refreshes to show the up-to-date version of the app.</p>
+<h3 id="building-a-dist-package">Building a dist package</h3>
+<p>When you&rsquo;re reading to deploy the web app to a production web server, you can run <code>npm run build</code> to build an application bundle in the folder <code>dist</code>. Check the content of the folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-bash" data-lang="bash">$ npm run build
+$ npm run serve
+</code></pre></div><p>Vite also includes a simple web server to test the application bundle. Run <code>npm run serve</code> to start the testing web server.</p>
+<h3 id="a-tour-of-the-source-code">A tour of the source code</h3>
+<p>Vite uses ES modules <a href="https://javascript.info/modules-intro">(online reference)</a> to manage the Vue components and other JavaScript files in a project. For example, <code>index.html</code> loads <code>main.js</code> with the following line.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#75715e">&lt;!-- Loading main.js as a JavaScript module --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./main.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p><code>main.js</code> sets up the Vue application. The first <code>import</code> statement imports a function <code>createApp</code> from the Vue package previously installed by <code>npm install</code>. The second <code>import</code> statement <strong>imports</strong> an options object of the root component from a SFC called <code>app.vue</code>. <code>main.js</code> then creates a Vue app according to the options object, and mounts it to the <code>&lt;div&gt;</code> with id <code>app</code> in the HTML file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// import &#39;createApp&#39; from the Vue library as a module
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">createApp</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;vue&#34;</span>;
+
+<span style="color:#75715e">// import the options object from the SFC
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">opts</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./app.vue&#34;</span>;
+
+<span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">opts</span>).<span style="color:#a6e22e">mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>);
+</code></pre></div><p>Next, let&rsquo;s look at the content of the SFC file <code>app.vue</code>, which contains the root component of the app. There are three sections in a SFC: the template, the CSS style and the JavaScript code.</p>
+<p>The template section provides the template code of the component.
+The JavaScript section <strong>exports</strong> the options object of the component, which is imported by <code>main.js</code> earlier.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vuejs" data-lang="vuejs">&lt;<span style="color:#f92672">template</span>&gt;
+<span style="color:#a6e22e">The</span> <span style="color:#a6e22e">time</span> <span style="color:#a6e22e">now</span> <span style="color:#a6e22e">is</span> 
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;clock&#39;</span>&gt;{{ <span style="color:#a6e22e">timeNow</span> }}&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">timeNow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span> }
+  },
+  <span style="color:#a6e22e">created</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">timeNow</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Date()).<span style="color:#a6e22e">toLocaleTimeString</span>();
+    <span style="color:#a6e22e">setInterval</span>( ()=&gt;{
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">timeNow</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Date()).<span style="color:#a6e22e">toLocaleTimeString</span>();
+    }, <span style="color:#ae81ff">1000</span>);
+  }
+};
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">scoped</span>&gt;
+.<span style="color:#a6e22e">clock</span> { <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span><span style="color:#a6e22e">px</span>; <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">6</span><span style="color:#a6e22e">em</span>; <span style="color:#a6e22e">border</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">px</span> <span style="color:#a6e22e">solid</span> <span style="color:#a6e22e">gray</span>; <span style="color:#a6e22e">text</span><span style="color:#f92672">-</span><span style="color:#a6e22e">align</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">center</span>; }
+&lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><p>SFC may also include a section for style. SFC allows us to restrict the style rules for this component only with <code>&lt;style scoped&gt;</code>.</p>
+<h2 id="using-third-party-components">Using third-party components</h2>
+<p>In this section, we go through the source code of another web app, which integrates the three UI component examples in the previous lecture.
+The link <a href="/chap3/c37-feature/dist/index.html">c37-feature</a> provides a deployed version of the web app, which you can run in browser. The source code can be downloaded at <a href="/chap3/c37-feature.zip">c37-feature</a>.</p>
+<p>First, notice that <code>package.json</code> adds Element-Plus as dependencies.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-json" data-lang="json">  <span style="color:#e6db74">&#34;dependencies&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+    <span style="color:#f92672">&#34;element-plus&#34;</span>: <span style="color:#e6db74">&#34;^1.1.0-beta.8&#34;</span>,
+    <span style="color:#f92672">&#34;vue&#34;</span>: <span style="color:#e6db74">&#34;^3.2.6&#34;</span>
+  }<span style="color:#960050;background-color:#1e0010">,</span>
+</code></pre></div><p>This app has four components. The root component <code>app.vue</code> includes three other components, <code>comp01.vue</code>, <code>comp02.vue</code>, <code>comp03.vue</code>. The three child components correspond to the three examples in the previous lecture about common component features.
+Notice several things in the following listing of <code>app.vue</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+  &lt;<span style="color:#f92672">el-card</span>&gt;
+    &lt;<span style="color:#f92672">template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">header</span>&gt;<span style="color:#a6e22e">Properties</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">Attributes</span>&lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">comp-part1</span>&gt;<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/comp-part1&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/el-card&gt; </span>
+
+  &lt;<span style="color:#f92672">el-card</span>&gt;
+    &lt;<span style="color:#f92672">template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">header</span>&gt;<span style="color:#a6e22e">Bi</span><span style="color:#f92672">-</span><span style="color:#a6e22e">directional</span> <span style="color:#a6e22e">binding</span>&lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">comp-part2</span>&gt;<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/comp-part2&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/el-card&gt; </span>
+
+  &lt;<span style="color:#f92672">el-card</span>&gt;
+    &lt;<span style="color:#f92672">template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">header</span>&gt;<span style="color:#a6e22e">Slots</span>&lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">comp-part3</span>&gt;<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/comp-part3&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/el-card&gt; </span>
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ElCard</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;element-plus&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;element-plus/dist/index.css&#39;</span>;
+
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">CompPart1</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./comp01.vue&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">CompPart2</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./comp02.vue&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">CompPart3</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./comp03.vue&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ElCard</span>, <span style="color:#a6e22e">CompPart1</span>, <span style="color:#a6e22e">CompPart2</span>, <span style="color:#a6e22e">CompPart3</span> }
+};
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><ol>
+<li>it <code>import</code>s the options object (as default) from the SFC of each child component. The variable name (e.g. <code>CompPart1</code>) is arbitrary, but should follow the Pascal case.</li>
+<li>it registers the child components in the options object of the root component. (<code>components: { CompPart1 }</code>). Without this, you cannot use the child component in the template.</li>
+<li><code>components: { CompPart1 }</code> is a shorthand for <code>components: { CompPart1: CompPart1 }</code>. Because element names in HTML are case-insensitive, Vue will convert the PascalCase <code>CompPart1</code> to kebab-case <code>comp-part1</code> in the template.</li>
+<li>In the template, we inject the child component as <code>&lt;comp-part1&gt;&lt;/comp-part1&gt;</code>.</li>
+<li>Since we use one component from the Element Plus library, We also need to import <code>&lt;el-card&gt;</code> from the Node module <code>element-plus</code>, which we has installed earlier using <code>npm install</code>.</li>
+<li>The Element Plus library comes with a CSS style sheet for setting the appearance of its components. We use the statement <code>import 'element-plus/dist/index.css'</code> to tell Vue to refer to that CSS in the HTML page that includes this component (the root component).</li>
+</ol>
+<p>Next, examine the source code of the child component <code>comp01.vue</code>. Similar to the situation in the root component, here, we need to import <code>&lt;el-input&gt;</code> and <code>&lt;el-progress&gt;</code> from <code>element-plus</code>, and register them in this component. We also import the Element-Plus CSS in this SFC because this component is using components from the library. The Vite build tool will only import the CSS once in the HTML page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+   &lt;<span style="color:#f92672">el-input</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;what&#39;s up?&#34;</span>
+      <span style="color:#a6e22e">suffix</span><span style="color:#f92672">-icon</span><span style="color:#960050;background-color:#1e0010">=&#34;</span><span style="color:#a6e22e">el</span><span style="color:#f92672">-icon-chat-dot-round</span><span style="color:#960050;background-color:#1e0010">&#34;</span>
+      <span style="color:#f92672">v-model</span><span style="color:#e6db74">=&#34;message&#34;&gt;&lt;/el-input&gt;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">   &lt;el-progress :text-inside=&#34;true&#34; :stroke-width=&#34;30&#34;
+</span><span style="color:#e6db74">                :percentage=&#34;progress&#34; </span><span style="color:#f92672">:color</span><span style="color:#e6db74">=&#34;customColors&#34;</span>&gt;     
+   <span style="color:#960050;background-color:#1e0010">&lt;/</span><span style="color:#a6e22e">el</span><span style="color:#f92672">-progress</span>&gt;
+
+   &lt;<span style="color:#f92672">el-button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;primary&#34;</span> <span style="color:#f92672">@click</span><span style="color:#e6db74">=&#34;changeProgress&#34;</span>&gt;<span style="color:#a6e22e">Change</span> <span style="color:#a6e22e">progress</span><span style="color:#960050;background-color:#1e0010">&lt;/</span><span style="color:#a6e22e">el</span><span style="color:#f92672">-button</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ElInput</span>, <span style="color:#a6e22e">ElProgress</span>, <span style="color:#a6e22e">ElButton</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;element-plus&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;element-plus/dist/index.css&#39;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> { 
+    <span style="color:#a6e22e">ElInput</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ElInput</span>, 
+    <span style="color:#a6e22e">ElProgress</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ElProgress</span>,
+    <span style="color:#a6e22e">ElButton</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ElButton</span>,
+  },
+  <span style="color:#a6e22e">data</span>() { <span style="color:#75715e">/* omitted */</span> },
+  <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> { <span style="color:#75715e">/* omitted */</span> }
+}
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">scoped</span>&gt;
+.<span style="color:#a6e22e">el</span><span style="color:#f92672">-</span><span style="color:#a6e22e">input</span>, .<span style="color:#a6e22e">el</span><span style="color:#f92672">-</span><span style="color:#a6e22e">progress</span> { <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">300</span><span style="color:#a6e22e">px</span>; <span style="color:#a6e22e">margin</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span><span style="color:#a6e22e">px</span> <span style="color:#ae81ff">10</span><span style="color:#a6e22e">px</span>; }
+&lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><h2 id="downloadable-sample-code">Downloadable sample code</h2>
+<ul>
+<li><a href="/chap3/c37-proj01.zip">c37-proj01.zip</a> - first sample of Node project</li>
+<li><a href="/chap3/c37-sfc.zip">c37-sfc.zip</a> - simple Vue app using SFC and Vite build tool</li>
+<li><a href="/chap3/c37-feature.zip">c37-feature</a> - a Vue app to integrate the previous examples on common component features. this example demonstrates how to load third-party libraries and how a root component can include child components.</li>
+</ul>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633929656"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633929656"></script>
+    <script src="/js/jquery.sticky.js?1633929656"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633929656"></script>
+    <script src="/js/featherlight.min.js?1633929656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633929656"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1633929656"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1633929656"></script>
+    
+
+  </body>
+</html>
+

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: COMP312 notes</title>
+    <title>3-4 Events, methods and component lifecycle :: COMP312 notes</title>
 
     
     <link href="/css/nucleus.css?1633929656" rel="stylesheet">
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/3client/3-4/">
     <nav id="sidebar" class="">
   
   
@@ -256,7 +256,7 @@ JavaScript basics
     
       
       
-      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item parent">
         <a href="/3client/">
           
 Client-side programming
@@ -342,7 +342,7 @@ Client-side programming
   
 		
     
-      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item active">
         <a href="/3client/3-4/">
           
 3-4 Events, methods and component lifecycle
@@ -763,7 +763,13 @@ App server programming
             
           
           
-            <a href='/'></a> > Tags
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/3client/'>Client-side programming</a> > 3-4 Events, methods and component lifecycle
+          
+        
           
         
           
@@ -774,7 +780,13 @@ App server programming
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ui-event-handling">UI event handling</a></li>
+    <li><a href="#timer">Timer</a></li>
+    <li><a href="#life-cycle-methods">Life cycle methods</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -790,22 +802,88 @@ App server programming
           
             <h1>
               
-              Tags
+              3-4 Events, methods and component lifecycle
             </h1>
           
 
         
 
 
+<p>This section discusses several kinds of asynchronous function calls in client-side programming. We define these <strong>asynchronous functions</strong> in the program, but our code does not call them directly. Instead, we registered these asynchronous functions to handle some future events, e.g. user interface events, timers and Vue component life cycle.</p>
+<h2 id="ui-event-handling">UI event handling</h2>
+<p>In a web app, a common way to trigger an action is mouse click. When a user <strong>clicks</strong> on an HTML element, the element is said to <strong>fire a click event</strong>. We can use the Vue directive <code>v-on:click</code> (or shorthand notation <code>@click</code>) to define an <strong>event handler</strong>. Look at the code snippet from the <a href="/chap3/p307.html">example p307.html</a>.</p>
+<p>The event handler can be a JavaScript statement, (e.g. <code>count++</code>) or the number of a <strong>method</strong> of the view model.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#a6e22e">Click</span> <span style="color:#a6e22e">count</span><span style="color:#f92672">:</span> {{ <span style="color:#a6e22e">count</span> }}&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;btn btn-primary&#39;</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">-on</span><span style="color:#f92672">:</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count++&#39;</span>&gt;<span style="color:#a6e22e">Add</span> <span style="color:#ae81ff">1</span>&lt;/<span style="color:#f92672">button</span>&gt;<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nbsp</span>; 
+  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;btn btn-success&#39;</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;this.count--&#39;</span>&gt;<span style="color:#a6e22e">Minus</span> <span style="color:#ae81ff">1</span>&lt;/<span style="color:#f92672">button</span>&gt;<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nbsp</span>;
+  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;btn btn-warning&#39;</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;reset&#39;</span>&gt;<span style="color:#a6e22e">Reset</span> <span style="color:#a6e22e">to</span> <span style="color:#ae81ff">0</span>&lt;/<span style="color:#f92672">button</span>&gt;<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nbsp</span>; 
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">opts</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">count</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span> }
+  },
+  <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">reset</span>(<span style="color:#a6e22e">event</span>) { 
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      <span style="color:#75715e">// check the event object in browser console ... 
+</span><span style="color:#75715e"></span>    }
+    <span style="color:#75715e">// another method omitted
+</span><span style="color:#75715e"></span>  }
+};
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">vm</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">opts</span>).<span style="color:#a6e22e">mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>);
+</code></pre></div><p>Vue component methods are defined under the <code>methods</code> property of the options object. Inside the method body, you can use <code>this</code> to refer to data properties. Examine the view model <code>vm</code> in browser&rsquo;s developer tools to check that both data properties and methods are properties of <code>vm</code>.</p>
+<blockquote>
+<p>Vue component method definition cannot use arrow function, because it requires <code>this</code>.</p>
+</blockquote>
+<h2 id="timer">Timer</h2>
+<p>JavaScript timers allow us to schedule a function to run after a certain time period. There are two types of timers. <strong>One-time timer</strong> will run a given function <em>once</em> after a fixed period, and <strong>periodic timer</strong> will run a given function repeatedly with an interval of a fixed period. <a href="https://javascript.info/settimeout-setinterval">(online reference)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// set a timer of 5s. show a message when timer expires
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timerId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setTimeout</span>(
+  ()=&gt;{ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Time is up&#39;</span>) },
+  <span style="color:#ae81ff">5000</span>
+);
+
+<span style="color:#75715e">// run this to cancel the timer because it expires
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">timerId</span>);
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// set an interval timer of 2s. show a message every 2s
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timerId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(
+  ()=&gt;{ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;2s passed&#39;</span>) },
+  <span style="color:#ae81ff">2000</span>
+);
+
+<span style="color:#75715e">// run this to cancel the timer 
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">timerId</span>);
+</code></pre></div><p>Study the <a href="/chap3/p307-timer.html">example p307-timer.html</a> for another example of timers.</p>
+<h2 id="life-cycle-methods">Life cycle methods</h2>
+<p>Another source of asynchronous function calls in Vue is <a href="https://v3.vuejs.org/guide/instance.html#lifecycle-hooks">lifecycle hooks</a>.</p>
+<p>Examples we studied up to this moment only apply a single component instance, which is the root component mounted to the document tree. (In later sections of this chapter, we&rsquo;ll learn how to define new components and use third-party components.) Each component instance will go through several moments in its lifecycle. These include <code>created</code>, <code>mounted</code>, <code>updated</code> and <code>unmounted</code>. By defining a <strong>lifecycle hook</strong> in the options object, we can instruct Vue what to do in different moments in the lifecycle.</p>
+<p>Click here to see the <a href="https://v3.vuejs.org/images/lifecycle.svg">Vue component lifecycle diagram</a>.</p>
+<p>For example, we can define a <code>created</code> hook to initialize a component after its data properties are created, but before its template is processed and mounted to the document tree. For example, you can load data from a server to populate the initial view of a component.</p>
+<p>The following code snippet comes from <a href="/chap3/p307-lifecycle.html">example p307-lifecycle.html</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#a6e22e">This</span> <span style="color:#a6e22e">component</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">created</span> {{ <span style="color:#a6e22e">count</span> }} <span style="color:#a6e22e">seconds</span> <span style="color:#a6e22e">ago</span>.&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">opts</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">count</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span> };
+  },
+  <span style="color:#a6e22e">created</span>() {
+    <span style="color:#a6e22e">setInterval</span>( ()=&gt;{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>}, <span style="color:#ae81ff">1000</span> );
+  },
+  <span style="color:#a6e22e">updated</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;component updated...&#34;</span>);
+  }
+}
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div>
 
 
-
-<ul>
-    
-</ul>
-
-
-<footer class=" footline" >
+<footer class="footline">
     
 </footer>
 

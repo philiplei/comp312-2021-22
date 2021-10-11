@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: COMP312 notes</title>
+    <title>3-5 Form controls and bi-directional binding :: COMP312 notes</title>
 
     
     <link href="/css/nucleus.css?1633929656" rel="stylesheet">
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/3client/3-5/">
     <nav id="sidebar" class="">
   
   
@@ -256,7 +256,7 @@ JavaScript basics
     
       
       
-      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item parent">
         <a href="/3client/">
           
 Client-side programming
@@ -363,7 +363,7 @@ Client-side programming
   
 		
     
-      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item active">
         <a href="/3client/3-5/">
           
 3-5 Form controls and bi-directional binding
@@ -740,23 +740,98 @@ App server programming
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/3client/'>Client-side programming</a> > 3-5 Form controls and bi-directional binding
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#bi-directional-binding-with-v-model">Bi-directional binding with v-model</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              3-5 Form controls and bi-directional binding
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
+
+<h2 id="bi-directional-binding-with-v-model">Bi-directional binding with v-model</h2>
+<p>HTML provides several form controls for text input and selection. You can make a bi-directional binding of a data property to the value of a form control using <code>v-model</code> directive. As a simple example, look at the following code. When a user inputs or changes text in the input control, the data property is updated immediately. Similar, when the data property <code>name</code> changes, the input control also refreshes with the update.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span>&gt;<span style="color:#a6e22e">Name</span><span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">-model</span><span style="color:#960050;background-color:#1e0010">=&#34;</span><span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">&#34;</span> /&gt;
+  <span style="color:#a6e22e">Hello</span> {{ <span style="color:#a6e22e">name</span> }}<span style="color:#f92672">!</span>
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">opts</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span> }
+  }
+};
+<span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">opts</span>).<span style="color:#a6e22e">mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>);
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Please refer to the <a href="/chap3/p308.html">example p308.html</a> for making bi-directional binding on various HTML form controls using <code>v-model</code>. If you employ a UI library with input control, the attributes used to configure the controls may be different.
+Please refer to their documentation, e.g. as in <a href="https://element-plus.org/#/en-US/component/radio">Element-Plus</a>.</p>
+<p>The <a href="/chap3/p309.html">example p309.html</a> combines what&rsquo;ve been covered so far.</p>
 
 
-<h1 id="comp312-internet-programming-ii">COMP312 Internet Programming II</h1>
-<p>Welcome to the online course notes of COMP312. You can jump to the notes of chap 2 to 5 using the menu on the left.</p>
 
+<footer class="footline">
+    
+</footer>
 
         
         </div>

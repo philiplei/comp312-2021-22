@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript basics on COMP312 notes</title>
+    <link>https://philiplei.github.io/2basic/</link>
+    <description>Recent content in JavaScript basics on COMP312 notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Sep 2021 10:03:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/2basic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2-1 Basic data types and control</title>
+      <link>https://philiplei.github.io/2basic/2-1/</link>
+      <pubDate>Mon, 30 Aug 2021 10:36:44 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/2basic/2-1/</guid>
+      <description>This lab goes through the basic data types (Number and String) and control structures of the JavaScript programming language.
+Number Two basic data types in JavaScript are Number and String. There are no separate types for integers and doubles. You define a variable x with let x. You don&amp;rsquo;t need to specify data type. (In some old code, you may also see definition of variables with var x. This is similar to let x, but allows you to redefine the variable.</description>
+    </item>
+    
+    <item>
+      <title>2-2 Arrays</title>
+      <link>https://philiplei.github.io/2basic/2-2/</link>
+      <pubDate>Tue, 31 Aug 2021 09:19:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/2basic/2-2/</guid>
+      <description>This lab goes through the basics of the JavaScript arrays.
+Array An array keeps values in a sequence. Arrays can change size in run-time. You retrieve an element from an array by position. Use the operator [] to locate an element at the given index.
+let a = [ 1, 3, 5, 7, 9 ]; console.log(`The second odd number is ${a[1]}.`); let empty = [ ]; // empty array empty[1] // undefined The length property refers to the number of elements inside the array.</description>
+    </item>
+    
+    <item>
+      <title>2-3 Functions</title>
+      <link>https://philiplei.github.io/2basic/2-3/</link>
+      <pubDate>Tue, 31 Aug 2021 09:19:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/2basic/2-3/</guid>
+      <description>This lab explains the basics of the JavaScript functions.
+Functions There are two ways to define functions: the function keyword and arrow functions. This lab covers the first. We use a function to group some statements that can be reused.
+// draw a right angle triangle of height n function draw (n) { let out = &amp;#34;&amp;#34; for (let y=0; y&amp;lt;n; y++) { let s = &amp;#34;&amp;#34; for (let i=0; i&amp;lt;n-y-1; i++) s += &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>2-4 Objects as data structure</title>
+      <link>https://philiplei.github.io/2basic/2-4/</link>
+      <pubDate>Tue, 31 Aug 2021 11:00:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/2basic/2-4/</guid>
+      <description>This lab covers the basics of JavaScript objects and how to model complicated data using arrays and objects. The resultant data structure forms the basis of the JSON data format.
+Objects In JavaScript, an object is a collection of properties. Each property is a pair of name and value. (Sometimes JavaScript objects are used as key-value stores.) You can access each property with the dot notation.
+// define an object with 3 properties let peter = { firstName: &amp;#34;Peter&amp;#34;, lastName: &amp;#34;Chan&amp;#34;, age: 19 }; console.</description>
+    </item>
+    
+    <item>
+      <title>2-5 Functions as objects and callbacks</title>
+      <link>https://philiplei.github.io/2basic/2-5/</link>
+      <pubDate>Tue, 31 Aug 2021 12:14:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/2basic/2-5/</guid>
+      <description>Defining function objects Functions in JavaScript are often described as first-class values. (In fact, functions are objects, with their own properties and methods.) This means that, in many cases, if you can do something on numbers or strings, you can also do the same on functions. In particular, you can save a function in a variable, pass a function to another function, or return a function from a function.
+There are three ways to define a function: function declaration, function expression and arrow function.</description>
+    </item>
+    
+    <item>
+      <title>2-6 Objects with methods</title>
+      <link>https://philiplei.github.io/2basic/2-6/</link>
+      <pubDate>Wed, 01 Sep 2021 10:06:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/2basic/2-6/</guid>
+      <description>Object literals In previous sections, we&amp;rsquo;ve studied how to use JavaScript objects to model complicated data and how to declare functions that can be used as function objects, which can be stored in variable. By combining these knowledge, we can create an object in the sense of Object Oriented Programming: a object with state and behavior.
+To recap, a JavaScript object is a group of properties. Each property has a name and a value.</description>
+    </item>
+    
+    <item>
+      <title>2-7 Defining class</title>
+      <link>https://philiplei.github.io/2basic/2-7/</link>
+      <pubDate>Wed, 01 Sep 2021 15:42:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/2basic/2-7/</guid>
+      <description>A pitfall of object literals If you only need a single object with simple behavior, making an object literal with methods is a quick solution. However, if you need to create and maintain several objects with similar structure (data properties and methods), making separate object literals is cumbersome and inefficient.
+Consider the following example of person health records with a method BMI to calculate Body mass index. We&amp;rsquo;ll need to define each health record as object with its own version of the BMI method.</description>
+    </item>
+    
+  </channel>
+</rss>

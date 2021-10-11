@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Client-side programming on COMP312 notes</title>
+    <link>https://philiplei.github.io/3client/</link>
+    <description>Recent content in Client-side programming on COMP312 notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 May 2016 10:14:43 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/3client/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3-1 Background</title>
+      <link>https://philiplei.github.io/3client/3-1/</link>
+      <pubDate>Wed, 08 Sep 2021 09:04:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-1/</guid>
+      <description>Document tree and DOM When a web browser loads an HTML page from a web server, it converts the HTML code into a tree data structure known as document tree. All user interactions in the client-side of a web app are done through this DOM tree.
+The Document Object Model standard (online ref) defines a programming interface to access the document tree. Each HTML element is represented by a node in the tree.</description>
+    </item>
+    
+    <item>
+      <title>3-2 Vue application basics</title>
+      <link>https://philiplei.github.io/3client/3-2/</link>
+      <pubDate>Wed, 08 Sep 2021 18:05:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-2/</guid>
+      <description>A minimal Vue application  The example p301.html is a &amp;lsquo;bare-bones&amp;rsquo; example of a Vue application.
+&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div&amp;gt;1+2*3 = {{ 1+2*3 }}&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;It is now {{ (new Date).toLocaleTimeString() }}&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; // define an empty Vue options object const options = { }; // create a Vue component, mounted to the HTML template const vm = Vue.createApp(options).mount(&amp;#39;#app&amp;#39;); &amp;lt;/script&amp;gt; A Vue application is created using Vue.createApp(). The application contains a root component, which is mounted to a certain element in the document tree.</description>
+    </item>
+    
+    <item>
+      <title>3-3 Dynamic structure in template</title>
+      <link>https://philiplei.github.io/3client/3-3/</link>
+      <pubDate>Wed, 08 Sep 2021 22:06:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-3/</guid>
+      <description>Conditional rendering You can determine which part of the template to display depending on the value of data properties. Vue provides directives v-if, v-else-if and v-else to select what HTML content to show. The excerpt from example p304.html displays different message based on the value of temperature and rain.
+&amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div&amp;gt;Temperature: {{ temperature }}°C &amp;lt;span v-if=&amp;#34;temperature&amp;gt;=25&amp;#34;&amp;gt;It&amp;#39;s hot!&amp;lt;/span&amp;gt; &amp;lt;span v-else-if=&amp;#34;temperature&amp;gt;=10&amp;#34;&amp;gt;pleasant weather&amp;lt;/span&amp;gt; &amp;lt;span v-else&amp;gt;It&amp;#39;s cold, stay warm&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;Rain: {{ rain }}% &amp;lt;img v-if=&amp;#34;parseFloat(rain)&amp;gt;=30&amp;#34; src=&amp;#39;image/umbrella.</description>
+    </item>
+    
+    <item>
+      <title>3-4 Events, methods and component lifecycle</title>
+      <link>https://philiplei.github.io/3client/3-4/</link>
+      <pubDate>Thu, 09 Sep 2021 11:38:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-4/</guid>
+      <description>This section discusses several kinds of asynchronous function calls in client-side programming. We define these asynchronous functions in the program, but our code does not call them directly. Instead, we registered these asynchronous functions to handle some future events, e.g. user interface events, timers and Vue component life cycle.
+UI event handling In a web app, a common way to trigger an action is mouse click. When a user clicks on an HTML element, the element is said to fire a click event.</description>
+    </item>
+    
+    <item>
+      <title>3-5 Form controls and bi-directional binding</title>
+      <link>https://philiplei.github.io/3client/3-5/</link>
+      <pubDate>Wed, 08 Sep 2021 18:05:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-5/</guid>
+      <description>Bi-directional binding with v-model HTML provides several form controls for text input and selection. You can make a bi-directional binding of a data property to the value of a form control using v-model directive. As a simple example, look at the following code. When a user inputs or changes text in the input control, the data property is updated immediately. Similar, when the data property name changes, the input control also refreshes with the update.</description>
+    </item>
+    
+    <item>
+      <title>3-6 Component: motivation and features</title>
+      <link>https://philiplei.github.io/3client/3-6/</link>
+      <pubDate>Fri, 10 Sep 2021 20:45:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-6/</guid>
+      <description>Motivation Reusing components Suppose you&amp;rsquo;re developing a web app for online shopping. One page of the app lets the users to input a rating of a product. You&amp;rsquo;d like to build an interface similar to example p321.html. Wouldn&amp;rsquo;t it be great if you can utilize some existing code from a third-party library instead of writing this rating feature yourself?
+Vue components allow programmers to package some functionality into reusable code, and incorporate the code into their own application with ease.</description>
+    </item>
+    
+    <item>
+      <title>3-7 Vue projects and build tools</title>
+      <link>https://philiplei.github.io/3client/3-7/</link>
+      <pubDate>Sun, 12 Sep 2021 15:40:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-7/</guid>
+      <description>Introduction to Node.js  As we try to build more complicated (client side of) a web app, we&amp;rsquo;ve to handle a growing number of source code files (including HTML, JavaScript and other assets). We need to break down a large JavaScript program into several modules for better management. We may also want to install and use modules from third-party libraries (e.g. the Element Plus desktop UI library).
+To handle the complexity of such projects, web developers often apply build tools to facilitate the development and testing processes and automate the building of distributable.</description>
+    </item>
+    
+    <item>
+      <title>3-8 Make your own components</title>
+      <link>https://philiplei.github.io/3client/3-8/</link>
+      <pubDate>Sun, 12 Sep 2021 15:40:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/3client/3-8/</guid>
+      <description>In this lab, we&amp;rsquo;ll show how to create a Vue component (StarRate.Vue) and use it in the root component of the web app (App.vue).
+Properties and one-directional binding  We&amp;rsquo;d like to create a component called &amp;lt;star-rate&amp;gt; for user to rate something (e.g. products or movie). Take a look at the browser display at the SFC playground for the user interface. The root component App.vue includes the following in its template, and passes values to the &amp;lt;star-rate&amp;gt; component through the two properties: likes and max-likes.</description>
+    </item>
+    
+  </channel>
+</rss>

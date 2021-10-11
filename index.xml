@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 09 Oct 2021 12:29:00 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>5-1 Web API, concepts</title>
-      <link>https://philiplei.github.io/appserver/5-1/</link>
+      <link>https://philiplei.github.io/5appserver/5-1/</link>
       <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/appserver/5-1/</guid>
+      <guid>https://philiplei.github.io/5appserver/5-1/</guid>
       <description>In a modern web app, the application server implements a Web API that provides service to the front-end JavaScript code.
 A Web API is a defined set of HTTP request messages along with a definition of the structure of response messages, usually expressed in JSON format (from Wikipedia).
 A Web API provides service to clients through several endpoints. Each endpoint is named with an URL, e.g. http://example.com/products. A client uses an appropriate HTTP verb to invoke the endpoint.</description>
@@ -20,10 +20,10 @@ A Web API provides service to clients through several endpoints. Each endpoint i
     
     <item>
       <title>4-1 Node.js primer</title>
-      <link>https://philiplei.github.io/server/4-1/</link>
+      <link>https://philiplei.github.io/4server/4-1/</link>
       <pubDate>Fri, 17 Sep 2021 15:06:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/server/4-1/</guid>
+      <guid>https://philiplei.github.io/4server/4-1/</guid>
       <description>This lab goes through the basics of the Node.js platform.
 Quick start Node.js (https://nodejs.org) is a platform built on Chrome&amp;rsquo;s JavaScript runtime V8 for easily building fast, scalable network applications. Node.js supports the same basic JavaScript programming language as web browsers. As the first example, let&amp;rsquo;s run the following program p101.mjs in both browser and Node. (Follow instruction to install Node.)
 // p101.mjs // return the largest number in an array // assume at least 1 entry, and all entries are numbers function largest (A) { let big=A[0]; for (let i=1; i&amp;lt;A.</description>
@@ -31,58 +31,58 @@ Quick start Node.js (https://nodejs.org) is a platform built on Chrome&amp;rsquo
     
     <item>
       <title>3-1 Background</title>
-      <link>https://philiplei.github.io/client/3-1/</link>
+      <link>https://philiplei.github.io/3client/3-1/</link>
       <pubDate>Wed, 08 Sep 2021 09:04:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-1/</guid>
+      <guid>https://philiplei.github.io/3client/3-1/</guid>
       <description>Document tree and DOM When a web browser loads an HTML page from a web server, it converts the HTML code into a tree data structure known as document tree. All user interactions in the client-side of a web app are done through this DOM tree.
 The Document Object Model standard (online ref) defines a programming interface to access the document tree. Each HTML element is represented by a node in the tree.</description>
     </item>
     
     <item>
       <title>2-1 Basic data types and control</title>
-      <link>https://philiplei.github.io/basic/2-1/</link>
+      <link>https://philiplei.github.io/2basic/2-1/</link>
       <pubDate>Mon, 30 Aug 2021 10:36:44 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/basic/2-1/</guid>
+      <guid>https://philiplei.github.io/2basic/2-1/</guid>
       <description>This lab goes through the basic data types (Number and String) and control structures of the JavaScript programming language.
 Number Two basic data types in JavaScript are Number and String. There are no separate types for integers and doubles. You define a variable x with let x. You don&amp;rsquo;t need to specify data type. (In some old code, you may also see definition of variables with var x. This is similar to let x, but allows you to redefine the variable.</description>
     </item>
     
     <item>
       <title>5-2 RPC Web API</title>
-      <link>https://philiplei.github.io/appserver/5-2/</link>
+      <link>https://philiplei.github.io/5appserver/5-2/</link>
       <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/appserver/5-2/</guid>
+      <guid>https://philiplei.github.io/5appserver/5-2/</guid>
       <description>RPC-style Web API A common design style of Web API is RPC-style (Remote Procedure Call). A RPC-style Web API allocates one URL for each function or operation. These URLs represent an action and are usually named with a verb. The following table shows five endpoints in a Web API to manipulate products in a database. They implement four common operations on data known as CRUD (Create, Retrieve, Update and Delete).</description>
     </item>
     
     <item>
       <title>4-2 Asynchronous callback</title>
-      <link>https://philiplei.github.io/server/4-2/</link>
+      <link>https://philiplei.github.io/4server/4-2/</link>
       <pubDate>Fri, 17 Sep 2021 10:36:44 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/server/4-2/</guid>
+      <guid>https://philiplei.github.io/4server/4-2/</guid>
       <description>Asynchronous I/O handling Input / output operations, e.g. file reading/writing and network transactions, are much slower than CPU. Introductory programming examples (e.g. in Java and Python) typically use synchronous function call to perform I/O. Each file operation takes relatively long time to complete, and while the function call is waiting the I/O completion, the process / thread is blocked. When the I/O is completed, the program can continue to the next line in the program.</description>
     </item>
     
     <item>
       <title>3-2 Vue application basics</title>
-      <link>https://philiplei.github.io/client/3-2/</link>
+      <link>https://philiplei.github.io/3client/3-2/</link>
       <pubDate>Wed, 08 Sep 2021 18:05:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-2/</guid>
+      <guid>https://philiplei.github.io/3client/3-2/</guid>
       <description>A minimal Vue application  The example p301.html is a &amp;lsquo;bare-bones&amp;rsquo; example of a Vue application.
 &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div&amp;gt;1+2*3 = {{ 1+2*3 }}&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;It is now {{ (new Date).toLocaleTimeString() }}&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; // define an empty Vue options object const options = { }; // create a Vue component, mounted to the HTML template const vm = Vue.createApp(options).mount(&amp;#39;#app&amp;#39;); &amp;lt;/script&amp;gt; A Vue application is created using Vue.createApp(). The application contains a root component, which is mounted to a certain element in the document tree.</description>
     </item>
     
     <item>
       <title>2-2 Arrays</title>
-      <link>https://philiplei.github.io/basic/2-2/</link>
+      <link>https://philiplei.github.io/2basic/2-2/</link>
       <pubDate>Tue, 31 Aug 2021 09:19:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/basic/2-2/</guid>
+      <guid>https://philiplei.github.io/2basic/2-2/</guid>
       <description>This lab goes through the basics of the JavaScript arrays.
 Array An array keeps values in a sequence. Arrays can change size in run-time. You retrieve an element from an array by position. Use the operator [] to locate an element at the given index.
 let a = [ 1, 3, 5, 7, 9 ]; console.log(`The second odd number is ${a[1]}.`); let empty = [ ]; // empty array empty[1] // undefined The length property refers to the number of elements inside the array.</description>
@@ -90,40 +90,40 @@ let a = [ 1, 3, 5, 7, 9 ]; console.log(`The second odd number is ${a[1]}.`); let
     
     <item>
       <title>5-3 REST Web API</title>
-      <link>https://philiplei.github.io/appserver/5-3/</link>
+      <link>https://philiplei.github.io/5appserver/5-3/</link>
       <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/appserver/5-3/</guid>
+      <guid>https://philiplei.github.io/5appserver/5-3/</guid>
       <description>REST is the most popular way to design Web APIs. In a REST Web API, actions are designed around resources. Each resource is identify by a URL. A client applies the standard HTTP verbs (including GET, PUT, POST, DELETE, POST) on the resources to perform CRUD operations (Create, Retrieve, Update, Delete).
 For example, in an online shopping site, there may be resources about products, customers and their orders. These are represented by the following URLs.</description>
     </item>
     
     <item>
       <title>4-3 Promise, await and async</title>
-      <link>https://philiplei.github.io/server/4-3/</link>
+      <link>https://philiplei.github.io/4server/4-3/</link>
       <pubDate>Sat, 18 Sep 2021 16:05:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/server/4-3/</guid>
+      <guid>https://philiplei.github.io/4server/4-3/</guid>
       <description>Promise, basics In last section, we saw that many I/O operations take a callback function to report the result (if successful) or the error (if failing).
 import dns from &amp;#39;dns&amp;#39;; const govHost = &amp;#34;www.gov.mo&amp;#34;; dns.resolve(govHost, (err, records) =&amp;gt; { if (err) throw err; console.log(`${govHost}resolves to ${records}`); }); These asynchronous callbacks are efficient and easy to understand. However, when we need to organize a sequence of asynchronous operations, excessive nesting of the callback functions will soon make the code overwhelming.</description>
     </item>
     
     <item>
       <title>3-3 Dynamic structure in template</title>
-      <link>https://philiplei.github.io/client/3-3/</link>
+      <link>https://philiplei.github.io/3client/3-3/</link>
       <pubDate>Wed, 08 Sep 2021 22:06:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-3/</guid>
+      <guid>https://philiplei.github.io/3client/3-3/</guid>
       <description>Conditional rendering You can determine which part of the template to display depending on the value of data properties. Vue provides directives v-if, v-else-if and v-else to select what HTML content to show. The excerpt from example p304.html displays different message based on the value of temperature and rain.
 &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div&amp;gt;Temperature: {{ temperature }}°C &amp;lt;span v-if=&amp;#34;temperature&amp;gt;=25&amp;#34;&amp;gt;It&amp;#39;s hot!&amp;lt;/span&amp;gt; &amp;lt;span v-else-if=&amp;#34;temperature&amp;gt;=10&amp;#34;&amp;gt;pleasant weather&amp;lt;/span&amp;gt; &amp;lt;span v-else&amp;gt;It&amp;#39;s cold, stay warm&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;Rain: {{ rain }}% &amp;lt;img v-if=&amp;#34;parseFloat(rain)&amp;gt;=30&amp;#34; src=&amp;#39;image/umbrella.</description>
     </item>
     
     <item>
       <title>2-3 Functions</title>
-      <link>https://philiplei.github.io/basic/2-3/</link>
+      <link>https://philiplei.github.io/2basic/2-3/</link>
       <pubDate>Tue, 31 Aug 2021 09:19:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/basic/2-3/</guid>
+      <guid>https://philiplei.github.io/2basic/2-3/</guid>
       <description>This lab explains the basics of the JavaScript functions.
 Functions There are two ways to define functions: the function keyword and arrow functions. This lab covers the first. We use a function to group some statements that can be reused.
 // draw a right angle triangle of height n function draw (n) { let out = &amp;#34;&amp;#34; for (let y=0; y&amp;lt;n; y++) { let s = &amp;#34;&amp;#34; for (let i=0; i&amp;lt;n-y-1; i++) s += &amp;#34;.</description>
@@ -131,40 +131,40 @@ Functions There are two ways to define functions: the function keyword and arrow
     
     <item>
       <title>5-4 Making HTTP requests in client</title>
-      <link>https://philiplei.github.io/appserver/5-4/</link>
+      <link>https://philiplei.github.io/5appserver/5-4/</link>
       <pubDate>Sat, 09 Oct 2021 06:10:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/appserver/5-4/</guid>
+      <guid>https://philiplei.github.io/5appserver/5-4/</guid>
       <description>In a modern web app, client-side JavaScript programs react to user interaction, and send HTTP requests to Web APIs to get up-to-date information to display or invoke actions on the server. Client-side programs also need to handle receive data or reported errors from the server.
 Web browsers provide two main means to send asynchronous HTTP requests: the traditional XMLHttpRequest, and the new Fetch API. XMLHttpRequest applies callbacks and events to handle asynchronous message handling, while the Fetch API fetch is based on promises.</description>
     </item>
     
     <item>
       <title>4-4 Modules, import and export</title>
-      <link>https://philiplei.github.io/server/4-4/</link>
+      <link>https://philiplei.github.io/4server/4-4/</link>
       <pubDate>Sun, 19 Sep 2021 10:57:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/server/4-4/</guid>
+      <guid>https://philiplei.github.io/4server/4-4/</guid>
       <description>When you build a complicated program, it becomes necessary to break your source code into multiple files called modules for better management and organization. In addition, you&amp;rsquo;ll often want to take advantage of other&amp;rsquo;s work and use third-party modules, e.g. install a package from https://npmjs.org. To support these, JavaScript allows programmers to export some functions / variables from a module, and import some functions / variable in another module.
 In the JavaScript world (Browsers, Node.</description>
     </item>
     
     <item>
       <title>3-4 Events, methods and component lifecycle</title>
-      <link>https://philiplei.github.io/client/3-4/</link>
+      <link>https://philiplei.github.io/3client/3-4/</link>
       <pubDate>Thu, 09 Sep 2021 11:38:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-4/</guid>
+      <guid>https://philiplei.github.io/3client/3-4/</guid>
       <description>This section discusses several kinds of asynchronous function calls in client-side programming. We define these asynchronous functions in the program, but our code does not call them directly. Instead, we registered these asynchronous functions to handle some future events, e.g. user interface events, timers and Vue component life cycle.
 UI event handling In a web app, a common way to trigger an action is mouse click. When a user clicks on an HTML element, the element is said to fire a click event.</description>
     </item>
     
     <item>
       <title>2-4 Objects as data structure</title>
-      <link>https://philiplei.github.io/basic/2-4/</link>
+      <link>https://philiplei.github.io/2basic/2-4/</link>
       <pubDate>Tue, 31 Aug 2021 11:00:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/basic/2-4/</guid>
+      <guid>https://philiplei.github.io/2basic/2-4/</guid>
       <description>This lab covers the basics of JavaScript objects and how to model complicated data using arrays and objects. The resultant data structure forms the basis of the JSON data format.
 Objects In JavaScript, an object is a collection of properties. Each property is a pair of name and value. (Sometimes JavaScript objects are used as key-value stores.) You can access each property with the dot notation.
 // define an object with 3 properties let peter = { firstName: &amp;#34;Peter&amp;#34;, lastName: &amp;#34;Chan&amp;#34;, age: 19 }; console.</description>
@@ -172,10 +172,10 @@ Objects In JavaScript, an object is a collection of properties. Each property is
     
     <item>
       <title>4-5 Database access</title>
-      <link>https://philiplei.github.io/server/4-5/</link>
+      <link>https://philiplei.github.io/4server/4-5/</link>
       <pubDate>Wed, 22 Sep 2021 10:52:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/server/4-5/</guid>
+      <guid>https://philiplei.github.io/4server/4-5/</guid>
       <description>This lab demonstrates basic database programming in Node.js using a file-based database sqlite.
 SQLite SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine (from https://www.sqlite.org/). The whole database is stored in a file, and an application can open this database directly without connecting to any server.
 A popular module to access SQLite in Node is sqlite3. However, this module only provides a callback-based API. Therefore, we will also use the package sqlite which is a wrapper library on sqlite3 that provides a promise-based API.</description>
@@ -183,80 +183,79 @@ A popular module to access SQLite in Node is sqlite3. However, this module only 
     
     <item>
       <title>3-5 Form controls and bi-directional binding</title>
-      <link>https://philiplei.github.io/client/3-5/</link>
+      <link>https://philiplei.github.io/3client/3-5/</link>
       <pubDate>Wed, 08 Sep 2021 18:05:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-5/</guid>
+      <guid>https://philiplei.github.io/3client/3-5/</guid>
       <description>Bi-directional binding with v-model HTML provides several form controls for text input and selection. You can make a bi-directional binding of a data property to the value of a form control using v-model directive. As a simple example, look at the following code. When a user inputs or changes text in the input control, the data property is updated immediately. Similar, when the data property name changes, the input control also refreshes with the update.</description>
     </item>
     
     <item>
       <title>2-5 Functions as objects and callbacks</title>
-      <link>https://philiplei.github.io/basic/2-5/</link>
+      <link>https://philiplei.github.io/2basic/2-5/</link>
       <pubDate>Tue, 31 Aug 2021 12:14:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/basic/2-5/</guid>
+      <guid>https://philiplei.github.io/2basic/2-5/</guid>
       <description>Defining function objects Functions in JavaScript are often described as first-class values. (In fact, functions are objects, with their own properties and methods.) This means that, in many cases, if you can do something on numbers or strings, you can also do the same on functions. In particular, you can save a function in a variable, pass a function to another function, or return a function from a function.
 There are three ways to define a function: function declaration, function expression and arrow function.</description>
     </item>
     
     <item>
       <title>5-5 Web app server</title>
-      <link>https://philiplei.github.io/appserver/5-5/</link>
+      <link>https://philiplei.github.io/5appserver/5-5/</link>
       <pubDate>Sat, 09 Oct 2021 12:29:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/appserver/5-5/</guid>
+      <guid>https://philiplei.github.io/5appserver/5-5/</guid>
       <description>Express.js (official website) is a web framework to simplify development of Web applications. It supports:
- Routing – different request processing based on URL patterns Middleware – chainable processing of requests and responses Template – generate HTML output from variables  This lab covers how to define routes to capture HTTP requests for a web app / service endpoints. In addition, we&amp;rsquo;ll discuss how to generate simple HTTP responses.
-Handling requests at routes This example shows the basic structure of an Express app.</description>
+ Routing – different request processing based on URL patterns Middleware – chainable processing of requests and responses Template – generate HTML output from variables  This lab covers how to define routes to capture HTTP requests for a web app / service endpoints. We&amp;rsquo;ll discuss how to generate simple HTTP responses. Finally, we&amp;rsquo;ll cover the usage of common middlewares.</description>
     </item>
     
     <item>
       <title>3-6 Component: motivation and features</title>
-      <link>https://philiplei.github.io/client/3-6/</link>
+      <link>https://philiplei.github.io/3client/3-6/</link>
       <pubDate>Fri, 10 Sep 2021 20:45:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-6/</guid>
+      <guid>https://philiplei.github.io/3client/3-6/</guid>
       <description>Motivation Reusing components Suppose you&amp;rsquo;re developing a web app for online shopping. One page of the app lets the users to input a rating of a product. You&amp;rsquo;d like to build an interface similar to example p321.html. Wouldn&amp;rsquo;t it be great if you can utilize some existing code from a third-party library instead of writing this rating feature yourself?
 Vue components allow programmers to package some functionality into reusable code, and incorporate the code into their own application with ease.</description>
     </item>
     
     <item>
       <title>2-6 Objects with methods</title>
-      <link>https://philiplei.github.io/basic/2-6/</link>
+      <link>https://philiplei.github.io/2basic/2-6/</link>
       <pubDate>Wed, 01 Sep 2021 10:06:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/basic/2-6/</guid>
+      <guid>https://philiplei.github.io/2basic/2-6/</guid>
       <description>Object literals In previous sections, we&amp;rsquo;ve studied how to use JavaScript objects to model complicated data and how to declare functions that can be used as function objects, which can be stored in variable. By combining these knowledge, we can create an object in the sense of Object Oriented Programming: a object with state and behavior.
 To recap, a JavaScript object is a group of properties. Each property has a name and a value.</description>
     </item>
     
     <item>
       <title>3-7 Vue projects and build tools</title>
-      <link>https://philiplei.github.io/client/3-7/</link>
+      <link>https://philiplei.github.io/3client/3-7/</link>
       <pubDate>Sun, 12 Sep 2021 15:40:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-7/</guid>
+      <guid>https://philiplei.github.io/3client/3-7/</guid>
       <description>Introduction to Node.js  As we try to build more complicated (client side of) a web app, we&amp;rsquo;ve to handle a growing number of source code files (including HTML, JavaScript and other assets). We need to break down a large JavaScript program into several modules for better management. We may also want to install and use modules from third-party libraries (e.g. the Element Plus desktop UI library).
 To handle the complexity of such projects, web developers often apply build tools to facilitate the development and testing processes and automate the building of distributable.</description>
     </item>
     
     <item>
       <title>2-7 Defining class</title>
-      <link>https://philiplei.github.io/basic/2-7/</link>
+      <link>https://philiplei.github.io/2basic/2-7/</link>
       <pubDate>Wed, 01 Sep 2021 15:42:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/basic/2-7/</guid>
+      <guid>https://philiplei.github.io/2basic/2-7/</guid>
       <description>A pitfall of object literals If you only need a single object with simple behavior, making an object literal with methods is a quick solution. However, if you need to create and maintain several objects with similar structure (data properties and methods), making separate object literals is cumbersome and inefficient.
 Consider the following example of person health records with a method BMI to calculate Body mass index. We&amp;rsquo;ll need to define each health record as object with its own version of the BMI method.</description>
     </item>
     
     <item>
       <title>3-8 Make your own components</title>
-      <link>https://philiplei.github.io/client/3-8/</link>
+      <link>https://philiplei.github.io/3client/3-8/</link>
       <pubDate>Sun, 12 Sep 2021 15:40:00 +0800</pubDate>
       
-      <guid>https://philiplei.github.io/client/3-8/</guid>
+      <guid>https://philiplei.github.io/3client/3-8/</guid>
       <description>In this lab, we&amp;rsquo;ll show how to create a Vue component (StarRate.Vue) and use it in the root component of the web app (App.vue).
 Properties and one-directional binding  We&amp;rsquo;d like to create a component called &amp;lt;star-rate&amp;gt; for user to rate something (e.g. products or movie). Take a look at the browser display at the SFC playground for the user interface. The root component App.vue includes the following in its template, and passes values to the &amp;lt;star-rate&amp;gt; component through the two properties: likes and max-likes.</description>
     </item>

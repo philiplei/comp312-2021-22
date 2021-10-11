@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App server programming on COMP312 notes</title>
+    <link>https://philiplei.github.io/5appserver/</link>
+    <description>Recent content in App server programming on COMP312 notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Sep 2021 15:14:43 +0800</lastBuildDate><atom:link href="https://philiplei.github.io/5appserver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5-1 Web API, concepts</title>
+      <link>https://philiplei.github.io/5appserver/5-1/</link>
+      <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/5appserver/5-1/</guid>
+      <description>In a modern web app, the application server implements a Web API that provides service to the front-end JavaScript code.
+A Web API is a defined set of HTTP request messages along with a definition of the structure of response messages, usually expressed in JSON format (from Wikipedia).
+A Web API provides service to clients through several endpoints. Each endpoint is named with an URL, e.g. http://example.com/products. A client uses an appropriate HTTP verb to invoke the endpoint.</description>
+    </item>
+    
+    <item>
+      <title>5-2 RPC Web API</title>
+      <link>https://philiplei.github.io/5appserver/5-2/</link>
+      <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/5appserver/5-2/</guid>
+      <description>RPC-style Web API A common design style of Web API is RPC-style (Remote Procedure Call). A RPC-style Web API allocates one URL for each function or operation. These URLs represent an action and are usually named with a verb. The following table shows five endpoints in a Web API to manipulate products in a database. They implement four common operations on data known as CRUD (Create, Retrieve, Update and Delete).</description>
+    </item>
+    
+    <item>
+      <title>5-3 REST Web API</title>
+      <link>https://philiplei.github.io/5appserver/5-3/</link>
+      <pubDate>Mon, 04 Oct 2021 16:14:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/5appserver/5-3/</guid>
+      <description>REST is the most popular way to design Web APIs. In a REST Web API, actions are designed around resources. Each resource is identify by a URL. A client applies the standard HTTP verbs (including GET, PUT, POST, DELETE, POST) on the resources to perform CRUD operations (Create, Retrieve, Update, Delete).
+For example, in an online shopping site, there may be resources about products, customers and their orders. These are represented by the following URLs.</description>
+    </item>
+    
+    <item>
+      <title>5-4 Making HTTP requests in client</title>
+      <link>https://philiplei.github.io/5appserver/5-4/</link>
+      <pubDate>Sat, 09 Oct 2021 06:10:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/5appserver/5-4/</guid>
+      <description>In a modern web app, client-side JavaScript programs react to user interaction, and send HTTP requests to Web APIs to get up-to-date information to display or invoke actions on the server. Client-side programs also need to handle receive data or reported errors from the server.
+Web browsers provide two main means to send asynchronous HTTP requests: the traditional XMLHttpRequest, and the new Fetch API. XMLHttpRequest applies callbacks and events to handle asynchronous message handling, while the Fetch API fetch is based on promises.</description>
+    </item>
+    
+    <item>
+      <title>5-5 Web app server</title>
+      <link>https://philiplei.github.io/5appserver/5-5/</link>
+      <pubDate>Sat, 09 Oct 2021 12:29:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/5appserver/5-5/</guid>
+      <description>Express.js (official website) is a web framework to simplify development of Web applications. It supports:
+ Routing – different request processing based on URL patterns Middleware – chainable processing of requests and responses Template – generate HTML output from variables  This lab covers how to define routes to capture HTTP requests for a web app / service endpoints. We&amp;rsquo;ll discuss how to generate simple HTTP responses. Finally, we&amp;rsquo;ll cover the usage of common middlewares.</description>
+    </item>
+    
+  </channel>
+</rss>
