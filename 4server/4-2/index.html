@@ -12,20 +12,20 @@
     <title>4-2 Asynchronous callback :: COMP312 notes</title>
 
     
-    <link href="/css/nucleus.css?1633929656" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1633929656" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1633929656" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1633929656" rel="stylesheet">
-    <link href="/css/auto-complete.css?1633929656" rel="stylesheet">
-    <link href="/css/theme.css?1633929656" rel="stylesheet">
-    <link href="/css/tabs.css?1633929656" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1633929656" rel="stylesheet">
+    <link href="/css/nucleus.css?1633945810" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1633945810" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1633945810" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1633945810" rel="stylesheet">
+    <link href="/css/auto-complete.css?1633945810" rel="stylesheet">
+    <link href="/css/theme.css?1633945810" rel="stylesheet">
+    <link href="/css/tabs.css?1633945810" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1633945810" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1633929656" rel="stylesheet">
+    <link href="/css/theme-green.css?1633945810" rel="stylesheet">
     
     
 
-    <script src="/js/jquery.min.js?1633929656"></script>
+    <script src="/js/jquery.min.js?1633945810"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -783,9 +783,9 @@ App server programming
 <nav id="TableOfContents">
   <ul>
     <li><a href="#asynchronous-io-handling">Asynchronous I/O handling</a></li>
-    <li><a href="#events-and-event-handlers">Events and event handlers</a></li>
     <li><a href="#sequential-io-operations">Sequential I/O operations</a></li>
     <li><a href="#callback-hell">Callback hell</a></li>
+    <li><a href="#events-and-event-handlers">Events and event handlers</a></li>
     <li><a href="#downloadable-example">Downloadable example</a></li>
   </ul>
 </nav>
@@ -884,27 +884,6 @@ App server programming
 </span><span style="color:#75715e">// ...
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// event loop
-</span></code></pre></div><h2 id="events-and-event-handlers">Events and event handlers</h2>
-<p>On the other hand, some I/O processes detect some kind of event several times (0, 1, 2 or more), and need to run a callback function asynchronously to handle each event. For example, a web server runs a callback whenever it receives an HTTP request from a browser. The following example uses the built-in module <code>http</code> to write a simple web server.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p114.mjs
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">http</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;http&#39;</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
-  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, {<span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text/plain&#39;</span>});
-  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Hello browser&#34;</span>);
-  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>();
-});
-<span style="color:#75715e">// ...
-</span></code></pre></div><p>Try to run the example <code>p114.mjs</code>. The HTTP <code>server</code> actually support several more kinds of events, and you can register event handler for each kind of event.</p>
-<p>Event handlers are similar to the callback function of a periodic timer. They are also similar to event handlers in web browsers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">setInterval</span>( 
-  <span style="color:#75715e">/* this callback runs every minute, after all the statements below */</span>
-  ()=&gt;{  },
-  <span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>
-);
-<span style="color:#75715e">// ...
-</span><span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">// event loop
 </span></code></pre></div><h2 id="sequential-io-operations">Sequential I/O operations</h2>
 <p>The execution time of asynchronous callbacks make the proper sequencing of I/O operations confusing to beginning JavaScript programmers. To properly order two I/O operations, you often need to put the second I/O operation inside the callback of the first I/O operation. Consider the following example of copying the file <code>mpi-info.txt</code> to <code>copy-mpi-info.txt</code>. <a href="/chap4/p115.mjs">example p115.mjs</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// p115.mjs - file copy
@@ -933,7 +912,28 @@ App server programming
     });
   });
 });
-</code></pre></div><h2 id="downloadable-example">Downloadable example</h2>
+</code></pre></div><h2 id="events-and-event-handlers">Events and event handlers</h2>
+<p>On the other hand, some I/O processes detect some kind of event several times (0, 1, 2 or more), and need to run a callback function asynchronously to handle each event. For example, a web server runs a callback whenever it receives an HTTP request from a browser. The following example uses the built-in module <code>http</code> to write a simple web server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#75715e">// p114.mjs
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">http</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;http&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, {<span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text/plain&#39;</span>});
+  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Hello browser&#34;</span>);
+  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>();
+});
+<span style="color:#75715e">// ...
+</span></code></pre></div><p>Try to run the example <code>p114.mjs</code>. The HTTP <code>server</code> actually support several more kinds of events, and you can register event handler for each kind of event.</p>
+<p>Event handlers are similar to the callback function of a periodic timer. They are also similar to event handlers in web browsers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">setInterval</span>( 
+  <span style="color:#75715e">/* this callback runs every minute, after all the statements below */</span>
+  ()=&gt;{  },
+  <span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>
+);
+<span style="color:#75715e">// ...
+</span><span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// event loop
+</span></code></pre></div><h2 id="downloadable-example">Downloadable example</h2>
 <p>The example source files are <a href="/chap4/chap4-2.zip">available here</a>.</p>
 
 
@@ -959,16 +959,16 @@ App server programming
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1633929656"></script>
-    <script src="/js/perfect-scrollbar.min.js?1633929656"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1633929656"></script>
-    <script src="/js/jquery.sticky.js?1633929656"></script>
-    <script src="/js/jquery.svg.pan.zoom.js?1633929656"></script>
-    <script src="/js/featherlight.min.js?1633929656"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1633929656"></script>
+    <script src="/js/clipboard.min.js?1633945810"></script>
+    <script src="/js/perfect-scrollbar.min.js?1633945810"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1633945810"></script>
+    <script src="/js/jquery.sticky.js?1633945810"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1633945810"></script>
+    <script src="/js/featherlight.min.js?1633945810"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1633945810"></script>
     
         
-            <script src="/js/mermaid.min.js?1633929656"></script>
+            <script src="/js/mermaid.min.js?1633945810"></script>
         
         
             
@@ -979,7 +979,7 @@ App server programming
             }
         </script>
     
-    <script src="/js/relearn.js?1633929656"></script>
+    <script src="/js/relearn.js?1633945810"></script>
     
 
   </body>
