@@ -57,5 +57,16 @@ Web browsers provide two main means to send asynchronous HTTP requests: the trad
  Routing – different request processing based on URL patterns Middleware – chainable processing of requests and responses Template – generate HTML output from variables  This lab covers how to define routes to capture HTTP requests for a web app / service endpoints. We&amp;rsquo;ll discuss how to generate simple HTTP responses. Finally, we&amp;rsquo;ll cover the usage of common middlewares.</description>
     </item>
     
+    <item>
+      <title>5-6 Implementing REST API</title>
+      <link>https://philiplei.github.io/5appserver/5-6/</link>
+      <pubDate>Sat, 16 Oct 2021 09:19:00 +0800</pubDate>
+      
+      <guid>https://philiplei.github.io/5appserver/5-6/</guid>
+      <description>This lab consolidates programming knowledge learnt in previous lecture to build a simple Single Page Application, which is a web app that consists of two main parts:
+ server-side: a REST Web API provides endpoints for CRUD operations on products client-side: a Vue application that interacts with the Web API  The client-side Vue application is identical to the one developed in section 5-4 &amp;lsquo;Making HTTP requests in clients&amp;rsquo;.
+The server-side is built with Express.</description>
+    </item>
+    
   </channel>
 </rss>

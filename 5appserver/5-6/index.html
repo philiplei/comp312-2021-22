@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+<meta name="author" content="Philip Lei">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>5-6 Implementing REST API :: COMP312 notes</title>
+
+    
+    <link href="/css/nucleus.css?1634349523" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1634349523" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1634349523" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1634349523" rel="stylesheet">
+    <link href="/css/auto-complete.css?1634349523" rel="stylesheet">
+    <link href="/css/theme.css?1634349523" rel="stylesheet">
+    <link href="/css/tabs.css?1634349523" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1634349523" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1634349523" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery.min.js?1634349523"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/5appserver/5-6/">
+    <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://philiplei.github.io">
+    <i class="fas fa-file-code"></i> <b>COMP312 course notes</b>
+</a>
+
+    </div>
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/2basic/" title="JavaScript basics" class="dd-item">
+        <a href="/2basic/">
+          
+JavaScript basics
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-1/" title="2-1 Basic data types and control" class="dd-item">
+        <a href="/2basic/2-1/">
+          
+2-1 Basic data types and control
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-2/" title="2-2 Arrays" class="dd-item">
+        <a href="/2basic/2-2/">
+          
+2-2 Arrays
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-3/" title="2-3 Functions" class="dd-item">
+        <a href="/2basic/2-3/">
+          
+2-3 Functions
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-4/" title="2-4 Objects as data structure" class="dd-item">
+        <a href="/2basic/2-4/">
+          
+2-4 Objects as data structure
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-5/" title="2-5 Functions as objects and callbacks" class="dd-item">
+        <a href="/2basic/2-5/">
+          
+2-5 Functions as objects and callbacks
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-6/" title="2-6 Objects with methods" class="dd-item">
+        <a href="/2basic/2-6/">
+          
+2-6 Objects with methods
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/2basic/2-7/" title="2-7 Defining class" class="dd-item">
+        <a href="/2basic/2-7/">
+          
+2-7 Defining class
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/3client/" title="Client-side programming" class="dd-item">
+        <a href="/3client/">
+          
+Client-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-1/" title="3-1 Background" class="dd-item">
+        <a href="/3client/3-1/">
+          
+3-1 Background
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-2/" title="3-2 Vue application basics" class="dd-item">
+        <a href="/3client/3-2/">
+          
+3-2 Vue application basics
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-3/" title="3-3 Dynamic structure in template" class="dd-item">
+        <a href="/3client/3-3/">
+          
+3-3 Dynamic structure in template
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-4/" title="3-4 Events, methods and component lifecycle" class="dd-item">
+        <a href="/3client/3-4/">
+          
+3-4 Events, methods and component lifecycle
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-5/" title="3-5 Form controls and bi-directional binding" class="dd-item">
+        <a href="/3client/3-5/">
+          
+3-5 Form controls and bi-directional binding
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-6/" title="3-6 Component: motivation and features" class="dd-item">
+        <a href="/3client/3-6/">
+          
+3-6 Component: motivation and features
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-7/" title="3-7 Vue projects and build tools" class="dd-item">
+        <a href="/3client/3-7/">
+          
+3-7 Vue projects and build tools
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/3client/3-8/" title="3-8 Make your own components" class="dd-item">
+        <a href="/3client/3-8/">
+          
+3-8 Make your own components
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/4server/" title="Server-side programming" class="dd-item">
+        <a href="/4server/">
+          
+Server-side programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-1/" title="4-1 Node.js primer" class="dd-item">
+        <a href="/4server/4-1/">
+          
+4-1 Node.js primer
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-2/" title="4-2 Asynchronous callback" class="dd-item">
+        <a href="/4server/4-2/">
+          
+4-2 Asynchronous callback
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-3/" title="4-3 Promise, await and async" class="dd-item">
+        <a href="/4server/4-3/">
+          
+4-3 Promise, await and async
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-4/" title="4-4 Modules, import and export" class="dd-item">
+        <a href="/4server/4-4/">
+          
+4-4 Modules, import and export
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/4server/4-5/" title="4-5 Database access" class="dd-item">
+        <a href="/4server/4-5/">
+          
+4-5 Database access
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+        
+
+
+
+
+
+  
+		
+    
+      
+      
+      <li data-nav-id="/5appserver/" title="App server programming" class="dd-item parent">
+        <a href="/5appserver/">
+          
+App server programming
+
+          
+        </a>
+        <ul>
+          
+          
+          
+
+          
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-1/" title="5-1 Web API, concepts" class="dd-item">
+        <a href="/5appserver/5-1/">
+          
+5-1 Web API, concepts
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-2/" title="5-2 RPC Web API" class="dd-item">
+        <a href="/5appserver/5-2/">
+          
+5-2 RPC Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-3/" title="5-3 REST Web API" class="dd-item">
+        <a href="/5appserver/5-3/">
+          
+5-3 REST Web API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-4/" title="5-4 Making HTTP requests in client" class="dd-item">
+        <a href="/5appserver/5-4/">
+          
+5-4 Making HTTP requests in client
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-5/" title="5-5 Web app server" class="dd-item">
+        <a href="/5appserver/5-5/">
+          
+5-5 Web app server
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+            
+
+
+
+
+
+  
+		
+    
+      <li data-nav-id="/5appserver/5-6/" title="5-6 Implementing REST API" class="dd-item active">
+        <a href="/5appserver/5-6/">
+          
+5-6 Implementing REST API
+
+          
+        </a>
+      </li>
+    
+  
+
+            
+          
+        </ul>
+      </li>
+    
+  
+
+        
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/5appserver/'>App server programming</a> > 5-6 Implementing REST API
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#main-program">Main program</a></li>
+    <li><a href="#rest-api-implementation">REST API implementation</a></li>
+    <li><a href="#downloadable-sample-code">Downloadable sample code</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              5-6 Implementing REST API
+            </h1>
+          
+
+        
+
+
+<p>This lab consolidates programming knowledge learnt in previous lecture to build a simple Single Page Application, which is a web app that consists of two main parts:</p>
+<ul>
+<li>server-side: a REST Web API provides endpoints for CRUD operations on products</li>
+<li>client-side: a Vue application that interacts with the Web API</li>
+</ul>
+<p>The client-side Vue application is identical to the one developed in section 5-4 &lsquo;Making HTTP requests in clients&rsquo;.</p>
+<p>The server-side is built with Express.js.</p>
+<h2 id="main-program">Main program</h2>
+<p>The main program creates an Express app, binds the REST API implementation to the path <code>/api</code>, and serves the client-side Vue application as static files in <code>/dist</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">express</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;express&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+
+<span style="color:#75715e">// import the router that implements the REST API
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">api</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./api.mjs&#39;</span>;
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#39;/api&#39;</span>, <span style="color:#a6e22e">api</span>);
+
+<span style="color:#75715e">// the Vue application built by Vite, &#39;npm run build&#39;
+</span><span style="color:#75715e">// it consumes the REST API
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#66d9ef">static</span>(<span style="color:#ae81ff">__</span><span style="color:#a6e22e">dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/dist&#39;</span>));
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">port</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">8000</span>;
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">port</span>);
+</code></pre></div><h2 id="rest-api-implementation">REST API implementation</h2>
+<p>An <strong>Express Router</strong> is an object to group routes and middlewares. In this example, all requests with the prefix <code>/api</code> will pass through this router. Thus, <code>app.get('/products', ..)</code> handles requests for path <code>/api/products</code>. At the end of the module, we export the router object as default. Notice how the main project imports the router and adds it to the stack of middlewares of the Express app.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">express</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;express&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">api</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">Router</span>();
+
+<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/products&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">q</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM Product&#34;</span>;
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">q</span>);
+    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">result</span>);
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">err</span>);
+  }
+});
+
+<span style="color:#75715e">// other endpoints ...
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">api</span>;
+</code></pre></div><p>The route for <code>GET /products</code> uses a <code>SELECT</code> query to retrieve all products from the database, and if there are no run-time errors, return the result as JSON data to the client. In case there are errors (e.g. the promise <code>db.all(q)</code> is rejected), we set the HTTP status code to <code>500</code>, and return the error object for debug purpose. (In production code, you should never return error object. This may expose confidential information about your application. Usually, you will create a user-friendly error page.)</p>
+<p>The following is the route to handle <code>POST /products</code>. This route handler creates a product in the database. The data about the new product is passed to the API as JSON data. Therefore, the router has to use the <code>express.json()</code> middleware to parse the HTTP request payload and save the data in <code>req.body</code>. Next, basic sanity check is done on the user input, e.g. are all required fields of the new product provided? You may want to do further checking, e.g. are the values in a reasonable range. If there are error about input data, the route handler returns HTTP status code <code>400</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:3;-o-tab-size:3;tab-size:3"><code class="language-js" data-lang="js"><span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">json</span>());
+
+<span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#39;/products&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>,<span style="color:#a6e22e">res</span>) =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">productName</span><span style="color:#f92672">==</span><span style="color:#66d9ef">undefined</span>
+    <span style="color:#f92672">||</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">category</span><span style="color:#f92672">==</span><span style="color:#66d9ef">undefined</span>  
+    <span style="color:#f92672">||</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">unitPrice</span><span style="color:#f92672">==</span><span style="color:#66d9ef">undefined</span> 
+    <span style="color:#f92672">||</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">unitsInStock</span><span style="color:#f92672">==</span><span style="color:#66d9ef">undefined</span>)  { 
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">sendStatus</span>(<span style="color:#ae81ff">400</span>); 
+  }
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">valuesNewProduct</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">$productName</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">productName</span>,
+    <span style="color:#a6e22e">$category</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">category</span>,
+    <span style="color:#a6e22e">$unitPrice</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">unitPrice</span>,
+    <span style="color:#a6e22e">$unitsInStock</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">unitsInStock</span>  
+  };
+  <span style="color:#75715e">// todo: further checking on valid values
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">q1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;INSERT INTO Product (productName, category, unitPrice, unitsInStock) VALUES ($productName, $category, $unitPrice, $unitsInStock)&#39;</span>;
+
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">q2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM Product WHERE id=$id&#34;</span>;
+
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">insResult</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">run</span>(<span style="color:#a6e22e">q1</span>, <span style="color:#a6e22e">valuesNewProduct</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pid</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">insResult</span>.<span style="color:#a6e22e">lastID</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">q2</span>, {<span style="color:#a6e22e">$id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">pid</span>});
+    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">200</span>).<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">result</span>);
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">err</span>);
+  }
+});
+</code></pre></div><p>The database operations may also generate errors. These will be thrown as exceptions by <code>awake</code>. We catch these promise rejection errors and return the HTTP status code <code>500</code>.</p>
+<p>If there is no error, we return a JSON string of the newly created product to the client-side.</p>
+<p>For the implementation of other routes in the REST API (e.g. <code>PUT</code> and <code>DELETE</code>), please refer to the source code.</p>
+<h2 id="downloadable-sample-code">Downloadable sample code</h2>
+<ul>
+<li><a href="/chap5/p560-restapi.zip">p560-restapi.zip</a> - the Single Page Application example on this page, which contains both the client-side Vue app and the server-side REST Web API.</li>
+</ul>
+
+
+
+<footer class="footline">
+    
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1634349523"></script>
+    <script src="/js/perfect-scrollbar.min.js?1634349523"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1634349523"></script>
+    <script src="/js/jquery.sticky.js?1634349523"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1634349523"></script>
+    <script src="/js/featherlight.min.js?1634349523"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1634349523"></script>
+    
+        
+            <script src="/js/mermaid.min.js?1634349523"></script>
+        
+        
+            
+        
+        <script>
+            if (mermaid) {
+                mermaid.mermaidAPI.initialize( Object.assign( { "securityLevel": "antiscript" }, JSON.parse("{ \"startOnLoad\": true }"), { startOnLoad: false } ) );
+            }
+        </script>
+    
+    <script src="/js/relearn.js?1634349523"></script>
+    
+
+  </body>
+</html>
+
